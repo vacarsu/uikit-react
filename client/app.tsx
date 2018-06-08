@@ -45,7 +45,7 @@ class ExamplePage extends React.Component<any, any> {
         return (
             <OffcanvasContainer>
                 <Router>
-                    <Section className="uk-position-relative">
+                    <Section position="relative">
                         <Section style="secondary" preserveColor>
                             <NavbarSticky options="animation: uk-animation-slide-top; cls-inactive: uk-navbar-transparent uk-light; top: 556;">
                                 <NavbarContainer transparent>

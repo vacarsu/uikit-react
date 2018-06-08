@@ -25,7 +25,8 @@ export class Section extends React.Component<props, any> {
             [`uk-section`]: this.props.padding,
             [`uk-section-${this.props.style}`]: !!this.props.style,
             [`uk-preserve-color`]: this.props.preserveColor,
-            [setClassNames(this.props)]: true
+            [setClassNames(this.props)]: true,
+            [`uk-position-${this.props.position}`]: !!this.props.position
         })
     }
 }
