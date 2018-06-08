@@ -1,0 +1,24 @@
+{
+    "compilerOptions": {
+        "outDir": "./dist/",
+        "noImplicitAny": false,
+        "sourceMap": true,
+        "module": "es6",
+        "target": "es5",
+        "jsx": "react",
+        "allowJs": true,
+        "typeRoots": [
+            "client/types"
+        ]
+    },
+    "exclude": [
+        "node_modules"
+    ],
+    "include": [
+        "**/*.ts",
+        "**/*.tsx"
+    ],
+    "files": [
+        "client/types/base-props.d.ts"
+    ]
+}
