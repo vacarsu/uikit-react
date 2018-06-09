@@ -12,14 +12,24 @@ declare interface props extends BaseProps {
 export class Sidebar extends React.Component<props, any> {
     render() {
         return (
-            <Panel className={this.setClassNames()}>
+            <div style={{
+                position: 'fixed',
+                top: '80px',
+                bottom: '0',
+                boxSizing: 'border-box',
+                width: '240px !important',
+                padding: '40px 40px 60px 40px',
+                borderRight: '1px #e5e5e5 solid',
+                overflow: 'auto'
+            }} className={this.setClassNames()}>
                 {this.props.children}
-            </Panel>
+            </div>
         );
     }
 
     private setClassNames(): string {
         return classNames({
+            [`uk-overflow-auto`]: true,
             [`uk-${this.props.visibility}`]: !!this.props.visibility,
             [setClassNames(this.props)]: true
         });

@@ -9,6 +9,10 @@
     "rename-version": "docusaurus-rename-version"
   },
   "devDependencies": {
+    "@types/marked": "^0.3.0",
     "docusaurus": "^1.1.5"
+  },
+  "dependencies": {
+    "marked": "^0.4.0"
   }
 }

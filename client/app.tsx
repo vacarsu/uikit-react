@@ -27,11 +27,7 @@ import { Flex } from './components/Flex/Flex';
 import { Parallax } from './components/Parallax/Parallax';
 import { Sidebar } from './components/Sidebar/Sidebar';
 
-import { AccordionPage } from './pages/Accordion/AccordionPage';
-import { AlertPage } from './pages/Alert/AlertPage';
-import { ArticlePage } from './pages/Article/ArticlePage';
-import { BadgePage } from './pages/Badge/BadgePage';
-import { IconPage } from './pages/Icon/IconPage';
+import { DocsPage } from './pages/Docs/DocsPage';
 import { IndexPage } from './pages/Index/IndexPage';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -73,52 +69,24 @@ class ExamplePage extends React.Component<any, any> {
                                     <NavLink to="/client/">Home</NavLink>
                                 </ListItem>
                                 <ListItem>
-                                    <NavLink to="/client/accordion">Accordion</NavLink>
+                                    <NavLink to="/client/docs/accordion">Accordion</NavLink>
                                 </ListItem>
                                 <ListItem>
-                                    <NavLink to="/client/alert">Alert</NavLink>
+                                    <NavLink to="/client/docs/alert">Alert</NavLink>
                                 </ListItem>
                                 <ListItem>
-                                    <NavLink to="/client/article">Article</NavLink>
+                                    <NavLink to="/client/docs/article">Article</NavLink>
                                 </ListItem>
                                 <ListItem>
-                                    <NavLink to="/client/badge">Badge</NavLink>
+                                    <NavLink to="/client/docs/badge">Badge</NavLink>
                                 </ListItem>
                                 <ListItem>
-                                    <NavLink to="/client/icon">Icon</NavLink>
+                                    <NavLink to="/client/docs/icon">Icon</NavLink>
                                 </ListItem>
                             </List>
                         </Offcanvas>
-                        <Flex direction="row">
-                            <Sidebar position="fixed">
-                                <List type="divider">
-                                    <ListItem>
-                                        <NavLink to="/client/">Home</NavLink>
-                                    </ListItem>
-                                    <ListItem>
-                                        <NavLink to="/client/accordion">Accordion</NavLink>
-                                    </ListItem>
-                                    <ListItem>
-                                        <NavLink to="/client/alert">Alert</NavLink>
-                                    </ListItem>
-                                    <ListItem>
-                                        <NavLink to="/client/article">Article</NavLink>
-                                    </ListItem>
-                                    <ListItem>
-                                        <NavLink to="/client/badge">Badge</NavLink>
-                                    </ListItem>
-                                    <ListItem>
-                                        <NavLink to="/client/icon">Icon</NavLink>
-                                    </ListItem>
-                                </List>
-                            </Sidebar>
-                            <Route exact path="/client/" component={IndexPage} />
-                            <Route exact path="/client/accordion" component={AccordionPage}/>
-                            <Route exact path="/client/alert" component={AlertPage}/>
-                            <Route exact path="/client/article" component={ArticlePage}/>
-                            <Route exact path="/client/badge" component={BadgePage}/>
-                            <Route exact path="/client/icon" component={IconPage}/>
-                        </Flex>
+                        <Route exact path="/client/" component={IndexPage} />
+                        <Route path="/client/docs" component={DocsPage} />
                     </Section>
                 </Router>
             </OffcanvasContainer>

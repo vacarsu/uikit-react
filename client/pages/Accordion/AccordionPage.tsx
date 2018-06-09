@@ -1,5 +1,6 @@
 import * as React from 'react';
 import * as Prism from 'prismjs';
+import * as marked from 'marked';
 
 import { Accordion } from '../../components/Accordion/Accordion';
 import { Article } from '../../components/Article/Article';
@@ -18,9 +19,29 @@ import { BasicExample } from './BasicExample';
 import { DisableCollapseExample } from './DisableCollapseExample';
 import { ExpandMultipleExample } from './ExpandMultipleExample';
 
-export class AccordionPage extends React.Component {
-    componentDidMount() {
-        Prism.highlightElement(document.getElementById('elements-usage'));
+export class AccordionPage extends React.Component<any, any> {
+    constructor(props) {
+        super(props);
+        this.state = {
+            parsedMarkdown: ''
+        };
+    }
+
+    componentWillMount() {
+        fetch('/client/docs/doc1.md')
+            .then((res) => res.text())
+            .then(text => {
+                this.setState({
+                    parsedMarkdown: marked(text)
+                });
+            })
+            .catch((err) => {
+                console.error(err);
+            });
+    }
+
+    componentDidUpdate() {
+        Prism.highlightAll();
     }
 
     render() {
@@ -31,8 +52,7 @@ export class AccordionPage extends React.Component {
             <Section style="small">
                 <Container size="small">
                     <Article title={articleTitle}>
-                        <p>
-                            {articleContent}
+                        <p dangerouslySetInnerHTML={{__html: this.state.parsedMarkdown}}>
                         </p>
                         <h3>Properties</h3>
                         <Table divider size="small">

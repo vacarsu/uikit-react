@@ -5,6 +5,7 @@ import { setClassNames } from '../../utils/set-class-names';
 declare interface props extends BaseProps {
     padding?: boolean;
     color?: string;
+    size?: string;
     preserveColor?: boolean;
 }
 
@@ -24,6 +25,7 @@ export class Section extends React.Component<props, any> {
         return classNames({
             [`uk-section`]: this.props.padding,
             [`uk-section-${this.props.color}`]: !!this.props.color,
+            [`uk-section-${this.props.size}`]: !!this.props.size,
             [`uk-preserve-color`]: this.props.preserveColor,
             [setClassNames(this.props)]: true,
             [`uk-position-${this.props.position}`]: !!this.props.position

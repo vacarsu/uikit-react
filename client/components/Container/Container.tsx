@@ -1,7 +1,9 @@
 import * as React from 'react';
 import * as classNames from 'classnames';
 
-declare interface props {
+import { setClassNames } from '../../utils/set-class-names';
+
+declare interface props extends BaseProps {
   size?: string;
 }
 
@@ -16,10 +18,10 @@ export class Container extends React.Component<props, any> {
     }
 
     private setClassNames(): string {
-        const isSized = this.props.size ? true : false;
         return classNames({
             [`uk-container`]: true,
-            [`uk-container-${this.props.size}`]: isSized
+            [`uk-container-${this.props.size}`]: !!this.props.size,
+            [setClassNames(this.props)]: true
         });
     }
 }
