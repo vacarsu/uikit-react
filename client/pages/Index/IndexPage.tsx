@@ -14,7 +14,7 @@ export class IndexPage extends React.Component {
         return (
             <Flex direction="column">
                 <Light>
-                    <Section style="secondary" padding>
+                    <Section color="secondary" padding>
                         <Flex alignment="center">
                             <object width="300" height="300" data="/client/images/uikit-react.svg" />
                         </Flex>

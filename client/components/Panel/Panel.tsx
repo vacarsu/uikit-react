@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { alignClass } from '../../utils/align-class';
-import { heightClass } from '../../utils/height-class';
-import { widthClass } from '../../utils/width-class';
+import * as classNames from 'classnames';
+
+import { setClassNames } from '../../utils/set-class-names';
 
 declare interface props extends BaseProps {
     isScrollable?: boolean;
@@ -10,16 +10,18 @@ declare interface props extends BaseProps {
 export class Panel extends React.Component<props, any> {
     render() {
         return (
-            <div className={`
-                uk-panel
-                ${this.isScrollable()}
-                ${alignClass(this.props.align)}
-                ${heightClass(this.props.height)}
-                ${widthClass(this.props.width)}
-            `}>
+            <div className={this.setClassNames()}>
                 {this.props.children}
             </div>
         );
+    }
+
+    private setClassNames() {
+        return classNames({
+            [`uk-panel`]: true,
+            [`uk-panel-scrollable`]: this.props.isScrollable,
+            [setClassNames(this.props)]: true
+        });
     }
 
     private isScrollable() {
