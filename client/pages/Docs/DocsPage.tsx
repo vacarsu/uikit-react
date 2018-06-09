@@ -3,6 +3,11 @@ import { Route, NavLink } from 'react-router-dom';
 
 import { Container } from '../../components/Container/Container';
 import { Flex } from '../../components/Flex/Flex';
+import { Form } from '../../components/Form/Form';
+import { InputContainer } from '../../components/Form/InputContainer';
+import { Label } from '../../components/Form/Label';
+import { Select } from '../../components/Form/Select';
+import { SelectOption } from '../../components/Form/SelectOption';
 import { List } from '../../components/List/List';
 import { ListItem } from '../../components/List/ListItem';
 import { Nav } from '../../components/Nav/Nav';
@@ -24,6 +29,12 @@ export class DocsPage extends React.Component<any, any> {
         this.state = { version: '0.0.1' };
     }
 
+    private onVersionChange(event) {
+        this.setState({
+            version: event.target.value
+        });
+    }
+
     render() {
         return (
             <Section>
@@ -32,12 +43,26 @@ export class DocsPage extends React.Component<any, any> {
                         <Container width="1-6">
                             <Sidebar position="fixed">
                                 <Nav preset="default">
+                                    <NavItem>
+                                        <Form>
+                                            <InputContainer>
+                                                <Label htmlFor="version">Version</Label>
+                                                <Select
+                                                    id="version"
+                                                    value={this.state.version}
+                                                    onChange={this.onVersionChange.bind(this)}>
+                                                    <SelectOption value="0.0.1">0.0.1</SelectOption>
+                                                    <SelectOption value="0.0.2">0.0.2</SelectOption>
+                                                </Select>
+                                            </InputContainer>
+                                        </Form>
+                                    </NavItem>
                                     {this.renderMenu()}
                                 </Nav>
                             </Sidebar>
                         </Container>
                         <Section>
-                            <Route path={`${this.props.match.url}/:name`} component={Documentation} />
+                            <Route path={`${this.props.match.url}/:version/:name`} component={Documentation} />
                         </Section>
                     </Flex>
                 </Container>
@@ -46,12 +71,14 @@ export class DocsPage extends React.Component<any, any> {
     }
 
     private renderMenu() {
+        let count = 0;
         return Object.keys(docsNav).map((k) => {
+            count++;
             return (
-                <NavItem>
-                    <NavLink to={`/client/docs/${docsNav[k].toLowerCase()}`}>{docsNav[k]}</NavLink>
+                <NavItem type={count === 1 ? "divider" : null}>
+                    <NavLink to={`/client/docs/${this.state.version}/${docsNav[k].toLowerCase()}`}>{docsNav[k]}</NavLink>
                 </NavItem>
-            )
+            );
         });
     }
 }

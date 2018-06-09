@@ -9,8 +9,8 @@ import 'prismjs/plugins/toolbar/prism-toolbar';
 import 'prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard';
 import 'prismjs/components/prism-css.min';
 
-import { Button } from './components/Button/Button';
 import { Container } from './components/Container/Container';
+import { Light } from './components/Light/Light';
 import { Icon } from './components/Icon/Icon';
 import { Link } from './components/Link/Link';
 import { List } from './components/List/List';
@@ -20,12 +20,7 @@ import { OffcanvasContainer } from './components/Offcanvas/OffcanvasContainer';
 import { Navbar } from './components/Navbar/Navbar';
 import { NavbarContainer } from './components/Navbar/NavbarContainer';
 import { NavbarSticky } from './components/Navbar/NavbarSticky';
-import { Scrollspy } from './components/Scrollspy/Scrollspy';
 import { Section } from './components/Section/Section';
-import { Light } from './components/Light/Light';
-import { Flex } from './components/Flex/Flex';
-import { Parallax } from './components/Parallax/Parallax';
-import { Sidebar } from './components/Sidebar/Sidebar';
 
 import { DocsPage } from './pages/Docs/DocsPage';
 import { IndexPage } from './pages/Index/IndexPage';
