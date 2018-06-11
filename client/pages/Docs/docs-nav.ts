@@ -3,7 +3,7 @@ export const docsNav = {
     alert: 'Alert',
     article: 'Article',
     badge: 'Badge',
-    breadcrumb: 'breadcrumb',
+    breadcrumb: 'Breadcrumb',
     button: 'Button',
     card: 'Card',
     container: 'Container',

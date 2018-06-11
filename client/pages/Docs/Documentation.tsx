@@ -61,16 +61,12 @@ export class Documentation extends React.Component<any, any> {
         this.fetchDocs();
     }
 
-    componentDidUpdate() {
-        // this.fetchDocs();
-    }
-
     render() {
         return (
             <Section padding>
-            <Article title={this.state.name.charAt(0).toUpperCase() + this.state.name.substr(1)}>
-                {this.state.parsedMarkdown ? this.state.parsedMarkdown.tree : null}
-            </Article>
+                <Article title={this.state.name.charAt(0).toUpperCase() + this.state.name.substr(1)}>
+                    {this.state.parsedMarkdown ? this.state.parsedMarkdown.tree : null}
+                </Article>
             </Section>
         );
     }

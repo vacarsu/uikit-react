@@ -11,14 +11,15 @@ declare interface props extends BaseProps {
 export class Card extends React.Component<props, any> {
     render() {
         return (
-            <div className={`uk-card ${this.setClassNames()}`}>
+            <div className={this.setClassNames()}>
                 {this.props.children}
             </div>
         );
     }
 
     private setClassNames(): string {
-        return classNames({
+        return classNames('uk-card', {
+            [`uk-card-default`]: !this.props.color,
             [`uk-card-${this.props.color}`]: !!this.props.color,
             [`uk-card-hover`]: this.props.hover,
             [`uk-card-${this.props.size}`]: !!this.props.size,

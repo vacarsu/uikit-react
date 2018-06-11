@@ -13,7 +13,7 @@ export class Link extends React.Component<props, any> {
     render() {
         return (
             <a
-                uk-toggle={this.props.toggleOptions ? this.props.toggleOptions : ""}
+                uk-toggle={this.props.toggleOptions ? this.props.toggleOptions : null}
                 href={this.props.href}
                 className={`
                     uk-link-${linkType(this.props.type)}

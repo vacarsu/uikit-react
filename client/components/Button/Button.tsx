@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { colorClass } from '../../utils/color-class';
+import * as classNames from 'classnames';
+import { setClassNames } from '../../utils/set-class-names';
 import { alignClass } from '../../utils/align-class';
 
 declare interface props extends BaseProps {
@@ -7,6 +8,7 @@ declare interface props extends BaseProps {
     color?: string;
     size?: string;
     href?: string;
+    onClick?: any;
 }
 
 export class Button extends React.Component<props, any> {
@@ -16,21 +18,16 @@ export class Button extends React.Component<props, any> {
             <a 
                 uk-toggle={this.props.toggleOptions}
                 href={this.props.href}
-                className={`
-                    uk-button uk-button-${colorClass(this.props.color)}
-                    uk-button-${this.setupSize()}
-                    ${alignClass(this.props.align)}
-                `}
+                onClick={this.props.onClick}
+                className={this.setClassNames()}
             >
                 {this.props.children}
             </a>
             :
             <button 
                 uk-toggle={this.props.toggleOptions}
-                className={`
-                    uk-button uk-button-${colorClass(this.props.color)}
-                    uk-button-${this.setupSize()}
-                `}
+                onClick={this.props.onClick}
+                className={this.setClassNames()}
             >
                 {this.props.children}
             </button>
@@ -41,14 +38,12 @@ export class Button extends React.Component<props, any> {
         return this.props.href ? true : false;
     }
 
-    private setupSize(): string {
-        switch(this.props.size) {
-            case 'small':
-                return 'small';
-            case 'large':
-                return 'large';
-            default:
-                return 'small';
-        }
+    private setClassNames(): string {
+        return classNames('uk-button', {
+            [`uk-button-default`]: !this.props.color,
+            [`uk-button-${this.props.color}`]: !!this.props.color,
+            [`uk-button-${this.props.size}`]: !!this.props.size,
+            [`${setClassNames(this.props)}`]: true
+        });
     }
 }
