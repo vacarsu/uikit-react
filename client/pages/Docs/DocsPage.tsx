@@ -34,9 +34,18 @@ export class DocsPage extends React.Component<any, any> {
         return (
             <Section>
                 <Container>
-                    <Flex direction="row">
-                        <Container width="1-6">
-                            <Sidebar position="fixed">
+                        <Container>
+                            <Sidebar 
+                                style={{
+                                    top: '80px',
+                                    bottom: '0',
+                                    boxSizing: 'border-box',
+                                    padding: '40px 40px 60px 40px',
+                                    borderRight: '1px #e5e5e5 solid',
+                                    height: 'auto',
+                                    overflow: 'auto'
+                                }}
+                                position="fixed">
                                 <Nav preset="default">
                                     <NavItem>
                                         <Form>
@@ -56,10 +65,9 @@ export class DocsPage extends React.Component<any, any> {
                                 </Nav>
                             </Sidebar>
                         </Container>
-                        <Container size="small">
+                        <Container size="1-1" style={{ paddingLeft: '220' }}>
                             <Route path={`${this.props.match.url}/:version/:name`} component={Documentation} />
                         </Container>
-                    </Flex>
                 </Container>
             </Section>
         );

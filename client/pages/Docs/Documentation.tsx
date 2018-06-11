@@ -68,11 +68,9 @@ export class Documentation extends React.Component<any, any> {
     render() {
         return (
             <Section padding>
-                <Container style={{ paddingLeft: '25px' }}>
-                    <Article title={this.state.name.charAt(0).toUpperCase() + this.state.name.substr(1)}>
-                        {this.state.parsedMarkdown ? this.state.parsedMarkdown.tree : null}
-                    </Article>
-                </Container>
+            <Article title={this.state.name.charAt(0).toUpperCase() + this.state.name.substr(1)}>
+                {this.state.parsedMarkdown ? this.state.parsedMarkdown.tree : null}
+            </Article>
             </Section>
         );
     }

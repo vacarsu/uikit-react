@@ -12,15 +12,7 @@ declare interface props extends BaseProps {
 export class Sidebar extends React.Component<props, any> {
     render() {
         return (
-            <div style={{
-                position: 'fixed',
-                top: '80px',
-                bottom: '0',
-                boxSizing: 'border-box',
-                padding: '40px 40px 60px 40px',
-                borderRight: '1px #e5e5e5 solid',
-                overflow: 'auto'
-            }} className={this.setClassNames()}>
+            <div style={this.props.style} className={this.setClassNames()}>
                 {this.props.children}
             </div>
         );

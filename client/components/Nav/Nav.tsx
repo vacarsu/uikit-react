@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as classNames from 'classnames';
 
-declare interface props {
+declare interface props extends BaseProps {
     preset?: 'default' | 'primary' | 'center'
     options?: string;
     accordion?: boolean;
@@ -13,6 +13,7 @@ export class Nav extends React.Component<props, any> {
         return (
             <ul 
                 className={`${this.setClassNames()}`}
+                style={this.props.style}
                 uk-nav={this.props.options ? this.props.options : ""}
             >
                 {this.props.children}
