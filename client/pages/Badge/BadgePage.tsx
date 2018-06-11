@@ -29,7 +29,7 @@ export class BadgePage extends React.Component {
       
       return (
         
-          <Section style="small">
+          <Section size="small">
               <Container size="small">
                   <Article title={articleTitle}>
                       <p>
@@ -67,7 +67,7 @@ export class BadgePage extends React.Component {
                               {`<Badge count={Number} />`}
                           </code>
                       </pre>
-                      <Section style="small">
+                      <Section size="small">
                         <TabContainer id="basic-usage-tabs">
                           <Tab key="tab">Example</Tab>
                           <Tab key="tab">Code</Tab>

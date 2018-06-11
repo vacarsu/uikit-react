@@ -26,7 +26,7 @@ export class IndexPage extends React.Component {
                         </Flex>
                     </Section>
                 </Light>
-                <Section style="default" padding>
+                <Section size="default" padding>
                     <Container>
                         <Flex alignment="center" direction="row">
                             <List type="divider">

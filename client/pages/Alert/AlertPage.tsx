@@ -28,7 +28,7 @@ export class AlertPage extends React.Component {
         const articleContent = `Display success, warning and error messages.`;
         
         return (
-            <Section style="small">
+            <Section size="small">
                 <Container size="small">
                     <Article title={articleTitle}>
                         <p>

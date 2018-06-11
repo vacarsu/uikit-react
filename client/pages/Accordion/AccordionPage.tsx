@@ -49,7 +49,7 @@ export class AccordionPage extends React.Component<any, any> {
         const articleContent = `Create a list of items that can be shown individually by clicking an item's header.`;
         
         return (
-            <Section style="small">
+            <Section size="small">
                 <Container size="small">
                     <Article title={articleTitle}>
                         <p dangerouslySetInnerHTML={{__html: this.state.parsedMarkdown}}>

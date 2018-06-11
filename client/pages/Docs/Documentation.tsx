@@ -30,55 +30,45 @@ export class Documentation extends React.Component<any, any> {
     componentWillReceiveProps(nextProps) {
         const { name, version } = nextProps.match.params;
         if (this.state.name !== name) {
-            console.log('state updated');
             this.setState({
                 name: name
-            })
+            }, () => this.fetchDocs());
         }
 
         if (this.state.version !== version) {
-            console.log('state updated');
             this.setState({
                 version: version
-            })
+            }, () => this.fetchDocs());
         }
     }
 
     shouldComponentUpdate(nextProps, nextState): boolean {
         const { name, version } = nextProps.match.params;
-        console.log([this.state, name, version, nextState.isLoading]);
         if (this.state.name !== name) {
-            console.log('should update');
             return true;
         }
 
         if (this.state.version !== version) {
-            console.log('should update');
             return true;
         }
 
         if (this.state.isLoading !== nextState.isLoading) {
-            console.log('should update');
             return true;
         }
-
-        return false;
     }
 
     componentDidMount() {
-        console.log('did mount');
         this.fetchDocs();
     }
 
     componentDidUpdate() {
-        console.log('did update');
-        this.fetchDocs();
+        // this.fetchDocs();
     }
 
     render() {
         return (
             <Section padding>
-                <Container>
+                <Container style={{ paddingLeft: '25px' }}>
                     <Article title={this.state.name.charAt(0).toUpperCase() + this.state.name.substr(1)}>
                         {this.state.parsedMarkdown ? this.state.parsedMarkdown.tree : null}
                     </Article>
@@ -88,10 +78,11 @@ export class Documentation extends React.Component<any, any> {
     }
 
     private fetchDocs() {
+        this.setState({ isLoading: true });
+        console.log(this.state.name);
         fetch(`/client/docs/${this.state.version}/${this.state.name}.md`)
             .then((res) => res.text())
             .then(text => {
-                console.log(' did fetch');
                 this.setState({
                     parsedMarkdown: compile(text),
                     isLoading: false

@@ -5,6 +5,8 @@ import marksy from 'marksy/components';
 import { Accordion } from '../../components/Accordion/Accordion';
 import { AccordionItem } from '../../components/Accordion/AccordionItem';
 import { Alert } from '../../components/Alert/Alert';
+import { Article } from '../../components/Article/Article';
+import { Badge } from '../../components/Badge/Badge';
 import { Code } from './code';
 import { Tab } from '../../components/Tab/Tab';
 import { TabContainer } from '../../components/Tab/TabContainer';
@@ -13,18 +15,20 @@ import { Table } from '../../components/Table/Table';
 
 export const compile = marksy({
     createElement: React.createElement,
-    // highlight() {
-    //     return Prism.highlightAll();
-    // },
+    highlight(language, code) {
+        return Prism.highlight(code, Prism.languages.tsx);
+    },
     elements: {
         table({children}) {
-            return <Table>{children}</Table>
+            return <Table divider>{children}</Table>
         }
     },
     components: {
         Accordion,
         AccordionItem,
         Alert,
+        Article,
+        Badge,
         Code,
         Tab,
         TabContainer,

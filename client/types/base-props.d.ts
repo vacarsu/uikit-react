@@ -17,7 +17,7 @@ declare module "marksy" {
 
 interface BaseProps {
     className?: string;
-    style?: string;
+    style?: object;
     align?: string;
     height?: string;
     width?: string;

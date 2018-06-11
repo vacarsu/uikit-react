@@ -1,13 +1,16 @@
+Display success, warning and error messages.
 
 -------------
 ## Properties
 
-| Property   | Type          | Default | Required | Description |
-| --------   |:-------------:| -------:| -------- | ----------- |
-| Content    | string        | -       | true     | Text to render inside the alert |
-| Color      | string        | default | false    | The color of the Alert, can be ```default```, ```primary```, ```danger```, ```warning```, or ```success```|
-| isClosable | boolean       | false   | false    | If provided a close button will be rendered which removes the alert on click|
-| Options    | string        | -       | true     | A string of component modifiers. For a list of all modifiers see [UIkit Alert](https://getuikit.com/docs/alert#component-options). |
+| Property     | Type          | Default | Required | Description |
+| --------     |:-------------:| -------:| -------- | ----------- |
+| Content      | string        | -       | true     | Text to render inside the alert |
+| Color        | string        | default | false    | The color of the Alert, can be ```default```, ```primary```, ```danger```, ```warning```, or ```success```|
+| Duration     | number        | -       | false    | The length of time the alter will display in milliseconds|
+| isClosable   | boolean       | false   | false    | If provided a close button will be rendered which removes the alert on click|
+| onBeforeHide | Function      | -       | false     | Function to run right before the alert is about to hide |
+| onHide       | Function      | -       | false     | Function to run after the alert has been hidden |
 
 ## Elements
 

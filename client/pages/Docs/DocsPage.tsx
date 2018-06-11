@@ -56,7 +56,7 @@ export class DocsPage extends React.Component<any, any> {
                                 </Nav>
                             </Sidebar>
                         </Container>
-                        <Container size="large">
+                        <Container size="small">
                             <Route path={`${this.props.match.url}/:version/:name`} component={Documentation} />
                         </Container>
                     </Flex>

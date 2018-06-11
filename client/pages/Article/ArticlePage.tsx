@@ -26,7 +26,7 @@ export class ArticlePage extends React.Component {
         const articleContent = `Create articles within your page.`;
         
         return (
-            <Section style="small">
+            <Section size="small">
                 <Container size="small">
                     <Article title={articleTitle}>
                         <p>

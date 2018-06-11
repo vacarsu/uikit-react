@@ -9,7 +9,7 @@ import { Section } from '../../components/Section/Section';
 export class IconPage extends React.Component {
     render() {
         return (
-            <Section style="small">
+            <Section size="small">
                 <Card color="default">
                     <CardHeader>
                         <h3>Test</h3>

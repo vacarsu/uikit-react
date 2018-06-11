@@ -11,7 +11,7 @@ declare interface props extends BaseProps {
 export class Container extends React.Component<props, any> {
     render() {
         return (
-            <div className={this.setClassNames()}>
+            <div style={this.props.style ? this.props.style : null} className={this.setClassNames()}>
                 {this.props.children}
             </div>
         );
