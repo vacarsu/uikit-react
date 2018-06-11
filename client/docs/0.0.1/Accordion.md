@@ -1,4 +1,5 @@
 
+-------------
 ## Properties
 
 | Property | Type          | Default | Required | Description |
@@ -39,25 +40,21 @@
         </li>
         <li>
             <pre>
-                <code id="basic-usage" className="language-tsx">
-                    &lt;Accordion width=&quot;1-2&quot;&gt;
-                    <p>
-                        &lt;AccordionItem 
-                            title=&quot;Item 1&quot;
-                            content=&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&quot; /&gt;
-                    </p>
-                    <p>
-                        &lt;AccordionItem 
-                            title=&quot;Item 2&quot;
-                            content=&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&quot; /&gt;
-                    </p>
-                    <p>
-                        &lt;AccordionItem 
-                            title=&quot;Item 3&quot; 
-                            content=&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&quot; /&gt;
-                    </p>
-                    &lt;/Accordion&gt;
-                </code>
+                <Code code='
+                    <Accordion>
+                        <AccordionItem 
+                            title="Item 1"
+                            content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
+
+                        <AccordionItem 
+                            title="Item 2"
+                            content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
+
+                        <AccordionItem 
+                            title="Item 3" 
+                            content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
+                    </Accordion>'
+                />
             </pre>
         </li>
     </ul>
@@ -65,37 +62,91 @@
 
 ## Disable Collapse
 
-``` tsx
-<Accordion options="collapsible: false;">
-    <AccordionItem 
-        title="Item 1"
-        content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
+<div>
+    <ul uk-tab="">
+        <li class="uk-active"><a href="#">Usage</a></li>
+        <li><a href="#">Code</a></li>
+    </ul>
+    <ul class="uk-switcher">
+        <li>
+            <Accordion options="collapsible: false;">
+                <AccordionItem 
+                    title="Item 1"
+                    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
 
-    <AccordionItem 
-        title="Item 2"
-        content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
+                <AccordionItem 
+                    title="Item 2"
+                    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
 
-    <AccordionItem 
-        title="Item 3" 
-        content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
-</Accordion>
-```
+                <AccordionItem 
+                    title="Item 3" 
+                    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
+            </Accordion>
+        </li>
+        <li>
+            <pre>
+                <Code code='
+                    <Accordion options="collapsible: false;">
+                        <AccordionItem 
+                            title="Item 1"
+                            content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
+
+                        <AccordionItem 
+                            title="Item 2"
+                            content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
+
+                        <AccordionItem 
+                            title="Item 3" 
+                            content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
+                    </Accordion>'
+                />
+            </pre>
+        </li>
+    </ul>
+</div>
 
 
 ## Expand Multiple
 
-``` tsx
-<Accordion options="multiple: true;">
-    <AccordionItem 
-        title="Item 1"
-        content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
+<div>
+    <ul uk-tab="">
+        <li class="uk-active"><a href="#">Usage</a></li>
+        <li><a href="#">Code</a></li>
+    </ul>
+    <ul class="uk-switcher">
+        <li>
+            <Accordion options="collapsible: false;">
+                <AccordionItem 
+                    title="Item 1"
+                    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
 
-    <AccordionItem 
-        title="Item 2"
-        content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
+                <AccordionItem 
+                    title="Item 2"
+                    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
 
-    <AccordionItem 
-        title="Item 3" 
-        content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
-</Accordion>
-```
+                <AccordionItem 
+                    title="Item 3" 
+                    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
+            </Accordion>
+        </li>
+        <li>
+            <pre>
+                <Code code='
+                    <Accordion options="multiple: true;">
+                        <AccordionItem 
+                            title="Item 1"
+                            content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
+
+                        <AccordionItem 
+                            title="Item 2"
+                            content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
+
+                        <AccordionItem 
+                            title="Item 3" 
+                            content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
+                    </Accordion>'
+                />
+            </pre>
+        </li>
+    </ul>
+</div>

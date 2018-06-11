@@ -15,6 +15,7 @@ declare interface props {
 export class TabContainer extends React.Component<props, any> {
     comp
     componentDidMount() {
+        console.log(this.props.children);
         if (this.props.onBeforeShow) {
             this.validateIdProp();
             UIkit.util.on(this.props.id, 'beforeshow', () => { console.log("eventFired"); this.props.onBeforeShow() });

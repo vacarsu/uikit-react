@@ -17,7 +17,6 @@ export class Sidebar extends React.Component<props, any> {
                 top: '80px',
                 bottom: '0',
                 boxSizing: 'border-box',
-                width: '240px !important',
                 padding: '40px 40px 60px 40px',
                 borderRight: '1px #e5e5e5 solid',
                 overflow: 'auto'

@@ -17,11 +17,6 @@ import { Sidebar } from '../../components/Sidebar/Sidebar';
 
 import { Documentation } from './Documentation';
 import { docsNav } from './docs-nav';
-// import { AccordionPage } from '../Accordion/AccordionPage';
-// import { AlertPage } from '../Alert/AlertPage';
-// import { ArticlePage } from '../Article/ArticlePage';
-// import { BadgePage } from '../Badge/BadgePage';
-// import { IconPage } from '../Icon/IconPage';
 
 export class DocsPage extends React.Component<any, any> {
     constructor (props) {
@@ -61,9 +56,9 @@ export class DocsPage extends React.Component<any, any> {
                                 </Nav>
                             </Sidebar>
                         </Container>
-                        <Section>
+                        <Container size="large">
                             <Route path={`${this.props.match.url}/:version/:name`} component={Documentation} />
-                        </Section>
+                        </Container>
                     </Flex>
                 </Container>
             </Section>

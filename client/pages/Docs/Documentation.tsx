@@ -16,48 +16,84 @@ import { Section } from '../../components/Section/Section';
 import { Sidebar } from '../../components/Sidebar/Sidebar';
 
 export class Documentation extends React.Component<any, any> {
-    name: string;
-    version: string;
     constructor(props) {
         super(props);
         const { name, version } = this.props.match.params;
-        this.name = name;
-        this.version = version;
         this.state = {
-            parsedMarkdown: ''
+            name: name,
+            version: version,
+            parsedMarkdown: null,
+            isLoading: true
         };
     }
 
-    componentWillMount() {
-        let markdown = new Markdown();
-        fetch(`/client/docs/${this.version}/${this.name}.md`)
+    componentWillReceiveProps(nextProps) {
+        const { name, version } = nextProps.match.params;
+        if (this.state.name !== name) {
+            this.setState({
+                name: name
+            })
+        }
+
+        if (this.state.version !== version) {
+            this.setState({
+                version: version
+            })
+        }
+    }
+
+    shouldComponentUpdate(nextProps, nextState): boolean {
+        const { name, version, isLoading } = nextState;
+        if (this.state.name !== name) {
+            console.log('should update');
+            return true;
+        }
+
+        if (this.state.version !== version) {
+            console.log('should update');
+            return true;
+        }
+
+        if (this.state.isLoading !== isLoading) {
+            console.log('should update');
+            return true;
+        }
+    }
+
+    componentDidMount() {
+        console.log('did mount');
+        this.fetchDocs();
+    }
+
+    componentDidUpdate() {
+        console.log('did update');
+        this.fetchDocs();
+    }
+
+    render() {
+        return (
+            <Section padding>
+                <Container>
+                    <Article title={this.state.name.charAt(0).toUpperCase() + this.state.name.substr(1)}>
+                        {this.state.parsedMarkdown ? this.state.parsedMarkdown.tree : null}
+                    </Article>
+                </Container>
+            </Section>
+        );
+    }
+
+    private fetchDocs() {
+        fetch(`/client/docs/${this.state.version}/${this.state.name}.md`)
             .then((res) => res.text())
             .then(text => {
+                console.log(' did fetch');
                 this.setState({
-                    parsedMarkdown: compile(text)
+                    parsedMarkdown: compile(text),
+                    isLoading: false
                 });
             })
             .catch((err) => {
                 console.error(err);
             });
-    }
-
-    componentDidUpdate() {
-        Prism.highlightAll();
-    }
-
-    render() {
-        console.log(this.state.parsedMarkdown);
-        return (
-            <Section>
-                <Container size="small">
-                    <Article title={this.name.toUpperCase()}>
-                        {/* <p dangerouslySetInnerHTML={{ __html: this.state.parsedMarkdown }}></p> */}
-                        {this.state.parsedMarkdown.tree}
-                        {compile('<BasicAccordionExample />').tree}
-                    </Article>
-                </Container>
-            </Section>
-        );
     }
 }
