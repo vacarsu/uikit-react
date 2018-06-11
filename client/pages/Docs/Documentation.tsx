@@ -30,12 +30,14 @@ export class Documentation extends React.Component<any, any> {
     componentWillReceiveProps(nextProps) {
         const { name, version } = nextProps.match.params;
         if (this.state.name !== name) {
+            console.log('state updated');
             this.setState({
                 name: name
             })
         }
 
         if (this.state.version !== version) {
+            console.log('state updated');
             this.setState({
                 version: version
             })
@@ -43,7 +45,8 @@ export class Documentation extends React.Component<any, any> {
     }
 
     shouldComponentUpdate(nextProps, nextState): boolean {
-        const { name, version, isLoading } = nextState;
+        const { name, version } = nextProps.match.params;
+        console.log([this.state, name, version, nextState.isLoading]);
         if (this.state.name !== name) {
             console.log('should update');
             return true;
@@ -54,10 +57,12 @@ export class Documentation extends React.Component<any, any> {
             return true;
         }
 
-        if (this.state.isLoading !== isLoading) {
+        if (this.state.isLoading !== nextState.isLoading) {
             console.log('should update');
             return true;
         }
+
+        return false;
     }
 
     componentDidMount() {
