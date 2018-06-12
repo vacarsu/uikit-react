@@ -5,15 +5,15 @@ import { Route, NavLink } from 'react-router-dom';
 import { Markdown } from './parse-markdown';
 import { compile } from './marksy-components';
 
-import { Article } from '../../components/Article/Article';
-import { Container } from '../../components/Container/Container';
-import { Flex } from '../../components/Flex/Flex';
-import { List } from '../../components/List/List';
-import { ListItem } from '../../components/List/ListItem';
-import { Nav } from '../../components/Nav/Nav';
-import { NavItem } from '../../components/Nav/NavItem';
-import { Section } from '../../components/Section/Section';
-import { Sidebar } from '../../components/Sidebar/Sidebar';
+import { Article } from '../../../src/components/Article/Article';
+import { Container } from '../../../src/components/Container/Container';
+import { Flex } from '../../../src/components/Flex/Flex';
+import { List } from '../../../src/components/List/List';
+import { ListItem } from '../../../src/components/List/ListItem';
+import { Nav } from '../../../src/components/Nav/Nav';
+import { NavItem } from '../../../src/components/Nav/NavItem';
+import { Section } from '../../../src/components/Section/Section';
+import { Sidebar } from '../../../src/components/Sidebar/Sidebar';
 
 export class Documentation extends React.Component<any, any> {
     constructor(props) {

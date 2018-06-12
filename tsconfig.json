@@ -1,15 +1,14 @@
 {
     "compilerOptions": {
-        "outDir": "./dist/",
+        "baseUrl": ".",
+        "outDir": "lib",
         "noImplicitAny": false,
         "sourceMap": true,
-        "module": "es6",
+        "lib": [ "es2015", "dom" ],
+        "module": "es2015",
+        "moduleResolution": "node",
         "target": "es5",
-        "jsx": "react",
-        "allowJs": true,
-        "typeRoots": [
-            "client/types"
-        ]
+        "jsx": "react"
     },
     "exclude": [
         "node_modules"
@@ -19,6 +18,7 @@
         "**/*.tsx"
     ],
     "files": [
-        "client/types/base-props.d.ts"
+        "client/types/base-props.d.ts",
+        "src/types/index.d.ts"
     ]
 }

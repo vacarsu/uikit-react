@@ -1,19 +1,19 @@
 import * as React from 'react';
 import { Route, NavLink } from 'react-router-dom';
 
-import { Container } from '../../components/Container/Container';
-import { Flex } from '../../components/Flex/Flex';
-import { Form } from '../../components/Form/Form';
-import { InputContainer } from '../../components/Form/InputContainer';
-import { Label } from '../../components/Form/Label';
-import { Select } from '../../components/Form/Select';
-import { SelectOption } from '../../components/Form/SelectOption';
-import { List } from '../../components/List/List';
-import { ListItem } from '../../components/List/ListItem';
-import { Nav } from '../../components/Nav/Nav';
-import { NavItem } from '../../components/Nav/NavItem';
-import { Section } from '../../components/Section/Section';
-import { Sidebar } from '../../components/Sidebar/Sidebar';
+import { Container } from '../../../src/components/Container/Container';
+import { Flex } from '../../../src/components/Flex/Flex';
+import { Form } from '../../../src/components/Form/Form';
+import { InputContainer } from '../../../src/components/Form/InputContainer';
+import { Label } from '../../../src/components/Form/Label';
+import { Select } from '../../../src/components/Form/Select';
+import { SelectOption } from '../../../src/components/Form/SelectOption';
+import { List } from '../../../src/components/List/List';
+import { ListItem } from '../../../src/components/List/ListItem';
+import { Nav } from '../../../src/components/Nav/Nav';
+import { NavItem } from '../../../src/components/Nav/NavItem';
+import { Section } from '../../../src/components/Section/Section';
+import { Sidebar } from '../../../src/components/Sidebar/Sidebar';
 
 import { Documentation } from './Documentation';
 import { docsNav } from './docs-nav';

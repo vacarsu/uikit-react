@@ -9,23 +9,26 @@ import 'prismjs/plugins/toolbar/prism-toolbar';
 import 'prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard';
 import 'prismjs/components/prism-css.min';
 
-import { Container } from './components/Container/Container';
-import { Light } from './components/Light/Light';
-import { Icon } from './components/Icon/Icon';
-import { Link } from './components/Link/Link';
-import { List } from './components/List/List';
-import { ListItem } from './components/List/ListItem';
-import { Offcanvas } from './components/Offcanvas/Offcanvas';
-import { OffcanvasContainer } from './components/Offcanvas/OffcanvasContainer';
-import { Navbar } from './components/Navbar/Navbar';
-import { NavbarContainer } from './components/Navbar/NavbarContainer';
-import { NavbarSticky } from './components/Navbar/NavbarSticky';
-import { Section } from './components/Section/Section';
+import { Container } from '../src/components/Container/Container';
+import { Light } from '../src/components/Light/Light';
+import { Icon } from '../src/components/Icon/Icon';
+import { Link } from '../src/components/Link/Link';
+import { List } from '../src/components/List/List';
+import { ListItem } from '../src/components/List/ListItem';
+import { Offcanvas } from '../src/components/Offcanvas/Offcanvas';
+import { OffcanvasContainer } from '../src/components/Offcanvas/OffcanvasContainer';
+import { Navbar } from '../src/components/Navbar/Navbar';
+import { NavbarContainer } from '../src/components/Navbar/NavbarContainer';
+import { NavbarSticky } from '../src/components/Navbar/NavbarSticky';
+import { Section } from '../src/components/Section/Section';
+import * as uikit from '../lib/uikit-react';
+
 
 import { DocsPage } from './pages/Docs/DocsPage';
 import { IndexPage } from './pages/Index/IndexPage';
 
 document.addEventListener('DOMContentLoaded', () => {
+    console.log(uikit);
     render(
         <ExamplePage />,
         document.getElementById('root')

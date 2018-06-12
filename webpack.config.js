@@ -3,10 +3,15 @@ const path = require('path');
 
 module.exports = {
 	entry: {
-		bundle: './client/app.tsx'
+		bundle: './src/index.ts'
 	},
 	devtool: 'inline-source-map',
-	// devtool: 'eval',
+	output: {
+		path: path.resolve(__dirname, 'lib'),
+		filename: 'uikit-react.js',
+		library: '[name]',
+		libraryTarget: 'commonjs'
+	},
 	module: {
 		rules: [
 			{
@@ -16,31 +21,9 @@ module.exports = {
 			}
 		]
 	},
-	optimization: {
-		splitChunks: {
-			cacheGroups: {
-				commons: {
-					chunks: "initial",
-					minChunks: 2,
-					maxInitialRequests: 5, // The default limit is too small to showcase the effect
-					minSize: 0 // This is example is too small to create commons chunks
-				},
-				vendor: {
-					test: /node_modules/,
-					chunks: "initial",
-					name: "vendor",
-					priority: 10,
-					enforce: true
-				}
-			}
-		}
-	},
 	resolve: {
-		extensions: [ '.tsx', '.ts', '.js' ]
-	},
-	output: {
-		filename: '[name].js',
-		path: path.resolve(__dirname, 'dist')
+		extensions: [ '.tsx', '.ts', '.js' ],
+		modules: ['src', 'node_modules']
 	},
 	devServer: {
 		compress: true,

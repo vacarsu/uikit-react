@@ -1,13 +1,13 @@
 import * as React from 'react';
 
-import { Button } from '../../components/Button/Button';
-import { Container } from '../../components/Container/Container';
-import { Flex } from '../../components/Flex/Flex';
-import { Light } from '../../components/Light/Light';
-import { List } from '../../components/List/List';
-import { ListItem } from '../../components/List/ListItem';
-import { Section } from '../../components/Section/Section';
-import { Image } from '../../components/Image/Image';
+import { Button } from '../../../src/components/Button/Button';
+import { Container } from '../../../src/components/Container/Container';
+import { Flex } from '../../../src/components/Flex/Flex';
+import { Light } from '../../../src/components/Light/Light';
+import { List } from '../../../src/components/List/List';
+import { ListItem } from '../../../src/components/List/ListItem';
+import { Section } from '../../../src/components/Section/Section';
+import { Image } from '../../../src/components/Image/Image';
 
 export class IndexPage extends React.Component {
     render() {
