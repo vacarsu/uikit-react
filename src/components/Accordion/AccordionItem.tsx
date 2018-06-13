@@ -1,7 +1,6 @@
 import * as React from 'react';
-const classNames = require('classnames');
+import * as _classNames from 'classnames'; let classNames = _classNames;
 import { setClassNames } from '../../utils/set-class-names'
-import { AccordionItemProps } from 'uikit-react';
 
 export class AccordionItem extends React.Component<AccordionItemProps, any> {
     render() {

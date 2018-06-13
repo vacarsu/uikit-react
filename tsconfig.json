@@ -18,7 +18,6 @@
         "**/*.tsx"
     ],
     "files": [
-        "client/types/base-props.d.ts",
-        "src/types/index.d.ts"
+        "index.d.ts"
     ]
 }
