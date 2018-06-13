@@ -40,7 +40,7 @@ class ExamplePage extends React.Component<any, any> {
     render() {
         return (
             <OffcanvasContainer>
-                <Router>
+                <Router basename="/uikit-react">
                     <Section position="relative">
                         <Section color="secondary" preserveColor>
                             <NavbarSticky options="animation: uk-animation-slide-top; cls-inactive: uk-navbar-transparent uk-light; top: 556;">
