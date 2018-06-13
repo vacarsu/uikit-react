@@ -77,7 +77,7 @@ export class Documentation extends React.Component<any, any> {
     private fetchDocs() {
         this.setState({ isLoading: true });
         console.log(this.state.name);
-        fetch(`src/docs/${this.state.version}/${this.state.name}.md`)
+        fetch(`src/docs/${this.state.version}/${this.state.name.charAt(0).toUpperCase() + this.state.name.substr(1)}.md`)
             .then((res) => res.text())
             .then(text => {
                 this.setState({
