@@ -1,6 +1,6 @@
 {
   "name": "uikit-react",
-  "version": "3.0.10",
+  "version": "3.0.11",
   "description": "",
   "main": "./lib/uikit-react.js",
   "module": "./lib/uikit-react.js",
@@ -16,8 +16,6 @@
     "classnames": "^2.2.5",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
-    "marked": "^0.4.0",
-    "marksy": "^6.0.3",
     "prismjs": "^1.14.0"
   },
   "peerDependencies": {
