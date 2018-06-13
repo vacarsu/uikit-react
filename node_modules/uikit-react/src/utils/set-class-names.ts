@@ -1,4 +1,4 @@
-const classNames = require('classnames');
+import * as _classNames from 'classnames'; let classNames = _classNames;
 
 export function setClassNames(props) {
     const isHeightSet = props.height ? true : false;

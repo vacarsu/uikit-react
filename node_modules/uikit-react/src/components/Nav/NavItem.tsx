@@ -1,5 +1,5 @@
 import * as React from 'react';
-const classNames = require('classnames');
+import * as _classNames from 'classnames'; let classNames = _classNames;
 
 declare interface props {
     type?: 'header' | 'divider';
