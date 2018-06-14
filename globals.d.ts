@@ -1,3 +1,5 @@
+declare var UIkit: any;
+
 interface BaseProps {
     className?: string;
     style?: object;

@@ -15,26 +15,5 @@ export default [
         plugins: [
             typescript()
         ]
-    },
-    {
-        input: './client/app.tsx',
-        output: {
-            file: 'docs/bundle.js',
-            format: 'umd'
-        },
-        plugins: [
-            resolve(),
-            commonjs({
-                namedExports: {
-                    'node_modules/prismjs/prism.js': ['languages', 'highlight'],
-                    'node_modules/react/index.js': ['Children', 'Component', 'PropTypes', 'createElement', 'cloneElement'],
-                    'node_modules/react-dom/index.js': ['render']
-                }
-            }),
-            css({ output: 'bundle.css' }),
-            typescript(),
-            globals(),
-            serve()
-        ]
     }
 ];
