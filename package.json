@@ -11,14 +11,11 @@
   },
   "author": "Alex Lopez",
   "license": "ISC",
-  "dependencies": {
+  "peerDependencies": {
     "uikit": "^3.0.0-rc.5",
     "classnames": "^2.2.5",
     "react": "^16.4.0",
-    "react-dom": "^16.4.0",
-    "prismjs": "^1.14.0"
-  },
-  "peerDependencies": {
+    "react-dom": "^16.4.0"
   },
   "devDependencies": {
     "@types/classnames": "^2.2.4",
