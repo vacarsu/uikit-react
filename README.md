@@ -81,9 +81,14 @@ export default class HomePage extends React.Component<any, any> {
         )
     }
 }
+```
 
 ## Documentation
 #### [Docs](https://vacarsu.github.io/uikit-react)
+
+
+### uikit-react logo
+created by Stian Didriksen
 
 ### MIT Licence
 Copyright 2017 Alex Lopez
