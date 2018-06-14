@@ -1,5 +1,5 @@
 # UIkit React
-**A library of UIkit component for use in React**
+**A library of UIkit components for use in React**
 
 ## This library is currently a work in progress
 **If you decide to use this library please report any bugs. Pull requests are also gladly accepted**
@@ -15,9 +15,10 @@ yarn add uikit-react
 ```
 
 ## Documentation
-#### [Docs](https://vacarsu.github.io/uikit-react)
+#### [UIkit React Docs](https://vacarsu.github.io/uikit-react)
+#### [UIkit Docs](https://getuikit.com/docs/introduction)
 
-#### Sample layout create with Offcanvas
+#### Sample layout with Offcanvas
 ```jsx
 import * as React from 'react';
 import { 
@@ -31,11 +32,7 @@ import {
     Navbar,
     NavbarContainer,
     NavbarSticky,
-    Scrollspy,
     Section,
-    Light,
-    Flex,
-    Parallax
 } from 'uikit-react';
 
 export default class HomePage extends React.Component<any, any> {
@@ -57,22 +54,7 @@ export default class HomePage extends React.Component<any, any> {
                     <Offcanvas id="menu" options="overlay: true">
                         <List type="divider">
                             <ListItem>
-                                <Link href="/client/">Home</Link>
-                            </ListItem>
-                            <ListItem>
-                                <Link href="/client/accordion">Accordion</Link>
-                            </ListItem>
-                            <ListItem>
-                                <Link href="/client/alert">Alert</Link>
-                            </ListItem>
-                            <ListItem>
-                                <Link href="/client/article">Article</Link>
-                            </ListItem>
-                            <ListItem>
-                                <Link href="/client/badge">Badge</Link>
-                            </ListItem>
-                            <ListItem>
-                                <Link href="/client/icon">Icon</Link>
+                                <Link href="/">Home</Link>
                             </ListItem>
                         </List>
                     </Offcanvas>
