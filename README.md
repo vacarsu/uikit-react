@@ -1,7 +1,7 @@
-<img src="/images/uikit-react.svg" width="256"/>
-
 # UIkit React
 **A library of UIkit components for use in React**
+
+<img src="/images/uikit-react.svg" width="256"/>
 
 ## This library is currently a work in progress
 **If you decide to use this library please report any bugs. Pull requests are also gladly accepted**
