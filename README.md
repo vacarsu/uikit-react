@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/vacarsu/uikit-react/master/images/uikit-react.svg.png" width="256"/>
+<img src="https://raw.githubusercontent.com/vacarsu/uikit-react/master/images/uikit-react.svg" width="256"/>
 
 # UIkit React
 **A library of UIkit components for use in React**
