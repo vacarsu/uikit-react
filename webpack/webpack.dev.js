@@ -5,7 +5,7 @@ module.exports = [
     new HtmlWebpackPlugin({
         inject: true,
         template: './src/index.html',
-        filename: './../index.html'
+        filename: './index.html'
     }),
     new BaseHrefWebpackPlugin({ baseHref: '/' })
 ];

@@ -46,6 +46,7 @@ module.exports = env => {
 			}
 		},
 		devServer: {
+			inline: true,
 			compress: true,
 			historyApiFallback: {
 				rewrites: [
