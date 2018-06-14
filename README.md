@@ -14,9 +14,11 @@ npm install uikit-react --save
 yarn add uikit-react
 ```
 
+## Documentation
+#### [Docs](https://vacarsu.github.io/uikit-react)
+
 #### Sample layout create with Offcanvas
 ```jsx
-
 import * as React from 'react';
 import { 
     Container,
@@ -36,8 +38,6 @@ import {
     Parallax
 } from 'uikit-react';
 
-// The HomePage of your app
-// All decorators may be placed in any order, the only exception is DimState must come before DimPropTypes.
 export default class HomePage extends React.Component<any, any> {
     render() {
         return (
@@ -82,9 +82,6 @@ export default class HomePage extends React.Component<any, any> {
     }
 }
 ```
-
-## Documentation
-#### [Docs](https://vacarsu.github.io/uikit-react)
 
 
 ### uikit-react logo
