@@ -1,1 +1,0 @@
-{"code":"export { Offcanvas } from './Offcanvas';\r\nexport { OffcanvasContainer } from './OffcanvasContainer';\r\n//# sourceMappingURL=index.js.map","map":"{\"version\":3,\"file\":\"index.js\",\"sourceRoot\":\"\",\"sources\":[\"index.ts\"],\"names\":[],\"mappings\":\"AAAA,OAAO,EAAE,SAAS,EAAE,MAAM,aAAa,CAAC;AACxC,OAAO,EAAE,kBAAkB,EAAE,MAAM,sBAAsB,CAAC\"}"}
