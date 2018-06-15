@@ -67,7 +67,7 @@ class ExamplePage extends React.Component<any, any> {
                                                 </Link>
                                             </ListItem>
                                             <ListItem>
-                                            <Link href="https://github.com/vacarsu/dimension-cms">
+                                            <Link href="https://github.com/vacarsu/uikit-react">
                                                 <Icon options="github" button />
                                             </Link>
                                         </ListItem>
