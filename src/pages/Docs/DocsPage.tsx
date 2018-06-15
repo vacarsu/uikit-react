@@ -69,6 +69,7 @@ export class DocsPage extends React.Component<any, any> {
                     </Container>
                     <Container size="1-1" style={{ paddingLeft: '220' }}>
                         <Route path={`${this.props.match.url}/:version/:name`} component={Documentation} />
+                        test
                     </Container>
                 </Container>
             </Section>
