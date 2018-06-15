@@ -1,5 +1,4 @@
 export const docsNav = {
-    itroduction: 'Introduction',
     accordion: 'Accordion',
     alert: 'Alert',
     article: 'Article',
