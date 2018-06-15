@@ -57,7 +57,7 @@ class ExamplePage extends React.Component<any, any> {
                         
                                     <Navbar align="right">
                                         <ListItem>
-                                                <NavLink to="/docs/">
+                                                <NavLink to="/docs/0.0.1/Introduction">
                                                     <Button size="small">Documentation</Button>
                                                 </NavLink>
                                             </ListItem>
