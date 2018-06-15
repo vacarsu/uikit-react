@@ -37,7 +37,7 @@ You can apply this component to modify the width of content inside sections from
         </li>
         <li>
             <pre>
-                <Code code='<Containter size="expannd" background="muted">Add your child components</Container>'
+                <Code code='<Containter size="expand" background="muted">Add your child components</Container>'
                 />
             </pre>
         </li>
@@ -52,4 +52,4 @@ Add one of the following properties to the container to apply a different max-wi
 | --------     |:-------------:| -------:| -------- | ----------- |
 | small | Add this class for a narrower container. |
 | large | Add this class for a wider container. |
-| large | Add this class, if you do not want to limit the container width but still want the dynamic horizontal padding. |
+| expand | Add this class, if you do not want to limit the container width but still want the dynamic horizontal padding. |
