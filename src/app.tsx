@@ -21,7 +21,11 @@ import {
     Navbar,
     NavbarContainer,
     NavbarSticky,
-    Section
+    Section,
+    Flex,
+    Button,
+
+    
 } from 'uikit-react';
 
 
@@ -39,21 +43,30 @@ document.addEventListener('DOMContentLoaded', () => {
 class ExamplePage extends React.Component<any, any> {
     render() {
         return (
-            <OffcanvasContainer>
+
                 <Router basename="/uikit-react">
                     <Section position="relative">
                         <Section color="secondary" preserveColor>
                             <NavbarSticky options="animation: uk-animation-slide-top; cls-inactive: uk-navbar-transparent uk-light; top: 556;">
-                                <NavbarContainer transparent>
-                                    <Navbar>
-                                        <ListItem>
-                                            <Link toggleOptions="target: #menu;" href="#">
-                                                <Icon options="menu" button />
-                                            </Link>
+                                <NavbarContainer>
+                                    <Navbar align="left">
+                                        <ListItem padding="small">
+                                                <a href="/"><img width="200" height="200" src="src/images/uikit-react-simple-text.svg"/></a>
                                         </ListItem>
                                     </Navbar>
+                        
                                     <Navbar align="right">
                                         <ListItem>
+                                                <NavLink to="/docs/">
+                                                    <Button size="small">Documentation</Button>
+                                                </NavLink>
+                                            </ListItem>
+                                            <ListItem>
+                                                <Link>
+                                                    Changelog
+                                                </Link>
+                                            </ListItem>
+                                            <ListItem>
                                             <Link href="https://github.com/vacarsu/dimension-cms">
                                                 <Icon options="github" button />
                                             </Link>
@@ -62,33 +75,12 @@ class ExamplePage extends React.Component<any, any> {
                                 </NavbarContainer>
                             </NavbarSticky>
                         </Section>
-                        <Offcanvas id="menu" options="overlay: true">
-                            <List type="divider">
-                                <ListItem>
-                                    <NavLink to="/">Home</NavLink>
-                                </ListItem>
-                                <ListItem>
-                                    <NavLink to="/docs/accordion">Accordion</NavLink>
-                                </ListItem>
-                                <ListItem>
-                                    <NavLink to="/docs/alert">Alert</NavLink>
-                                </ListItem>
-                                <ListItem>
-                                    <NavLink to="/docs/article">Article</NavLink>
-                                </ListItem>
-                                <ListItem>
-                                    <NavLink to="/docs/badge">Badge</NavLink>
-                                </ListItem>
-                                <ListItem>
-                                    <NavLink to="/docs/icon">Icon</NavLink>
-                                </ListItem>
-                            </List>
-                        </Offcanvas>
+
                         <Route exact path="/" component={IndexPage} />
                         <Route path="/docs" component={DocsPage} />
                     </Section>
                 </Router>
-            </OffcanvasContainer>
+
         )
     }
 }
