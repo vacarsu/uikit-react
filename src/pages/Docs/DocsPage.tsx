@@ -74,21 +74,16 @@ export class DocsPage extends React.Component<any, any> {
             </Section>
         );
     }
+
     private renderMenu() {
         let count = 0;
         return Object.keys(docsNav).map((k) => {
             count++;
-            if (count===0){
-                return (
-                        <NavLink to={`/docs/${this.state.version}/${docsNav[k].toLowerCase()}`}>{docsNav[k]}</NavLink>   
-                );
-            }
-            else{
-            return ( 
-                <NavItem key={k} type={count === 2 ? "divider" : null}>
+            return (
+                <NavItem key={k} type={count === 1 ? "divider" : null}>
                     <NavLink to={`/docs/${this.state.version}/${docsNav[k].toLowerCase()}`}>{docsNav[k]}</NavLink>
-                </NavItem>  
-            );}
+                </NavItem>
+            );
         });
     }
 }
