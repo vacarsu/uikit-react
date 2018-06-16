@@ -14,7 +14,10 @@ import {
     Nav,
     NavItem,
     Section,
-    Sidebar
+    Sidebar,
+    Cover,
+    Margin,
+    Button
 } from 'uikit-react';
 
 import { Documentation } from './Documentation';
@@ -63,7 +66,7 @@ export class DocsPage extends React.Component<any, any> {
                                         </InputContainer>
                                     </Form>
                                 </NavItem> */}
-                                {this.renderMenu()}
+                                {this.renderMenu2()}
                             </Nav>
                         </Sidebar>
                     </Container>
@@ -74,16 +77,38 @@ export class DocsPage extends React.Component<any, any> {
             </Section>
         );
     }
-
-    private renderMenu() {
+    private renderMenu2(){
+        return (
+            <ListItem>
+                <NavItem>GETTING STARTED</NavItem>
+                <NavItem type={"divider"}></NavItem>
+                <NavItem>
+                    <ListItem>
+                        <NavLink to={`/docs/${this.state.version}/Introduction`} style={{ fontSize: "15", color: "#333" }}>Introduction</NavLink>
+                    </ListItem>
+                </NavItem>
+                <Margin type="bottom"></Margin>
+                <NavItem>COMPONENTS</NavItem>
+                <NavItem type={"divider"}></NavItem>
+                <ListItem>
+                    {this.renderList()}
+                </ListItem>
+            </ListItem>
+        )
+    }
+    private renderList(){
         let count = 0;
         return Object.keys(docsNav).map((k) => {
             count++;
             return (
-                <NavItem key={k} type={count === 1 ? "divider" : null}>
-                    <NavLink to={`/docs/${this.state.version}/${docsNav[k].toLowerCase()}`}>{docsNav[k]}</NavLink>
+                <ListItem>
+                <NavItem key={k}>
+                    <NavLink to={`/docs/${this.state.version}/${docsNav[k].toLowerCase()}`}style={{ fontSize: "15", color: "#333" }}>{docsNav[k]}</NavLink>
                 </NavItem>
+                </ListItem>
             );
         });
     }
+   
 }
+
