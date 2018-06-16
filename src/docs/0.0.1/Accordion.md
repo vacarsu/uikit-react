@@ -8,7 +8,7 @@ Create a list of items that can be shown individually by clicking an item's head
 | Children | AccordionItem | -       |    yes   | An array of Items to be rendered inside the Accordian tag. |
 | Options  | string        | -       |    yes   | A string of component modifiers.  |
 
-## Modifiers
+## Property Modifiers
 
 | Modifier | Value | Default | Description |
 | -------- |:-------------:| -------:| -------- |
