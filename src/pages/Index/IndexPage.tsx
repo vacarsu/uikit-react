@@ -1,4 +1,6 @@
 import * as React from 'react';
+import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
+import { DocsPage } from '../../pages/Docs/DocsPage';
 
 import { Button } from 'uikit-react';
 import { Container } from 'uikit-react';
@@ -12,22 +14,25 @@ import { Dark } from 'uikit-react';
 import { Link } from 'uikit-react';
 import { Icon } from 'uikit-react';
 import { Cover } from 'uikit-react';
+import { Navbar } from 'uikit-react';
 
 export class IndexPage extends React.Component {
     render() {
         return (
             <Flex direction="column"  >
-                <Light >
-                <Container size="large" type="image" style={{ backgroundImage: 'url("src/images/background.svg")', width: "expand", height:"100%"}}>
-                            <Flex alignment="center">
-                                <object width="300" height="300" data="src/images/uikit-react.svg" />
-                            </Flex>
-                            <Flex alignment="center">
-                                <h1>UIkit React</h1>
-                            </Flex>
-                            <Flex alignment="center">
+                <Light>
+                    <Container size="large" type="image" style={{ backgroundImage: 'url("src/images/background.svg")', width: "expand", height:"100%"}}>
+                        <Flex alignment="center">
+                            <object width="300" height="300" data="src/images/uikit-react.svg" />
+                        </Flex>
+                        <Flex alignment="center">
+                        <h1>UIkit React</h1>
+                        </Flex>
+                        <Flex alignment="center">
+                            <NavLink to="/docs/0.0.1/Introduction">
                                 <Button size="large" color="">Get Started</Button>
-                            </Flex>
+                            </NavLink>
+                        </Flex>
                             <Section padding="small">
                                 <Flex alignment="center">
                                     <h4> Use Uikit with React, a powerfully simple framework </h4>

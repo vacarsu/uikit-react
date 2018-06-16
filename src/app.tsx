@@ -54,9 +54,8 @@ class ExamplePage extends React.Component<any, any> {
                                                 <a href="/"><img width="200" height="200" src="src/images/uikit-react-simple-text.svg"/></a>
                                         </ListItem>
                                     </Navbar>
-                        
-                                    <Navbar align="right">
-                                        <ListItem>
+                                    <Navbar align="right" >
+                                            <ListItem>
                                                 <NavLink to="/docs/0.0.1/Introduction">
                                                     <Button size="small">Documentation</Button>
                                                 </NavLink>
@@ -67,7 +66,8 @@ class ExamplePage extends React.Component<any, any> {
                                                 </Link>
                                             </ListItem>
                                             <ListItem>
-                                            <Link href="https://github.com/vacarsu/uikit-react">
+                                        
+                                            <Link ClasName="test" href="https://github.com/vacarsu/uikit-react">
                                                 <Icon options="github" button />
                                             </Link>
                                         </ListItem>

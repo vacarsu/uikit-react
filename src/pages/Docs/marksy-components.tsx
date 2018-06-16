@@ -21,6 +21,10 @@ import {
     TabContent,
     Table,
     Cover,
+    Dark,
+    Light,
+    Section,
+    Flex,
 } from 'uikit-react';
 import { Code } from './code';
 
@@ -53,5 +57,9 @@ export const compile = marksy({
         TabContainer,
         TabContent,
         Cover,
+        Dark,
+        Light,
+        Section,
+        Flex,
     }
 });
