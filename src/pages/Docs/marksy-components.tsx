@@ -15,6 +15,7 @@ import {
     CardFooter,
     CardHeader,
     CardTitle,
+    Container,
     Link,
     Tab,
     TabContainer,
@@ -25,6 +26,7 @@ import {
     Light,
     Section,
     Flex,
+    Dropdown,
 } from 'uikit-react';
 import { Code } from './code';
 
@@ -52,6 +54,7 @@ export const compile = marksy({
         CardHeader,
         CardTitle,
         Code,
+        Container,
         Link,
         Tab,
         TabContainer,
@@ -61,5 +64,6 @@ export const compile = marksy({
         Light,
         Section,
         Flex,
+        Dropdown,
     }
 });
