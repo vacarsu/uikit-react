@@ -78,44 +78,33 @@ export class DocsPage extends React.Component<any, any> {
             </Section>
         );
     }
-    private renderMenu(){
+    private renderMenu() {
         return (
             <ListItem>
                 <NavItem type={"header"}>Getting Started</NavItem>
                 <NavItem type={"divider"}></NavItem>
-                <NavItem>
-                    <ListItem>
-                    <NavLink type={"primary"}  to={`/docs/${this.state.version}/Introduction`}>
-                        Introduction
+                <NavLink type={"primary"} to={`/docs/${this.state.version}/Introduction`}>
+                    Introduction
                         </NavLink>
-                  </ListItem>
-                </NavItem>
                 <NavItem>
                     <Margin type="bottom"></Margin>
                     <NavItem type={"header"}>Components</NavItem>
                 </NavItem>
                 <NavItem type={"divider"}></NavItem>
-                <ListItem>
-                    {this.renderComponents()}
-                </ListItem>
+
+                {this.renderComponents()}
             </ListItem>
         )
     }
-  
-    private renderComponents(){
+    private renderComponents() {
         let count = 0;
-        let openDoc=0;
+        let openDoc = 0;
         return Object.keys(docsNav).map((k) => {
             count++;
             return (
-                <ListItem>
-                <NavItem key={k}>
-                <NavLink  to={`/docs/${this.state.version}/${docsNav[k].toLowerCase()}`} >
+                <NavLink to={`/docs/${this.state.version}/${docsNav[k].toLowerCase()}`} >
                     {docsNav[k]}
- 
                 </NavLink>
-                </NavItem>
-                </ListItem>  
             );
         });
     }
