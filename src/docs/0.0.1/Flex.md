@@ -1,4 +1,4 @@
-Defines different styles for a toggleable dropdown.
+Adds flex abilities to child elements.
 
 -------------
 
@@ -210,10 +210,13 @@ Defines different styles for a toggleable dropdown.
         </li>
         <li>
             <pre>
-                <Code code='<Flex alignment="center">
-                              <Card><CardBody>item 1</CardBody></Card>
-                              <Card><CardBody>item 2</CardBody></Card>
-                              <Card><CardBody>item 3</CardBody></Card>
+                <Code code='<Flex wrap="wrap">
+                                <Card><CardBody>item 1</CardBody></Card>
+                                <Card><CardBody>item 2</CardBody></Card>
+                                <Card><CardBody>item 1</CardBody></Card>
+                                <Card><CardBody>item 2</CardBody></Card>
+                                <Card><CardBody>This large item makes the Flex wrap</CardBody></Card>
+                                <Card color="default uk-margin-right uk-margin-top"><CardBody>Item Added to the next row</CardBody></Card>
                             </Flex>'
                 />
             </pre>

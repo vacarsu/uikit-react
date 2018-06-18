@@ -39,7 +39,7 @@ export class DocsPage extends React.Component<any, any> {
     render() {
         return (
             <Section>
-                <Container>
+                <Container size="default uk-margin-remove-left">
                     <Container>
                         <Sidebar 
                             style={{
@@ -71,7 +71,7 @@ export class DocsPage extends React.Component<any, any> {
                             </Nav>
                         </Sidebar>
                     </Container>
-                    <Container size="1-1" style={{ paddingLeft: '220' }}>
+                    <Container size="1-1" style={{ paddingLeft: '280', marginRight: '-100' }}>
                         <Route path={`${this.props.match.url}/:version/:name`} component={Documentation} />
                     </Container>
                 </Container>
