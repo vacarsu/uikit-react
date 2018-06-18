@@ -1,4 +1,4 @@
-Create articles within your page.
+Create articles within your pages.
 
 -------------
 ## Properties
