@@ -24,7 +24,7 @@ import {
     Section,
     Flex,
     Button,
-
+    Dark
     
 } from 'uikit-react';
 
@@ -47,17 +47,17 @@ class ExamplePage extends React.Component<any, any> {
                 <Router basename="/uikit-react">
                     <Section position="relative">
                         <Section color="secondary" preserveColor>
-                            <NavbarSticky options="animation: uk-animation-slide-top; cls-inactive: uk-navbar-transparent uk-light; top: 556;">
+                            <NavbarSticky options="animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-inactive: uk-navbar-transparent uk-light; top: 100;" >.active{alert("hello")}
                                 <NavbarContainer>
                                     <Navbar align="left">
                                         <ListItem padding="small">
-                                                <a href="/"><img width="200" height="200" src="src/images/uikit-react-simple-text.svg"/></a>
+                                                <a href="/"><img width="200" height="200" src={this.darkorlight()}/></a>
                                         </ListItem>
                                     </Navbar>
                                     <Navbar align="right" >
                                             <ListItem>
                                                 <NavLink to="/docs/0.0.1/Introduction">
-                                                    <Button size="small">Documentation</Button>
+                                                    <Button size="small" >Documentation</Button>
                                                 </NavLink>
                                             </ListItem>
                                             <ListItem>
@@ -80,7 +80,15 @@ class ExamplePage extends React.Component<any, any> {
                         <Route path="/docs" component={DocsPage} />
                     </Section>
                 </Router>
+                
 
         )
-    }
+}
+private darkorlight(){
+    
+    let filename="src/images/uikit-react-simple-text.svg"
+    return filename;
+}
+
+
 }

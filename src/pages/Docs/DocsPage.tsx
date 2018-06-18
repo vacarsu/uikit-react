@@ -81,30 +81,28 @@ export class DocsPage extends React.Component<any, any> {
     private renderMenu(){
         return (
             <ListItem>
-                <NavItem>GETTING STARTED</NavItem>
+                <NavItem type={"header"}>Getting Started</NavItem>
                 <NavItem type={"divider"}></NavItem>
                 <NavItem>
                     <ListItem>
-                    <NavLink  type="primary"  to={`/docs/${this.state.version}/Introduction`}>
-                    <Button color="text" className="uk-button-active">
-                    <Container style={{ fontSize: "12", color: "#BBB" }}>
+                    <NavLink type={"primary"}  to={`/docs/${this.state.version}/Introduction`}>
                         Introduction
-                        </Container>
-                        </Button>
                         </NavLink>
                   </ListItem>
                 </NavItem>
-                <Margin type="bottom"></Margin>
-                <NavItem>COMPONENTS</NavItem>
+                <NavItem>
+                    <Margin type="bottom"></Margin>
+                    <NavItem type={"header"}>Components</NavItem>
+                </NavItem>
                 <NavItem type={"divider"}></NavItem>
                 <ListItem>
-                    {this.renderList()}
+                    {this.renderComponents()}
                 </ListItem>
             </ListItem>
         )
     }
   
-    private renderList(){
+    private renderComponents(){
         let count = 0;
         let openDoc=0;
         return Object.keys(docsNav).map((k) => {
@@ -112,12 +110,9 @@ export class DocsPage extends React.Component<any, any> {
             return (
                 <ListItem>
                 <NavItem key={k}>
-                <NavLink  to={`/docs/${this.state.version}/${docsNav[k].toLowerCase()}`}>
-                <Button color="text">
-                <Container style={{fontSize:"12", color:"#BBB"}}>
+                <NavLink  to={`/docs/${this.state.version}/${docsNav[k].toLowerCase()}`} >
                     {docsNav[k]}
-                    </Container>
-                </Button>
+ 
                 </NavLink>
                 </NavItem>
                 </ListItem>  
