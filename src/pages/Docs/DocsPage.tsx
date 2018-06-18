@@ -85,9 +85,13 @@ export class DocsPage extends React.Component<any, any> {
                 <NavItem type={"divider"}></NavItem>
                 <NavItem>
                     <ListItem>
-                    <Button color="text">
-                        <NavLink  to={`/docs/${this.state.version}/Introduction`} style={{ fontSize: "12", color: "#BBB" }}>Introduction</NavLink>
+                    <NavLink  type="primary"  to={`/docs/${this.state.version}/Introduction`}>
+                    <Button color="text" className="uk-button-active">
+                    <Container style={{ fontSize: "12", color: "#BBB" }}>
+                        Introduction
+                        </Container>
                         </Button>
+                        </NavLink>
                   </ListItem>
                 </NavItem>
                 <Margin type="bottom"></Margin>
@@ -108,9 +112,13 @@ export class DocsPage extends React.Component<any, any> {
             return (
                 <ListItem>
                 <NavItem key={k}>
+                <NavLink  to={`/docs/${this.state.version}/${docsNav[k].toLowerCase()}`}>
                 <Button color="text">
-                    <NavLink  to={`/docs/${this.state.version}/${docsNav[k].toLowerCase()}`} style={{fontSize:"12", color:"#BBB"}} >{docsNav[k]}</NavLink>
+                <Container style={{fontSize:"12", color:"#BBB"}}>
+                    {docsNav[k]}
+                    </Container>
                 </Button>
+                </NavLink>
                 </NavItem>
                 </ListItem>  
             );
