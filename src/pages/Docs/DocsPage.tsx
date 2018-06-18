@@ -17,7 +17,8 @@ import {
     Sidebar,
     Cover,
     Margin,
-    Button
+    Button,
+    Link
 } from 'uikit-react';
 
 import { Documentation } from './Documentation';
@@ -66,7 +67,7 @@ export class DocsPage extends React.Component<any, any> {
                                         </InputContainer>
                                     </Form>
                                 </NavItem> */}
-                                {this.renderMenu2()}
+                                {this.renderMenu()}
                             </Nav>
                         </Sidebar>
                     </Container>
@@ -77,15 +78,21 @@ export class DocsPage extends React.Component<any, any> {
             </Section>
         );
     }
-    private renderMenu2(){
+    private renderMenu(){
         return (
             <ListItem>
                 <NavItem>GETTING STARTED</NavItem>
                 <NavItem type={"divider"}></NavItem>
                 <NavItem>
                     <ListItem>
-                        <NavLink to={`/docs/${this.state.version}/Introduction`} style={{ fontSize: "15", color: "#333" }}>Introduction</NavLink>
-                    </ListItem>
+                    <NavLink  type="primary"  to={`/docs/${this.state.version}/Introduction`}>
+                    <Button color="text" className="uk-button-active">
+                    <Container style={{ fontSize: "12", color: "#BBB" }}>
+                        Introduction
+                        </Container>
+                        </Button>
+                        </NavLink>
+                  </ListItem>
                 </NavItem>
                 <Margin type="bottom"></Margin>
                 <NavItem>COMPONENTS</NavItem>
@@ -96,19 +103,26 @@ export class DocsPage extends React.Component<any, any> {
             </ListItem>
         )
     }
+  
     private renderList(){
         let count = 0;
+        let openDoc=0;
         return Object.keys(docsNav).map((k) => {
             count++;
             return (
                 <ListItem>
                 <NavItem key={k}>
-                    <NavLink to={`/docs/${this.state.version}/${docsNav[k].toLowerCase()}`}style={{ fontSize: "15", color: "#333" }}>{docsNav[k]}</NavLink>
+                <NavLink  to={`/docs/${this.state.version}/${docsNav[k].toLowerCase()}`}>
+                <Button color="text">
+                <Container style={{fontSize:"12", color:"#BBB"}}>
+                    {docsNav[k]}
+                    </Container>
+                </Button>
+                </NavLink>
                 </NavItem>
-                </ListItem>
+                </ListItem>  
             );
         });
     }
-   
 }
 
