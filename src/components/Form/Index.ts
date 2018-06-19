@@ -3,7 +3,7 @@ export { Fieldset } from './Fieldset';
 export { Form } from './Form';
 export { Input } from './Input';
 export { InputContainer } from './InputContainer';
-export { Label } from './Label';
+export { FormLabel } from './FormLabel';
 export { Legend } from './Legend';
 export { Radio } from './Radio';
 export { Range } from './Range';

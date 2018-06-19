@@ -14,7 +14,7 @@ export * from './components/Form/index';
 export * from './components/Grid/Grid';
 export * from './components/Icon/Icon';
 export * from './components/Image/Image';
-export * from './components/Labels/Labels';
+export * from './components/Label/Label';
 export * from './components/Light/Light';
 export * from './components/Lightbox/index';
 export * from './components/Link/Link';
