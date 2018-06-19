@@ -39,7 +39,17 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('root')
     );
 }, false);
+let navPath="src/images/uikit-react-simple-text.svg"
 
+
+/*
+replace line 55 with this to get moving navbar
+<NavbarSticky options="sel-target:.uk-navbar-container; cls-inactive:uk-navbar-transparent uk-light; top:100" 
+                            onActive={this.switchLight.bind(this)}
+                            onInactive={this.switchDark.bind(this)}
+                            >
+
+*/
 class ExamplePage extends React.Component<any, any> {
     render() {
         return (
@@ -47,12 +57,12 @@ class ExamplePage extends React.Component<any, any> {
                 <Router basename="/uikit-react">
                     <Section position="relative">
                
-                            <NavbarSticky options="sel-target:.uk-navbar-container; cls-inactive:uk-navbar-transparent uk-light; cls-active:uk-navbar-transparent uk-light;" >
+                            <NavbarSticky options="sel-target:.uk-navbar-container; cls-inactive:uk-navbar-transparent uk-light; cls-active:uk-navbar-transparent uk-light;">
                             <Section color="secondary" preserveColor>
                                 <NavbarContainer>
                                     <Navbar left>
                                         <ListItem padding="small">
-                                                <a href="/"><img width="200" height="200" src="src/images/uikit-react-simple-text.svg"/></a>
+                                                <a href="/"><img width="200" height="200" src={navPath}/></a>
                                         </ListItem>
                                     </Navbar>
                                     <Navbar right>
@@ -85,13 +95,22 @@ class ExamplePage extends React.Component<any, any> {
                 
 
         )
+        
 }
-
-private darkorlight(path){
-    
-    let filename=path
-    return filename;
+/*
+private switchLight(){
+    navPath="src/images/uikit-react-simple-text-invert.svg";
+    render(
+        <ExamplePage />,
+        document.getElementById('root')
+    );
 }
-
-
+private switchDark(){
+    navPath="src/images/uikit-react-simple-text.svg";
+    render(
+        <ExamplePage />,
+        document.getElementById('root')
+    );
+}
+*/
 }
