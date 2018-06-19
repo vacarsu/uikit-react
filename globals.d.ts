@@ -169,7 +169,8 @@ interface NavItemProps extends BaseProps {
 }
 
 interface NavbarProps extends BaseProps {
-    align?: string;
+    left?: boolean;
+    right?: boolean;
 }
 
 interface NavbarContainerProps extends BaseProps {

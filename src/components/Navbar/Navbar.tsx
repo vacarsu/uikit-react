@@ -18,8 +18,8 @@ export class Navbar extends React.Component<NavbarProps, any> {
 
     private setClassNames() {
         return classNames({
-            [`uk-navbar-left`]: !this.props.align,
-            [`uk-navbar-${this.props.align}`]: !!this.props.align,
+            [`uk-navbar-left`]: this.props.left,
+            [`uk-navbar-right`]: this.props.right,
             [setClassNames(this.props)]: true
         })
     }

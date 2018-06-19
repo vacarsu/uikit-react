@@ -1,4 +1,6 @@
 import * as React from 'react';
+import * as _classNames from 'classnames';
+let classNames = _classNames;
 import { setClassNames } from '../../utils/set-class-names';
 
 export class Label extends React.Component<LabelProps, any> {
@@ -6,9 +8,15 @@ export class Label extends React.Component<LabelProps, any> {
         return (
             <div 
                 style={this.props.style ? this.props.style : null}
-                className={`uk-label ${setClassNames(this.props)}`}>
+                className={`${setClassNames(this.props)}`}>
                 {this.props.content}
             </div>
         );
+    }
+
+    private setClassNames() {
+        return classNames('uk-label', {
+            [`uk-label-${this.props.color}`]: !!this.props.color
+        });
     }
 }
