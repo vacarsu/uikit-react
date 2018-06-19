@@ -1,13 +1,14 @@
 import * as React from 'react';
-import * as _classNames from 'classnames'; let classNames = _classNames;
+import * as _classNames from 'classnames';
+let classNames = _classNames;
+import { setClassNames } from '../../utils/set-class-names';
 
-declare interface props {
-}
-
-export class InputContainer extends React.Component<props, any> {
+export class InputContainer extends React.Component<BaseContainerProps, any> {
     render() {
         return (
-            <div className="uk-form-controls">
+            <div 
+                style={this.props.style ? this.props.style : null}
+                className={`uk-form-controls ${setClassNames(this.props)}`}>
                 {this.props.children}
             </div>
         );

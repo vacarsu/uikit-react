@@ -2,20 +2,13 @@ import * as React from 'react';
 import * as _classNames from 'classnames'; let classNames = _classNames;
 import { setClassNames } from '../../utils/set-class-names';
 
-declare interface props extends BaseProps {
-    padding?: boolean;
-    color?: string;
-    size?: string;
-    preserveColor?: boolean;
-}
 
-
-export class Section extends React.Component<props, any> {
+export class Section extends React.Component<SectionProps, any> {
     render() {
         return (
-            <div className={`
-                ${this.setClassNames()}
-            `}>
+            <div 
+                style={this.props.style ? this.props.style : null}
+                className={`${this.setClassNames()}`}>
                 {this.props.children}
             </div>
         );

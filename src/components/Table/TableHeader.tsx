@@ -1,16 +1,14 @@
 import * as React from 'react';
-import * as _classNames from 'classnames'; let classNames = _classNames;
+import * as _classNames from 'classnames';
+let classNames = _classNames;
+import { setClassNames } from '../../utils/set-class-names';
 
-declare interface props {
-    shrink?: boolean;
-    expand?: boolean;
-    width?: string;
-}
-
-export class TableHeader extends React.Component<props, any> {
+export class TableHeader extends React.Component<TableHeaderProps, any> {
     render() {
         return (
-            <th className={this.setClassNames()}>
+            <th 
+                style={this.props.style ? this.props.style : null}
+                className={this.setClassNames()}>
                 {this.props.children}
             </th>
         );
@@ -24,11 +22,11 @@ export class TableHeader extends React.Component<props, any> {
         } else if (this.props.shrink && this.props.width) {
             console.error("Please use only one width modfier on table components");
         } else {
-            const isWidth = this.props.width ? true : false;
             return classNames({
                 [`uk-table-expand`]: this.props.expand,
                 [`uk-table-shrink`]: this.props.shrink,
-                [`uk-table-${this.props.width}`]: isWidth
+                [`uk-table-${this.props.width}`]: !!this.props.width,
+                [`${setClassNames(this.props)}`]: true
             })
         }
     }

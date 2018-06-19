@@ -1,17 +1,14 @@
 import * as React from 'react';
-import * as _classNames from 'classnames'; let classNames = _classNames;
+import * as _classNames from 'classnames';
+let classNames = _classNames;
 import { setClassNames } from '../../utils/set-class-names';
 
-declare interface props extends BaseProps {
-    hover?: boolean;
-    color?: string;
-    size?: string;
-}
-
-export class Card extends React.Component<props, any> {
+export class Card extends React.Component<CardProps, any> {
     render() {
         return (
-            <div className={this.setClassNames()}>
+            <div
+                style={this.props.style ? this.props.style : null}
+                className={this.setClassNames()}>
                 {this.props.children}
             </div>
         );

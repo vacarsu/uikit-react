@@ -1,14 +1,15 @@
 import * as React from 'react';
+import * as _classNames from 'classnames';
+let classNames = _classNames;
+import { setClassNames } from '../../utils/set-class-names';
 
-declare interface props {
-    type: string;
-    dynamicWrapping?: boolean;
-}
-
-export class Margin extends React.Component<props, any> {
+export class Margin extends React.Component<MarginProps, any> {
     render() {
         return (
-            <div uk-margin={this.props.dynamicWrapping} className={this.setClassNames()}>
+            <div 
+                style={this.props.style ? this.props.style : null}
+                uk-margin={this.props.dynamicWrapping}
+                className={this.setClassNames()}>
                 {this.props.children}
             </div>
         );
@@ -22,6 +23,8 @@ export class Margin extends React.Component<props, any> {
             classString = `${classString} uk-margin-${string}`;
         });
 
-        return classString;
+        return classNames(classString, {
+            [`${setClassNames(this.props)}`]: true
+        })
     }
 }

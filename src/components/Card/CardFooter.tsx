@@ -1,12 +1,12 @@
 import * as React from 'react';
+import { setClassNames } from '../../utils/set-class-names';
 
-declare interface props {
-}
-
-export class CardFooter extends React.Component<props, any> {
+export class CardFooter extends React.Component<BaseProps, any> {
     render() {
         return (
-            <div className="uk-card-footer">
+            <div 
+                style={this.props.style ? this.props.style : null}
+                className={`uk-card-footer ${setClassNames(this.props)}`}>
                 {this.props.children}
             </div>
         );

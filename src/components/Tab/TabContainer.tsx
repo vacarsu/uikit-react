@@ -1,19 +1,8 @@
 import * as React from 'react';
 import { createPortal } from 'react-dom';
+import { setClassNames } from '../../utils/set-class-names';
 
-declare interface props {
-    id?: string;
-    options?: string;
-    onBeforeShow?: Function;
-    onShow?: Function;
-    onShown?: Function;
-    onBeforeHide?: Function;
-    onHide?: Function;
-    onHidden?: Function;
-}
-
-export class TabContainer extends React.Component<props, any> {
-    comp
+export class TabContainer extends React.Component<TabContainerProps, any> {
     componentDidMount() {
         console.log(this.props.children);
         if (this.props.onBeforeShow) {
@@ -49,7 +38,9 @@ export class TabContainer extends React.Component<props, any> {
 
     render() {
         return (
-            <div>
+            <div 
+                style={this.props.style ? this.props.style : null}
+                className={setClassNames(this.props)}>
                 <ul uk-tab={this.props.options ? this.props.options : ""}>
                     {this.renderChildren('tab')}
                 </ul>

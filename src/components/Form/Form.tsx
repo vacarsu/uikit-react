@@ -1,15 +1,13 @@
 import * as React from 'react';
-import * as _classNames from 'classnames'; let classNames = _classNames;
+import * as _classNames from 'classnames';
+let classNames = _classNames;
+import { setClassNames } from '../../utils/set-class-names';
 
-declare interface props extends React.HTMLProps<HTMLFormElement> {
-    layout?: string;
-    custom?: boolean;
-}
-
-export class Form extends React.Component<props, any> {
+export class Form extends React.Component<FormProps, any> {
     render() {
         return (
             <div
+                style={this.props.style ? this.props.style : null}
                 className={this.setClassNames()}
                 uk-form-custom={this.props.custom ? "" : null}>
                 {this.props.children}
@@ -19,7 +17,8 @@ export class Form extends React.Component<props, any> {
 
     private setClassNames(): string {
         return classNames({
-            [`uk-form-${this.props.layout}`]: !!this.props.layout
+            [`uk-form-${this.props.layout}`]: !!this.props.layout,
+            [`${setClassNames(this.props)}`]: true
         });
     }
 }

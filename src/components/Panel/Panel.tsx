@@ -1,30 +1,23 @@
 import * as React from 'react';
-import * as _classNames from 'classnames'; let classNames = _classNames;
-
+import * as _classNames from 'classnames'; 
+let classNames = _classNames;
 import { setClassNames } from '../../utils/set-class-names';
 
-declare interface props extends BaseProps {
-    isScrollable?: boolean;
-}
-
-export class Panel extends React.Component<props, any> {
+export class Panel extends React.Component<PanelProps, any> {
     render() {
         return (
-            <div className={this.setClassNames()}>
+            <div 
+                style={this.props.style ? this.props.style : null}
+                className={this.setClassNames()}>
                 {this.props.children}
             </div>
         );
     }
 
     private setClassNames() {
-        return classNames({
-            [`uk-panel`]: true,
+        return classNames('uk-panel', {
             [`uk-panel-scrollable`]: this.props.isScrollable,
             [setClassNames(this.props)]: true
         });
-    }
-
-    private isScrollable() {
-        if (this.props.isScrollable) return 'uk-panel-scrollable';
     }
 }

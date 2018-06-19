@@ -1,17 +1,14 @@
 import * as React from 'react';
-import * as _classNames from 'classnames'; let classNames = _classNames;
+import * as _classNames from 'classnames';
+let classNames = _classNames;
+import { setClassNames } from '../../utils/set-class-names';
 
-declare interface props extends React.HTMLProps<HTMLInputElement> {
-    color?: 'danger' | 'success' | 'blank';
-    layout?: 'small' | 'large';
-    width?: 'large' | 'medium' | 'small' | 'xsmall';
-}
-
-export class Checkbox extends React.Component<props, any> {
+export class Checkbox extends React.Component<FormInputProps, any> {
     render() {
         return (
             <input
                 id={this.props.id}
+                style={this.props.style ? this.props.style : null}
                 className={this.setClassNames()}
                 type="checkbox"
                 name={this.props.name ? this.props.name : null}
@@ -27,7 +24,8 @@ export class Checkbox extends React.Component<props, any> {
             [`uk-checkbox`]: true,
             [`uk-form-${this.props.color}`]: !!this.props.color,
             [`uk-form-${this.props.width}`]: !!this.props.width,
-            [`uk-form-${this.props.layout}`]: !!this.props.layout
+            [`uk-form-${this.props.layout}`]: !!this.props.layout,
+            [`${setClassNames(this.props)}`]: true
         });
     }
 }

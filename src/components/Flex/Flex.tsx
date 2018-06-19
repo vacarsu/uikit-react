@@ -1,19 +1,14 @@
 import * as React from 'react';
-import * as _classNames from 'classnames'; let classNames = _classNames;
+import * as _classNames from 'classnames';
+let classNames = _classNames;
+import { setClassNames } from '../../utils/set-class-names';
 
-declare interface props {
-    alignment?: string;
-    direction?: string;
-    wrap?: string;
-}
-
-export class Flex extends React.Component<props, any> {
+export class Flex extends React.Component<FlexProps, any> {
     render() {
         return (
-            <div className={`
-                uk-flex
-                ${this.setClassNames()}
-            `}>
+            <div
+                style={this.props.style ? this.props.style : null}
+                className={`uk-flex ${this.setClassNames()}`}>
                 {this.props.children}
             </div>
         );
@@ -26,7 +21,8 @@ export class Flex extends React.Component<props, any> {
             [`uk-flex-${alignments[0]}`]: !!alignments[0],
             [`uk-flex-${alignments[1]}`]: !!alignments[1],
             [`uk-flex-${this.props.direction}`]: !!this.props.direction,
-            [`uk-flex-${this.props.wrap}`]: !!this.props.wrap
+            [`uk-flex-${this.props.wrap}`]: !!this.props.wrap,
+            [`${setClassNames(this.props)}`]: true
         });
     }
 }

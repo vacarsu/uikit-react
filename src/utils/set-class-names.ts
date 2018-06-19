@@ -1,6 +1,8 @@
-import * as _classNames from 'classnames'; let classNames = _classNames;
+import * as _classNames from 'classnames';
+let classNames = _classNames;
 
 export function setClassNames(props) {
+    const isClassNameSet = props.className ? true : false;
     const isHeightSet = props.height ? true : false;
     const isWidthSet = props.width ? true : false;
     const isAlignSet = props.align ? true : false;
@@ -8,6 +10,7 @@ export function setClassNames(props) {
     const isPositionSet = props.position ? true : false;
     
     return classNames({
+        [`${props.className}`]: isClassNameSet,
         [`uk-align-${props.align}`]: isAlignSet,
         [`uk-height-${props.height}`]: isHeightSet,
         [`uk-width-${props.width}`]: isWidthSet,

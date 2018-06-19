@@ -1,14 +1,9 @@
 import * as React from 'react';
-import * as _classNames from 'classnames'; let classNames = _classNames;
+import * as _classNames from 'classnames';
+let classNames = _classNames;
+import { setClassNames } from '../../utils/set-class-names';
 
-declare interface props {
-    options: string;
-    href?: string;
-    button?: boolean;
-    image?: string;
-}
-
-export class Icon extends React.Component<props, any> {
+export class Icon extends React.Component<IconProps, any> {
     render() {
         return (
             this.renderIconType()
@@ -19,6 +14,7 @@ export class Icon extends React.Component<props, any> {
         if (this.props.href) {
             return (
                 <a
+                    style={this.props.style ? this.props.style : null}
                     className={this.getClassNames()}
                     href={this.props.href}
                     uk-icon={this.props.options}
@@ -28,13 +24,14 @@ export class Icon extends React.Component<props, any> {
             return (
                 <span
                     className={this.getClassNames()}
-                    style={{ backgroundImage: `url(${this.props.image})` }}
+                    style={{ backgroundImage: `url(${this.props.image})`, ...this.props.style }}
                     uk-icon={this.props.options}
                 />
             );
         } else {
             return (
                 <em
+                    style={this.props.style ? this.props.style : null}
                     className={this.getClassNames()}
                     uk-icon={this.props.options}
                 />
@@ -44,13 +41,12 @@ export class Icon extends React.Component<props, any> {
     }
 
     private getClassNames(): string {
-        const isLink = this.props.href ? true : false;
-        const isImage = this.props.image ? true : false;
         return classNames({
             [`uk-icon`]: true,
             [`uk-icon-button`]: this.props.button,
-            [`uk-icon-link`]: isLink,
-            [`uk-icon-image`]: isImage
+            [`uk-icon-link`]: !!this.props.href,
+            [`uk-icon-image`]: !!this.props.image,
+            [`${setClassNames(this.props)}`]: true
         });
     }
 }

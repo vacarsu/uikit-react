@@ -1,20 +1,14 @@
 import * as React from 'react';
-import * as _classNames from 'classnames'; let classNames = _classNames;
+import * as _classNames from 'classnames';
+let classNames = _classNames;
 import { setClassNames } from '../../utils/set-class-names';
 
-declare interface props extends BaseProps {
-    toggleOptions?: string;
-    color?: string;
-    size?: string;
-    href?: string;
-    onClick?: any;
-}
-
-export class Button extends React.Component<props, any> {
+export class Button extends React.Component<ButtonProps, any> {
     render() {
         return (
             this.isLink() ?
             <a 
+                style={this.props.style ? this.props.style : null}
                 uk-toggle={this.props.toggleOptions}
                 href={this.props.href}
                 onClick={this.props.onClick}
@@ -24,6 +18,7 @@ export class Button extends React.Component<props, any> {
             </a>
             :
             <button 
+                style={this.props.style ? this.props.style : null}
                 uk-toggle={this.props.toggleOptions}
                 onClick={this.props.onClick}
                 className={this.setClassNames()}

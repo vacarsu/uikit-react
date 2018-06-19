@@ -1,13 +1,13 @@
 import * as React from 'react';
+import { setClassNames } from '../../utils/set-class-names';
 
-declare interface props extends BaseProps {
-    options: string;
-}
-
-export class Lightbox extends React.Component<props, any> {
+export class Lightbox extends React.Component<LightboxProps, any> {
     render() {
         return (
-            <div uk-grid uk-lightbox={this.props.options ? this.props.options : ""}>
+            <div 
+                style={this.props.style ? this.props.style : null}
+                className={setClassNames(this.props)}
+                uk-lightbox={this.props.options ? this.props.options : ""}>
                 {this.props.children}
             </div>
         );

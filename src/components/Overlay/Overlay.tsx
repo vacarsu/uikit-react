@@ -1,23 +1,24 @@
 import * as React from 'react';
+import * as _classNames from 'classnames';
+let classNames = _classNames;
+import { setClassNames } from '../../utils/set-class-names';
 
-declare interface props {
-    position?: string;
-    style?: 'light' | 'dark';
-    showIcon?: boolean;
-}
-
-export class Overlay extends React.Component<props, any> {
+export class Overlay extends React.Component<OverlayProps, any> {
     render() {
         return (
-            <div className={`uk-overlay ${this.setPosition()}`}>
-                {this.props.showIcon ? <span uk-overlay-icon></span> : ""}
+            <div 
+                style={this.props.style ? this.props.style : null}
+                className={`${this.setClassNames()}`}>
+                {this.props.showIcon ? <span uk-overlay-icon></span> : null}
             </div>
         );
     }
 
-    setPosition(): string {
-        if (this.props.position) {
-            return `uk-position-${this.props.position}`;
-        }
+    private setClassNames() {
+        return classNames('uk-overlay', {
+            [`uk-position-${this.props.position}`]: !!this.props.position,
+            [`uk-position-${this.props.type}`]: !!this.props.type,
+            [`${setClassNames(this.props)}`]: true
+        });
     }
 }

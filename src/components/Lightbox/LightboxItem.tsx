@@ -1,15 +1,14 @@
 import * as React from 'react';
+import { setClassNames } from '../../utils/set-class-names';
 
-declare interface props {
-    href: string;
-    caption?: string;
-}
-
-
-export class LightboxItem extends React.Component<props, any> {
+export class LightboxItem extends React.Component<LightboxItemProps, any> {
     render() {
         return (
-            <a href={this.props.href} data-caption={this.props.caption}>
+            <a
+                style={this.props.style ? this.props.style : null}
+                className={setClassNames(this.props)}
+                href={this.props.href}
+                data-caption={this.props.caption}>
                 {this.props.children}
             </a>
         );

@@ -1,15 +1,12 @@
 import * as React from 'react';
+import { setClassNames } from '../../utils/set-class-names';
 
-declare interface props {
-    shrink?: boolean;
-    expand?: boolean;
-    width?: string;
-}
-
-export class TableHead extends React.Component<props, any> {
+export class TableHead extends React.Component<TableHeadProps, any> {
     render() {
         return (
-            <thead>
+            <thead
+                style={this.props.style ? this.props.style : null}
+                className={`${setClassNames(this.props)}`}>
                 {this.props.children}
             </thead>
         );

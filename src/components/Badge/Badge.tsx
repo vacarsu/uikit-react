@@ -1,13 +1,12 @@
 import * as React from 'react';
+import { setClassNames } from '../../utils/set-class-names';
 
-declare interface props {
-    count: number;
-}
-
-export class Badge extends React.Component<props, any> {
+export class Badge extends React.Component<BadgeProps, any> {
     render() {
         return (
-            <span className="uk-badge">
+            <span
+                style={this.props.style ? this.props.style : null}
+                className={`uk-badge ${setClassNames(this.props)}`}>
                 {this.props.count}
             </span>
         );

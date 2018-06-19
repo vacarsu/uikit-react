@@ -1,12 +1,12 @@
 import * as React from 'react';
+import { setClassNames } from '../../utils/set-class-names';
 
-declare interface props {
-}
-
-export class Breadcrumb extends React.Component<props, any> {
+export class Breadcrumb extends React.Component<BreadcrumbProps, any> {
     render() {
         return (
-            <ul className="uk-breadcrumb">
+            <ul 
+                style={this.props.style ? this.props.style : null}
+                className={`uk-breadcrumb ${setClassNames(this.props)}`}>
                 {this.props.children}
             </ul>
         );

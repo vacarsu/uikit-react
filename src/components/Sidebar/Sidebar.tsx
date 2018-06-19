@@ -1,18 +1,14 @@
 import * as React from 'react';
-import * as _classNames from 'classnames'; let classNames = _classNames;
-
+import * as _classNames from 'classnames';
+let classNames = _classNames;
 import { setClassNames } from '../../utils/set-class-names';
-import { Panel } from '../Panel/Panel';
 
-declare interface props extends BaseProps {
-    visibility?: string;
-}
-
-
-export class Sidebar extends React.Component<props, any> {
+export class Sidebar extends React.Component<SidebarProps, any> {
     render() {
         return (
-            <div style={this.props.style} className={this.setClassNames()}>
+            <div 
+                style={this.props.style ? this.props.style : null}
+                className={this.setClassNames()}>
                 {this.props.children}
             </div>
         );

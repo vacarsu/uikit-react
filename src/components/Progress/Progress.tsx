@@ -1,17 +1,9 @@
 import * as React from 'react';
-import { alignClass } from '../../utils/align-class';
-import { widthClass } from '../../utils/width-class';
+import * as _classNames from 'classnames'; 
+let classNames = _classNames;
+import { setClassNames } from '../../utils/set-class-names';
 
-declare interface props {
-    value: number;
-    max: number;
-}
-
-declare interface state {
-    value: number;
-}
-
-export class Progress extends React.Component<props, state> {
+export class Progress extends React.Component<ProgressProps, ProgressState> {
     constructor(props) {
         super(props);
 
@@ -29,10 +21,17 @@ export class Progress extends React.Component<props, state> {
     render() {
         return (
             <progress 
-                className="uk-progress"
+                style={this.props.style ? this.props.style : null}
+                className={`${this.setClassNames()}`}
                 value={this.state.value}
                 max={this.props.max}
             ></progress>
         );
+    }
+
+    private setClassNames() {
+        return classNames('uk-progress', {
+            [`${setClassNames(this.props)}`]: true
+        })
     }
 }

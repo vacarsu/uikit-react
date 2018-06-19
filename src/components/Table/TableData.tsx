@@ -1,16 +1,13 @@
 import * as React from 'react';
 import * as _classNames from 'classnames'; let classNames = _classNames;
+import { setClassNames } from '../../utils/set-class-names';
 
-declare interface props {
-    shrink?: boolean;
-    expand?: boolean;
-    width?: string;
-}
-
-export class TableData extends React.Component<props, any> {
+export class TableData extends React.Component<TableDataProps, any> {
     render() {
         return (
-            <td className={this.setClassNames()}>
+            <td 
+                style={this.props.style ? this.props.style : null}
+                className={this.setClassNames()}>
                 {this.props.children}
             </td>
         );
@@ -28,7 +25,8 @@ export class TableData extends React.Component<props, any> {
             return classNames({
                 [`uk-table-expand`]: this.props.expand,
                 [`uk-table-shrink`]: this.props.shrink,
-                [`uk-table-${this.props.width}`]: isWidth
+                [`uk-table-${this.props.width}`]: isWidth,
+                [`${setClassNames(this.props)}`]: true
             })
         }
     }

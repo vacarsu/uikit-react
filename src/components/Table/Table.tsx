@@ -1,35 +1,29 @@
 import * as React from 'react';
-import * as _classNames from 'classnames'; let classNames = _classNames;
+import * as _classNames from 'classnames';
+let classNames = _classNames;
+import { setClassNames } from '../../utils/set-class-names';
 
-declare interface props {
-    divider?: boolean;
-    striped?: boolean;
-    hover?: boolean;
-    justify?: boolean;
-    center?: boolean;
-    responsive?: boolean;
-    size?: string;
-}
-
-export class Table extends React.Component<props, any> {
+export class Table extends React.Component<TableProps, any> {
     render() {
         return (
-            <table className={`uk-table ${this.setClassNames()}`}>
+            <table 
+                style={this.props.style ? this.props.style : null}
+                className={`${this.setClassNames()}`}>
                 {this.props.children}
             </table>
         );
     }
 
     private setClassNames(): string {
-        const isSized = this.props.size ? true : false;
-        return classNames({
+        return classNames('uk-table', {
             [`uk-table-divider`]: this.props.divider,
             [`uk-table-striped`]: this.props.striped,
             [`uk-table-hover`]: this.props.hover,
             [`uk-table-justify`]: this.props.justify,
             [`uk-table-middle`]: this.props.center,
             [`uk-overflow-auto`]: this.props.responsive,
-            [`uk-table-${this.props.size}`]: isSized,
+            [`uk-table-${this.props.size}`]: !!this.props.size,
+            [`${setClassNames(this.props)}`]: true
         })
     }
 }
