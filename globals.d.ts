@@ -179,7 +179,10 @@ interface NavbarContainerProps extends BaseProps {
 }
 
 interface NavbarStickyProps extends BaseProps {
+    id?: string;
     options?: string;
+    onActive?: any;
+    onInactive?: any;
 }
 
 interface OffcanvasContainerProps extends BaseProps {
