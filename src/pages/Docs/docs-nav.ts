@@ -14,7 +14,7 @@ export const docsNav = {
     icon: 'Icon',
     image: 'Image',
     inverse: 'Inverse',
-    labels: 'Labels',
+    label: 'Label',
     Lightbox: 'Lightbox',
     link: 'Link',
     list: 'List',

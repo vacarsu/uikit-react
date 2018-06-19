@@ -6,14 +6,14 @@ Highlight important content
 
 | Property     | Type          | Default | Required | Description |
 | --------     |:-------------:| -------:| -------- | ----------- |
-| content      | string        |  -      |  true    | the labels content |
-| color        | string        |  -      |  false   | the labels color options are ```default```, ```success```, ```warning```, or ```danger```,|
+| content      | string        |  -      |  true    | the Label content |
+| color        | string        |  -      |  false   | the Label color options are ```default```, ```success```, ```warning```, or ```danger``` |
 
 
 ## Elements
 
 ``` tsx
-<Labels content="" />
+<Label content="" />
 ```
 
 ## Basic Usage
@@ -25,11 +25,11 @@ Highlight important content
     </ul>
     <ul className="uk-switcher">
         <li>
-          <Labels content="label" />
+          <Label content="label" />
         </li>
         <li>
             <pre>
-                <Code code='<Labels content="label" />'
+                <Code code='<Label content="label" />'
                 />
             </pre>
         </li>
@@ -45,18 +45,18 @@ Highlight important content
     </ul>
     <ul className="uk-switcher">
         <li>
-          <Labels color="defualt" content="label" />
-          <Labels color="success" content="label" />
-          <Labels color="warning" content="label" />
-          <Labels color="danger" content="label" />
+          <Label ClassName="uk-label-success" content="label" />
+          <Label ClassNames="success" content="label" />
+          <Label ClassNames="warning" content="label" />
+          <Label ClassNames="danger" content="label" />
         </li>
         <li>
             <pre>
                 <Code code=
-                  '<Labels color="defualt" content="label" />
-                  <Labels color="success" content="label" />
-                  <Labels color="warning" content="label" />
-                  <Labels color="danger" content="label" />'
+                  '<Label color="defualt" content="label" />
+                  <Label color="success" content="label" />
+                  <Label color="warning" content="label" />
+                  <Label color="danger" content="label" />'
                 />
             </pre>
         </li>
@@ -75,7 +75,7 @@ Highlight important content
           <Flex>
             <Card size="medium" width="1-2">
             <Flex alignment="right">
-              <Labels content="label" />
+              <Label content="label" />
             </Flex>
             <CardBody>
             <CardTitle>Title</CardTitle>
@@ -84,7 +84,7 @@ Highlight important content
             </Card>
             <Card size="medium" width="1-2">
             <Flex alignment="right">
-              <Labels color="success" content="label" />
+              <Label color="success" content="label" />
             </Flex>
             <CardBody>
             <CardTitle>Title</CardTitle>
@@ -99,7 +99,7 @@ Highlight important content
                   '<Flex>
                     <Card size="medium" width="1-2">
                     <Flex alignment="right">
-                      <Labels content="label" />
+                      <Label content="label" />
                     </Flex>
                     <CardBody>
                     <CardTitle>Title</CardTitle>
@@ -108,7 +108,7 @@ Highlight important content
                     </Card>
                     <Card size="medium" width="1-2">
                     <Flex alignment="right">
-                      <Labels color="success" content="label" />
+                      <Label color="success" content="label" />
                     </Flex>
                     <CardBody>
                     <CardTitle>Title</CardTitle>
