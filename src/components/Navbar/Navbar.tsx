@@ -1,13 +1,14 @@
 import * as React from 'react';
+import * as _classNames from 'classnames';
+let classNames = _classNames;
+import { setClassNames } from '../../utils/set-class-names';
 
-declare interface props {
-    align?: string;
-}
-
-export class Navbar extends React.Component<props, any> {
+export class Navbar extends React.Component<NavbarProps, any> {
     render() {
         return (
-            <div className={`${this.setAlign()}`}>
+            <div 
+                style={this.props.style ? this.props.style : null}
+                className={`${this.setClassNames()}`}>
                 <ul className="uk-navbar-nav">
                     {this.props.children}
                 </ul>
@@ -15,11 +16,11 @@ export class Navbar extends React.Component<props, any> {
         );
     }
 
-    private setAlign(): string {
-        if (this.props.align) {
-            return `uk-navbar-${this.props.align}`;
-        } else {
-            return `uk-navbar-left`;
-        }
+    private setClassNames() {
+        return classNames({
+            [`uk-navbar-left`]: !this.props.align,
+            [`uk-navbar-${this.props.align}`]: !!this.props.align,
+            [setClassNames(this.props)]: true
+        })
     }
 }

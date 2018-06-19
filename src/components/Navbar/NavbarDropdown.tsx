@@ -1,12 +1,12 @@
 import * as React from 'react';
+import { setClassNames } from '../../utils/set-class-names';
 
-declare interface props {
-}
-
-export class NavbarDropdown extends React.Component<props, any> {
+export class NavbarDropdown extends React.Component<BaseProps, any> {
     render() {
         return (
-            <div className="uk-navbar-dropdown">
+            <div 
+                style={this.props.style ? this.props.style : null}
+                className={`uk-navbar-dropdown ${setClassNames(this.props)}`}>
                 <ul className="uk-nav uk-navbar-dropdown-nav">
                     {this.props.children}
                 </ul>

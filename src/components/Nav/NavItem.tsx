@@ -1,15 +1,14 @@
 import * as React from 'react';
-import * as _classNames from 'classnames'; let classNames = _classNames;
+import * as _classNames from 'classnames';
+let classNames = _classNames;
+import { setClassNames } from '../../utils/set-class-names';
 
-declare interface props {
-    type?: 'header' | 'divider';
-    parent?: boolean;
-}
-
-export class NavItem extends React.Component<props, any> {
+export class NavItem extends React.Component<NavItemProps, any> {
     render() {
         return (
-            <li className={`${this.setClassNames()}`}>
+            <li 
+                style={this.props.style ? this.props.style : null}
+                className={`${this.setClassNames()}`}>
                 {this.props.children}
             </li>
         );
@@ -18,7 +17,8 @@ export class NavItem extends React.Component<props, any> {
     private setClassNames(): string {
         return classNames({
             [`uk-nav-${this.props.type}`]: !!this.props.type,
-            [`uk-parent`]: this.props.parent
+            [`uk-parent`]: this.props.parent,
+            [`${setClassNames(this.props)}`]: true
         })
     }
 }

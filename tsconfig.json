@@ -18,6 +18,8 @@
         "**/*.tsx"
     ],
     "files": [
-        "index.d.ts"
+        "index.d.ts",
+        "globals.d.ts",
+        "uikit.d.ts"
     ]
 }

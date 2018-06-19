@@ -1,26 +1,12 @@
 import * as React from 'react';
-import { alignClass } from '../../utils/align-class';
-import { heightClass } from '../../utils/height-class';
-import { widthClass } from '../../utils/width-class';
+import { setClassNames } from '../../utils/set-class-names';
 
-declare interface props {
-    src: string;
-    alt?: string;
-    type: 'video' | 'image';
-    videoFormat?: string;
-    autoPlay?: boolean;
-    loop?: boolean;
-    muted?: boolean;
-    playsinline?: boolean;
-    width?: string;
-    height?: string;
-    responsive?: boolean;
-}
-
-export class Cover extends React.Component<props, any> {
+export class Cover extends React.Component<CoverProps, any> {
     render() {
         return (
-            <div className="uk-cover-container">
+            <div
+                style={this.props.style ? this.props.style : null}
+                className={`uk-cover-container ${setClassNames(this.props)}`}>
                 {this.renderResponsiveMode()}
                 {this.renderBasedOnType()}
             </div>

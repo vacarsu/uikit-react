@@ -1,24 +1,23 @@
 import * as React from 'react';
-import { linkType } from '../../utils/link-type';
+import * as _classNames from 'classnames';
+let classNames = _classNames;
+import { setClassNames } from '../../utils/set-class-names';
 
-
-declare interface props extends BaseProps {
-    type?: 'bullet' | 'divider' | 'striped';
-}
-
-
-export class List extends React.Component<props, any> {
+export class List extends React.Component<ListProps, any> {
     render() {
         return (
-            <ul className={`uk-list ${this.setType()}`}>
+            <ul 
+                style={this.props.style ? this.props.style : null}
+                className={`${this.setClassNames()}`}>
                 {this.props.children}
             </ul>
         );
     }
 
-    setType() {
-        if(this.props.type) {
-            return `uk-list-${this.props.type}`;
-        }
+    private setClassNames() {
+        return classNames('uk-list', {
+            [`uk-link-${this.props.type}`]: !!this.props.type,
+            [`${setClassNames(this.props)}`]: true
+        });
     }
 }

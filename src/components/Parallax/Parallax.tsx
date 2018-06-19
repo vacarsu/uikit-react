@@ -1,14 +1,12 @@
 import * as React from 'react';
+import { setClassNames } from '../../utils/set-class-names';
 
-declare interface props extends BaseProps {
-  options: string;
-}
-
-
-export class Parallax extends React.Component<props, any> {
+export class Parallax extends React.Component<ParallaxProps, any> {
     render() {
         return (
-            <div>
+            <div 
+                style={this.props.style ? this.props.style : null}
+                className={`${setClassNames(this.props)}`}>
                 {this.applyParallaxFiltersToChild()}
             </div>
         );

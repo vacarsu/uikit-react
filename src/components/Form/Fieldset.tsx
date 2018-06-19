@@ -1,14 +1,13 @@
 import * as React from 'react';
 import * as _classNames from 'classnames';
 let classNames = _classNames;
+import { setClassNames } from '../../utils/set-class-names';
 
-declare interface props {
-}
-
-export class Fieldset extends React.Component<props, any> {
+export class Fieldset extends React.Component<BaseProps, any> {
     render() {
         return (
             <fieldset
+                style={this.props.style ? this.props.style : null}
                 className={this.setClassNames()}>
                 {this.props.children}
             </fieldset>
@@ -17,7 +16,8 @@ export class Fieldset extends React.Component<props, any> {
 
     private setClassNames(): string {
         return classNames({
-            [`uk-fieldset`]: true
+            [`uk-fieldset`]: true,
+            [`${setClassNames(this.props)}`]: true
         });
     }
 }

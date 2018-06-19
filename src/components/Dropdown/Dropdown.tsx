@@ -1,14 +1,15 @@
 import * as React from 'react';
+import { setClassNames } from '../../utils/set-class-names';
 
-declare interface props {
-    options?: string;
-}
-
-export class Dropdown extends React.Component<props, any> {
+export class Dropdown extends React.Component<DropdownProps, any> {
     render() {
         return (
-            <div uk-dropdown={this.props.options ? this.props.options : ""}>
-                <ul className="uk-nav uk-dropdown-nav">
+            <div
+                className={`${setClassNames(this.props)}`}
+                uk-dropdown={this.props.options ? this.props.options : ""}>
+                <ul
+                    style={this.props.style ? this.props.style : null}
+                    className={`uk-nav uk-dropdown-nav`}>
                     {this.props.children}
                 </ul>
             </div>

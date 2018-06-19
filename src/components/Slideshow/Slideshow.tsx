@@ -1,16 +1,15 @@
 import * as React from 'react';
+import * as _classNames from 'classnames';
+let classNames = _classNames;
+import { setClassNames } from '../../utils/set-class-names';
 
-declare interface props {
-    options?: string;
-    navigation?: boolean;
-    navigationStyle?: 'dark' | 'light';
-}
-
-
-export class Slideshow extends React.Component<props, any> {
+export class Slideshow extends React.Component<SlideshowProps, any> {
     render() {
         return (
-            <div uk-slideshow={this.props.options ? this.props.options : ""}>
+            <div 
+                style={this.props.style ? this.props.style : null}
+                className={`${setClassNames(this.props)}`}
+                uk-slideshow={this.props.options ? this.props.options : ""}>
                 {this.setNavigation()}
             </div>
         );
@@ -19,7 +18,8 @@ export class Slideshow extends React.Component<props, any> {
     private setNavigation() {
         if (this.props.navigation) {
             return (
-                <div className={`uk-position-relative uk-visible-toggle ${this.setNavigationStyle()}`}>
+                <div 
+                    className={`uk-position-relative uk-visible-toggle ${this.setNavigationStyle()}`}>
                     <ul className="uk-slideshow-items">
                         {this.props.children}
                     </ul>

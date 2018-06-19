@@ -1,12 +1,12 @@
 import * as React from 'react';
+import { setClassNames } from '../../utils/set-class-names';
 
-declare interface props {
-}
-
-export class TableBody extends React.Component<props, any> {
+export class TableBody extends React.Component<BaseProps, any> {
     render() {
         return (
-            <tbody>
+            <tbody
+                style={this.props.style ? this.props.style : null}
+                className={`${setClassNames(this.props)}`}>
                 {this.props.children}
             </tbody>
         );

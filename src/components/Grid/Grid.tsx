@@ -1,53 +1,26 @@
 import * as React from 'react';
-import { alignClass } from '../../utils/align-class';
-import { heightClass } from '../../utils/height-class';
-import { widthClass } from '../../utils/width-class';
+import * as _classNames from 'classnames';
+let classNames = _classNames;
+import { setClassNames } from '../../utils/set-class-names';
 
-declare interface props {
-    gutter?: string;
-    divider?: boolean;
-    match?: boolean;
-    masonry?: boolean;
-}
-
-export class Grid extends React.Component<props, any> {
+export class Grid extends React.Component<GridProps, any> {
     render() {
         return (
-            <div className={`
-                    ${this.setGutter()}
-                    ${this.setDivider()}
-                    ${this.setMatch()}
-                `}
-                 uk-grid={`
-                    ${this.setMasonry()}
-                 `}
-            >
+            <div 
+                style={this.props.style ? this.props.style : null}
+                className={`${this.setClassNames()}`}
+                uk-grid={this.props.options ? this.props.options : ""}>
                 {this.props.children}
             </div>
         );
     }
 
-    private setGutter(): string {
-        if (this.props.gutter) {
-            return `uk-grid-${this.props.gutter}`
-        }
-    }
-
-    private setDivider(): string {
-        if (this.props.divider) {
-            return `uk-grid-divider`;
-        }
-    }
-
-    private setMatch(): string {
-        if (this.props.match) {
-            return `uk-grid-match`;
-        }
-    }
-
-    private setMasonry(): string {
-        if (this.props.masonry) {
-            return 'masonry: true;'
-        }
+    private setClassNames() {
+        return classNames({
+            [`uk-grid-${this.props.gutter}`]: !!this.props.gutter,
+            [`uk-grid-divider`]: this.props.divider,
+            [`uk-grid-match`]: this.props.match,
+            [`${setClassNames(this.props)}`]: true
+        });
     }
 }

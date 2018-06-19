@@ -1,23 +1,16 @@
 import * as React from 'react';
+import * as _classNames from 'classnames';
+let classNames = _classNames;
+import { setClassNames } from '../../utils/set-class-names';
 
-declare interface props {
-    src: string;
-    options?: string;
-    className?: string;
-    width?: string;
-    height?: string;
-    style?: object;
-    alt?: string;
-}
-
-export class Image extends React.Component<props, any> {
+export class Image extends React.Component<ImageProps, any> {
     render() {
         return (
             <img
                 className={this.props.className}
                 width={this.props.width}
                 height={this.props.height}
-                style={this.props.style}
+                style={this.props.style ? this.props.style : null}
                 data-src={this.props.src}
                 uk-img={this.props.options ? this.props.options : ""}
             />

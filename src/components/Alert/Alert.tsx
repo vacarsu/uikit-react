@@ -1,19 +1,11 @@
 import * as React from 'react';
-import * as _classNames from 'classnames'; let classNames = _classNames;
+import * as _classNames from 'classnames';
+let classNames = _classNames;
 
 import { setClassNames } from '../../utils/set-class-names';
 import { Icon } from '../Icon/Icon';
 
-declare interface props extends BaseProps {
-    content: string;
-    color?: string;
-    duration?: number;
-    isClosable?: boolean;
-    onBeforeHide?: Function;
-    onHide?: Function;
-}
-
-export class Alert extends React.Component<props, any> {
+export class Alert extends React.Component<AlertProps, any> {
     durationTimeout;
     leaveTimeout;
     constructor(props) {
@@ -47,7 +39,8 @@ export class Alert extends React.Component<props, any> {
                     overflow: 'hidden',
                     transition: 'height 0.5s ease-in-out, opacity 0.3s ease-in-out',
                     height: !this.state.isOpen ? 0 : 'auto',
-                    opacity: !this.state.isOpen ? 0 : 1
+                    opacity: !this.state.isOpen ? 0 : 1,
+                    ...this.props.style
                 }}
             >
                 {

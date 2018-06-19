@@ -1,15 +1,12 @@
 import * as React from 'react';
+import { setClassNames } from '../../utils/set-class-names';
 
-declare interface props extends BaseProps {
-
-}
-
-export class Light extends React.Component<props, any> {
+export class Light extends React.Component<BaseContainerProps, any> {
     render() {
         return (
-            <div className={`
-                uk-light
-            `}>
+            <div 
+                style={this.props.style ? this.props.style : null}
+                className={`uk-light ${setClassNames(this.props)}`}>
                 {this.props.children}
             </div>
         );

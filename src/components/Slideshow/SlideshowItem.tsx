@@ -1,21 +1,12 @@
 import * as React from 'react';
+import { setClassNames } from '../../utils/set-class-names';
 
-declare interface props {
-    src: string;
-    alt?: string;
-    type: 'image' | 'video';
-    videoFormat?: string;
-    autoPlay?: boolean;
-    loop?: boolean;
-    muted?: boolean;
-    playsinline?: boolean;
-}
-
-
-export class SlideshowItem extends React.Component<props, any> {
+export class SlideshowItem extends React.Component<SlideshowItemProps, any> {
     render() {
         return (
-            <li>
+            <li
+                style={this.props.style ? this.props.style : null}
+                className={`${setClassNames(this.props)}`}>
                 {this.renderBasedOnType()}
             </li>
         );

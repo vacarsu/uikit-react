@@ -1,13 +1,13 @@
 import * as React from 'react';
-import * as _classNames from 'classnames'; let classNames = _classNames;
+import * as _classNames from 'classnames';
+let classNames = _classNames;
+import { setClassNames } from '../../utils/set-class-names';
 
-declare interface props {
-}
-
-export class Legend extends React.Component<props, any> {
+export class Legend extends React.Component<BaseProps, any> {
     render() {
         return (
             <legend
+                style={this.props.style ? this.props.style : null}
                 className={this.setClassNames()}>
                 {this.props.children}
             </legend>
@@ -16,7 +16,8 @@ export class Legend extends React.Component<props, any> {
 
     private setClassNames(): string {
         return classNames({
-            [`uk-legend`]: true
+            [`uk-legend`]: true,
+            [`${setClassNames(this.props)}`]: true
         });
     }
 }

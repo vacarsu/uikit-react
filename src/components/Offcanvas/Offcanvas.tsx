@@ -1,17 +1,7 @@
 import * as React from 'react';
+import { setClassNames } from '../../utils/set-class-names';
 
-declare interface props extends BaseProps {
-    id: string;
-    options?: string;
-    onBeforeShow?: Function;
-    onShow?: Function;
-    onShown?: Function;
-    onBeforeHide?: Function;
-    onHide?: Function;
-    onHidden?: Function;
-}
-
-export class Offcanvas extends React.Component<props, any> {
+export class Offcanvas extends React.Component<OffcanvasContainerProps, any> {
     componentDidMount() {
         if (this.props.onBeforeShow) {
             UIkit.util.on(this.props.id, 'beforeshow', this.props.onBeforeShow);
@@ -40,7 +30,11 @@ export class Offcanvas extends React.Component<props, any> {
 
     render() {
         return (
-            <div id={this.props.id} uk-offcanvas={this.props.options ? this.props.options : ""}>
+            <div 
+                id={this.props.id}
+                style={this.props.style ? this.props.style : null}
+                className={`${setClassNames(this.props)}`}
+                uk-offcanvas={this.props.options ? this.props.options : ""}>
                 <div className="uk-offcanvas-bar">
                     {this.props.children}
                 </div>
