@@ -3,19 +3,19 @@ import * as React from 'react';
 declare interface props {
     id?: string;
     options?: string;
-    active?: Function;
-    inactive?: Function;
+    onActive?: Function;
+    onInactive?: Function;
 }
 
 export class NavbarSticky extends React.Component<props, any> {
     componentDidMount(){   
-        if(this.props.active){
+        if(this.props.onActive){
             this.validateIdProp();
-            UIkit.util.on(this.props.id, 'active', this.props.active);
+            UIkit.util.on(this.props.id, 'active', this.props.onActive);
         }
-        if(this.props.inactive){
+        if(this.props.onInactive){
             this.validateIdProp();
-            UIkit.util.on(this.props.id, 'active', this.props.inactive);
+            UIkit.util.on(this.props.id, 'active', this.props.onInactive);
         }
         }
  
