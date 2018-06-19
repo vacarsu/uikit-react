@@ -15,9 +15,10 @@ Create a responsive lightbox gallery with images and videos.
 | `autoplay` | Number | `0` | Delay of autoplay in milliseconds. |
 | `autoplay-interval` | Number | `0` | Delay of slide switch in autoplay mode. |
 | `pause-on-hover` | Boolean | false | Pause video play on hover. |
-| `video-autoplay` | Boolean | false | Video autoplays. |
+| `video-autoplay` | Boolean | `false` | Video autoplays. |
 | `index` | Integer, String | `0` | Which Lightbox item to show. This is a zero-based index. |
 | `toggle` | CSS selector | `a` |Toggle selector. Opens the Lightbox panel upon click. |
+
 ## Elements
 
 ``` tsx
@@ -38,7 +39,7 @@ Create a responsive lightbox gallery with images and videos.
         </li>
         <li>
             <pre>
-                <Code code='<Lightbox><Button class="uk-button uk-button-default" href="src/images/background.jpeg">Open</Button></Lightbox>'
+                <Code code='tsx <Lightbox><Button class="uk-button uk-button-default" href="src/images/background.jpeg">Open</Button></Lightbox>'
                 />
             </pre>
         </li>
