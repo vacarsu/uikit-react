@@ -46,8 +46,8 @@ class ExamplePage extends React.Component<any, any> {
 
                 <Router basename="/uikit-react">
                     <Section position="relative">
-                            <NavbarSticky options="sel-target: .uk-navbar-container; cls-active:uk-navbar-transparent; cls-inactive: uk-navbar-transparent uk-light;" >
-                            <Section color="secondary" preserveColor>
+                    <Section color="secondary" preserveColor>
+                            <NavbarSticky options="animation: uk-animation-slide-top; sel-target:.uk-navbar-container; cls-inactive:uk-navbar-transparent uk-light; top:100;">
                                 <NavbarContainer>
                                     <Navbar align="left">
                                         <ListItem padding="small">
@@ -73,8 +73,8 @@ class ExamplePage extends React.Component<any, any> {
                                         </ListItem>
                                     </Navbar>
                                 </NavbarContainer>
-                                </Section>
                             </NavbarSticky>
+                            </Section>
 
                         <Route exact path="/" component={IndexPage} />
                         <Route path="/docs" component={DocsPage} />
