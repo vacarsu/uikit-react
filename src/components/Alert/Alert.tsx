@@ -34,6 +34,7 @@ export class Alert extends React.Component<AlertProps, any> {
 
         return (
             <div
+                id={this.props.id ? this.props.id : null}
                 className={this.setClassNames()}
                 style={{
                     overflow: 'hidden',

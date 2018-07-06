@@ -7,6 +7,7 @@ export class Link extends React.Component<LinkProps, any> {
     render() {
         return (
             <a
+                id={this.props.id ? this.props.id : null}
                 style={this.props.style ? this.props.style : null}
                 uk-toggle={this.props.toggleOptions ? this.props.toggleOptions : null}
                 href={this.props.href}

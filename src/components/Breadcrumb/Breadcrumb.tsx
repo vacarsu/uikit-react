@@ -5,6 +5,7 @@ export class Breadcrumb extends React.Component<BreadcrumbProps, any> {
     render() {
         return (
             <ul 
+                id={this.props.id ? this.props.id : null}
                 style={this.props.style ? this.props.style : null}
                 className={`uk-breadcrumb ${setClassNames(this.props)}`}>
                 {this.props.children}

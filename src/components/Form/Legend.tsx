@@ -7,6 +7,7 @@ export class Legend extends React.Component<BaseProps, any> {
     render() {
         return (
             <legend
+                id={this.props.id ? this.props.id : null}
                 style={this.props.style ? this.props.style : null}
                 className={this.setClassNames()}>
                 {this.props.children}

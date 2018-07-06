@@ -5,6 +5,7 @@ export class Article extends React.Component<ArticleProps, any> {
     render() {
         return (
             <article
+                id={this.props.id ? this.props.id : null}
                 style={this.props.style ? this.props.style : null}
                 className={`
                     uk-article

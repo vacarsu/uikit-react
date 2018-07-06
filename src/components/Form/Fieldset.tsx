@@ -7,6 +7,7 @@ export class Fieldset extends React.Component<BaseProps, any> {
     render() {
         return (
             <fieldset
+                id={this.props.id ? this.props.id : null}
                 style={this.props.style ? this.props.style : null}
                 className={this.setClassNames()}>
                 {this.props.children}

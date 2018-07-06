@@ -7,6 +7,7 @@ export class NavItem extends React.Component<NavItemProps, any> {
     render() {
         return (
             <li 
+                id={this.props.id ? this.props.id : null}
                 style={this.props.style ? this.props.style : null}
                 className={`${this.setClassNames()}`}>
                 {this.props.children}

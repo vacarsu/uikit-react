@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { setClassNames } from '../../utils/set-class-names';
 
-export class Offcanvas extends React.Component<OffcanvasContainerProps, any> {
+export class Offcanvas extends React.Component<OffcanvasProps, any> {
     componentDidMount() {
         if (this.props.onBeforeShow) {
             UIkit.util.on(this.props.id, 'beforeshow', this.props.onBeforeShow);

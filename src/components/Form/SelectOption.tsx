@@ -7,6 +7,7 @@ export class SelectOption extends React.Component<React.HTMLProps<HTMLOptionElem
     render() {
         return (
             <option
+                id={this.props.id ? this.props.id : null}
                 style={this.props.style ? this.props.style : null}
                 className={`${setClassNames(this.props)}`}
                 value={this.props.value}>

@@ -39,6 +39,7 @@ export class TabContainer extends React.Component<TabContainerProps, any> {
     render() {
         return (
             <div 
+                id={this.props.id ? this.props.id : null}
                 style={this.props.style ? this.props.style : null}
                 className={setClassNames(this.props)}>
                 <ul uk-tab={this.props.options ? this.props.options : ""}>

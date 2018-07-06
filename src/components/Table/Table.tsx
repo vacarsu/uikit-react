@@ -7,6 +7,7 @@ export class Table extends React.Component<TableProps, any> {
     render() {
         return (
             <table 
+                id={this.props.id ? this.props.id : null}
                 style={this.props.style ? this.props.style : null}
                 className={`${this.setClassNames()}`}>
                 {this.props.children}

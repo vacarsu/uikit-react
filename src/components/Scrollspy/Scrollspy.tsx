@@ -5,6 +5,7 @@ export class Scrollspy extends React.Component<ScrollspyProps, any> {
     render() {
         return (
             <div 
+                id={this.props.id ? this.props.id : null}
                 style={this.props.style ? this.props.style : null}
                 className={`${setClassNames(this.props)}`}
                 uk-scrollspy={this.props.options ? this.props.options : ""}>

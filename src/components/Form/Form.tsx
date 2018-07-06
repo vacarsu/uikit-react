@@ -7,6 +7,7 @@ export class Form extends React.Component<FormProps, any> {
     render() {
         return (
             <div
+                id={this.props.id ? this.props.id : null}
                 style={this.props.style ? this.props.style : null}
                 className={this.setClassNames()}
                 uk-form-custom={this.props.custom ? "" : null}>

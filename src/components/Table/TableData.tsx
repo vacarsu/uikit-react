@@ -6,6 +6,7 @@ export class TableData extends React.Component<TableDataProps, any> {
     render() {
         return (
             <td 
+                id={this.props.id ? this.props.id : null}
                 style={this.props.style ? this.props.style : null}
                 className={this.setClassNames()}>
                 {this.props.children}

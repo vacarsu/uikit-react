@@ -7,6 +7,7 @@ export class Margin extends React.Component<MarginProps, any> {
     render() {
         return (
             <div 
+                id={this.props.id ? this.props.id : null}
                 style={this.props.style ? this.props.style : null}
                 uk-margin={this.props.dynamicWrapping}
                 className={this.setClassNames()}>

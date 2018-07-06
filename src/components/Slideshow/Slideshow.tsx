@@ -6,7 +6,8 @@ import { setClassNames } from '../../utils/set-class-names';
 export class Slideshow extends React.Component<SlideshowProps, any> {
     render() {
         return (
-            <div 
+            <div
+                id={this.props.id ? this.props.id : null} 
                 style={this.props.style ? this.props.style : null}
                 className={`${setClassNames(this.props)}`}
                 uk-slideshow={this.props.options ? this.props.options : ""}>

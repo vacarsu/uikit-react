@@ -8,6 +8,7 @@ export class Container extends React.Component<ContainerProps, any> {
     render() {
         return (
             <div
+                id={this.props.id ? this.props.id : null}
                 style={this.props.style ? this.props.style : null}
                 className={this.setClassNames()}>
                 {this.props.children}

@@ -5,6 +5,7 @@ export class Parallax extends React.Component<ParallaxProps, any> {
     render() {
         return (
             <div 
+                id={this.props.id ? this.props.id : null}
                 style={this.props.style ? this.props.style : null}
                 className={`${setClassNames(this.props)}`}>
                 {this.applyParallaxFiltersToChild()}

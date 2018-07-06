@@ -8,6 +8,7 @@ export class Button extends React.Component<ButtonProps, any> {
         return (
             this.isLink() ?
             <a 
+                id={this.props.id ? this.props.id : null}
                 style={this.props.style ? this.props.style : null}
                 uk-toggle={this.props.toggleOptions}
                 href={this.props.href}
@@ -17,7 +18,8 @@ export class Button extends React.Component<ButtonProps, any> {
                 {this.props.children}
             </a>
             :
-            <button 
+            <button
+                id={this.props.id ? this.props.id : null} 
                 style={this.props.style ? this.props.style : null}
                 uk-toggle={this.props.toggleOptions}
                 onClick={this.props.onClick}

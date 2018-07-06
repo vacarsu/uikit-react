@@ -7,6 +7,7 @@ export class TableHeader extends React.Component<TableHeaderProps, any> {
     render() {
         return (
             <th 
+                id={this.props.id ? this.props.id : null}
                 style={this.props.style ? this.props.style : null}
                 className={this.setClassNames()}>
                 {this.props.children}

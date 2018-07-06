@@ -14,6 +14,7 @@ export class Icon extends React.Component<IconProps, any> {
         if (this.props.href) {
             return (
                 <a
+                    id={this.props.id ? this.props.id : null}
                     style={this.props.style ? this.props.style : null}
                     className={this.getClassNames()}
                     href={this.props.href}
@@ -23,6 +24,7 @@ export class Icon extends React.Component<IconProps, any> {
         } else if (this.props.image) {
             return (
                 <span
+                    id={this.props.id ? this.props.id : null}
                     className={this.getClassNames()}
                     style={{ backgroundImage: `url(${this.props.image})`, ...this.props.style }}
                     uk-icon={this.props.options}
@@ -31,6 +33,7 @@ export class Icon extends React.Component<IconProps, any> {
         } else {
             return (
                 <em
+                    id={this.props.id ? this.props.id : null}
                     style={this.props.style ? this.props.style : null}
                     className={this.getClassNames()}
                     uk-icon={this.props.options}

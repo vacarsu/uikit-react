@@ -21,6 +21,7 @@ export class Progress extends React.Component<ProgressProps, ProgressState> {
     render() {
         return (
             <progress 
+                id={this.props.id ? this.props.id : null}
                 style={this.props.style ? this.props.style : null}
                 className={`${this.setClassNames()}`}
                 value={this.state.value}

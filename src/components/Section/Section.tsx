@@ -7,6 +7,7 @@ export class Section extends React.Component<SectionProps, any> {
     render() {
         return (
             <div 
+                id={this.props.id ? this.props.id : null}
                 style={this.props.style ? this.props.style : null}
                 className={`${this.setClassNames()}`}>
                 {this.props.children}

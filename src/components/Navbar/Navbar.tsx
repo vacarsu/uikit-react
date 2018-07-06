@@ -7,6 +7,7 @@ export class Navbar extends React.Component<NavbarProps, any> {
     render() {
         return (
             <div 
+                id={this.props.id ? this.props.id : null}
                 style={this.props.style ? this.props.style : null}
                 className={`${this.setClassNames()}`}>
                 <ul className="uk-navbar-nav">

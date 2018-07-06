@@ -1,4 +1,5 @@
 interface BaseProps {
+    id?: string;
     className?: string;
     style?: object;
 }
@@ -186,7 +187,7 @@ interface NavbarStickyProps extends BaseProps {
     onInactive?: any;
 }
 
-interface OffcanvasContainerProps extends BaseProps {
+interface OffcanvasProps extends BaseProps {
     id: string;
     options?: string;
     onBeforeShow?: Function;

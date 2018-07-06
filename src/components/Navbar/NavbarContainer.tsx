@@ -8,6 +8,7 @@ export class NavbarContainer extends React.Component<NavbarContainerProps, any> 
         return (
             <div>
                 <nav
+                    id={this.props.id ? this.props.id : null}
                     className={`${this.setClassNames()}`}
                     style={this.props.style ? this.props.style : null}
                     uk-navbar={this.props.options ? this.props.options : ""}

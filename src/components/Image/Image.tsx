@@ -7,6 +7,7 @@ export class Image extends React.Component<ImageProps, any> {
     render() {
         return (
             <img
+                id={this.props.id ? this.props.id : null}
                 className={this.props.className}
                 width={this.props.width}
                 height={this.props.height}

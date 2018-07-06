@@ -1,13 +1,13 @@
 import * as React from 'react';
-import * as _classNames from 'classnames'; let classNames = _classNames;
-import { setClassNames } from '../../utils/set-class-names'
 
 export class AccordionItem extends React.Component<AccordionItemProps, any> {
     render() {
+        const { title, content, ...rest } = this.props;
+
         return (
-            <li style={this.props.style ? this.props.style : null}>
-                <a className="uk-accordion-title" href="#">{this.props.title}</a>
-                <div className="uk-accordion-content">{this.props.content}</div>
+            <li { ...rest }>
+                <a className="uk-accordion-title" href="#">{title}</a>
+                <div className="uk-accordion-content">{content}</div>
             </li>
         );
     }

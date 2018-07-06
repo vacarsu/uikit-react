@@ -7,6 +7,7 @@ export class Nav extends React.Component<NavProps, any> {
     render() {
         return (
             <ul 
+                id={this.props.id ? this.props.id : null}
                 style={this.props.style ? this.props.style : null}
                 className={`${this.setClassNames()}`}
                 uk-nav={this.props.options ? this.props.options : ""}

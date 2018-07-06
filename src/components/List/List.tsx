@@ -7,6 +7,7 @@ export class List extends React.Component<ListProps, any> {
     render() {
         return (
             <ul 
+                id={this.props.id ? this.props.id : null}
                 style={this.props.style ? this.props.style : null}
                 className={`${this.setClassNames()}`}>
                 {this.props.children}

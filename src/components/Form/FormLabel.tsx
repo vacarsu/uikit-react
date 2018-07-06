@@ -7,6 +7,7 @@ export class FormLabel extends React.Component<React.HTMLProps<HTMLLabelElement>
     render() {
         return (
             <label
+                id={this.props.id ? this.props.id : null}
                 style={this.props.style ? this.props.style : null}
                 className={`${setClassNames(this.props)}`}
                 htmlFor={this.props.htmlFor}>

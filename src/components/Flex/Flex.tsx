@@ -7,6 +7,7 @@ export class Flex extends React.Component<FlexProps, any> {
     render() {
         return (
             <div
+                id={this.props.id ? this.props.id : null}
                 style={this.props.style ? this.props.style : null}
                 className={`uk-flex ${this.setClassNames()}`}>
                 {this.props.children}
