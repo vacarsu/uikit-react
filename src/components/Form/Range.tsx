@@ -8,6 +8,7 @@ export class Range extends React.Component<FormInputProps, any> {
         return (
             <input
                 id={this.props.id}
+                placeholder={this.props.placeholder ? this.props.placeholder : null}
                 style={this.props.style ? this.props.style : null}
                 className={this.setClassNames()}
                 type="range"

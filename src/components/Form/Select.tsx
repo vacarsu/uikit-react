@@ -10,6 +10,7 @@ export class Select extends React.Component<FormSelectProps, any> {
         return (
             <select
                 id={this.props.id}
+                placeholder={this.props.placeholder ? this.props.placeholder : null}
                 style={this.props.style ? this.props.style : null}
                 className={this.setClassNames()}
                 value={this.props.value}

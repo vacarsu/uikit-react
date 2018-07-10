@@ -8,10 +8,10 @@ export class Textarea extends React.Component<FormTextareaProps, any> {
         return (
             <textarea
                 id={this.props.id ? this.props.id : null}
+                placeholder={this.props.placeholder ? this.props.placeholder : null}
                 style={this.props.style ? this.props.style : null}
                 className={this.setClassNames()}
                 name={this.props.name ? this.props.name : null}
-                placeholder={this.props.placeholder}
                 onChange={this.props.onChange}
                 onBlur={this.props.onBlur}
                 onFocus={this.props.onFocus}
