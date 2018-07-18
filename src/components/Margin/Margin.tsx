@@ -1,31 +1,32 @@
-import * as React from 'react';
-import * as _classNames from 'classnames';
+import * as React from "react";
+import * as _classNames from "classnames";
 let classNames = _classNames;
-import { setClassNames } from '../../utils/set-class-names';
+import { setClassNames } from "../../utils/set-class-names";
 
 export class Margin extends React.Component<MarginProps, any> {
-    render() {
-        return (
-            <div 
-                id={this.props.id ? this.props.id : null}
-                style={this.props.style ? this.props.style : null}
-                uk-margin={this.props.dynamicWrapping}
-                className={this.setClassNames()}>
-                {this.props.children}
-            </div>
-        );
-    }
+  render() {
+    return (
+      <div
+        id={this.props.id ? this.props.id : null}
+        style={this.props.style ? this.props.style : null}
+        uk-margin={this.props.dynamicWrapping}
+        className={this.setClassNames()}
+      >
+        {this.props.children}
+      </div>
+    );
+  }
 
-    private setClassNames() {
-        const stringArray = this.props.type.split('; ');
-        let classString: string;
-        
-        stringArray.map((string, idx) => {
-            classString = `${classString} uk-margin-${string}`;
-        });
+  private setClassNames() {
+    const stringArray = this.props.type.split("; ");
+    let classString: string;
 
-        return classNames(classString, {
-            [`${setClassNames(this.props)}`]: true
-        })
-    }
+    stringArray.map((string, idx) => {
+      classString = `${classString} uk-margin-${string}`;
+    });
+
+    return classNames(classString, {
+      [`${setClassNames(this.props)}`]: true
+    });
+  }
 }

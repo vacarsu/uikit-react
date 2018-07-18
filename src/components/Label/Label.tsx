@@ -1,23 +1,24 @@
-import * as React from 'react';
-import * as _classNames from 'classnames';
+import * as React from "react";
+import * as _classNames from "classnames";
 let classNames = _classNames;
-import { setClassNames } from '../../utils/set-class-names';
+import { setClassNames } from "../../utils/set-class-names";
 
 export class Label extends React.Component<LabelProps, any> {
-    render() {
-        return (
-            <div 
-                id={this.props.id ? this.props.id : null}
-                style={this.props.style ? this.props.style : null}
-                className={`${setClassNames(this.props)}`}>
-                {this.props.content}
-            </div>
-        );
-    }
+  render() {
+    return (
+      <div
+        id={this.props.id ? this.props.id : null}
+        style={this.props.style ? this.props.style : null}
+        className={`${setClassNames(this.props)}`}
+      >
+        {this.props.content}
+      </div>
+    );
+  }
 
-    private setClassNames() {
-        return classNames('uk-label', {
-            [`uk-label-${this.props.color}`]: !!this.props.color
-        });
-    }
+  private setClassNames() {
+    return classNames("uk-label", {
+      [`uk-label-${this.props.color}`]: !!this.props.color
+    });
+  }
 }

@@ -1,45 +1,44 @@
-import * as React from 'react';
-import * as _classNames from 'classnames';
+import * as React from "react";
+import * as _classNames from "classnames";
 let classNames = _classNames;
-import { setClassNames } from '../../utils/set-class-names';
+import { setClassNames } from "../../utils/set-class-names";
 
 export class Button extends React.Component<ButtonProps, any> {
-    render() {
-        return (
-            this.isLink() ?
-            <a 
-                id={this.props.id ? this.props.id : null}
-                style={this.props.style ? this.props.style : null}
-                uk-toggle={this.props.toggleOptions}
-                href={this.props.href}
-                onClick={this.props.onClick}
-                className={this.setClassNames()}
-            >
-                {this.props.children}
-            </a>
-            :
-            <button
-                id={this.props.id ? this.props.id : null} 
-                style={this.props.style ? this.props.style : null}
-                uk-toggle={this.props.toggleOptions}
-                onClick={this.props.onClick}
-                className={this.setClassNames()}
-            >
-                {this.props.children}
-            </button>
-        )
-    }
+  render() {
+    return this.isLink() ? (
+      <a
+        id={this.props.id ? this.props.id : null}
+        style={this.props.style ? this.props.style : null}
+        uk-toggle={this.props.toggleOptions}
+        href={this.props.href}
+        onClick={this.props.onClick}
+        className={this.setClassNames()}
+      >
+        {this.props.children}
+      </a>
+    ) : (
+      <button
+        id={this.props.id ? this.props.id : null}
+        style={this.props.style ? this.props.style : null}
+        uk-toggle={this.props.toggleOptions}
+        onClick={this.props.onClick}
+        className={this.setClassNames()}
+      >
+        {this.props.children}
+      </button>
+    );
+  }
 
-    private isLink(): boolean {
-        return this.props.href ? true : false;
-    }
+  private isLink(): boolean {
+    return this.props.href ? true : false;
+  }
 
-    private setClassNames(): string {
-        return classNames('uk-button', {
-            [`uk-button-default`]: !this.props.color,
-            [`uk-button-${this.props.color}`]: !!this.props.color,
-            [`uk-button-${this.props.size}`]: !!this.props.size,
-            [`${setClassNames(this.props)}`]: true
-        });
-    }
+  private setClassNames(): string {
+    return classNames("uk-button", {
+      [`uk-button-default`]: !this.props.color,
+      [`uk-button-${this.props.color}`]: !!this.props.color,
+      [`uk-button-${this.props.size}`]: !!this.props.size,
+      [`${setClassNames(this.props)}`]: true
+    });
+  }
 }
