@@ -13,7 +13,7 @@ export class Image extends React.Component<ImageProps, any> {
                 height={this.props.height}
                 style={this.props.style ? this.props.style : null}
                 data-src={this.props.src}
-                uk-img={this.props.options ? this.props.options : ""}
+                data-uk-img={this.props.options ? this.props.options : ""}
             />
         );
     }

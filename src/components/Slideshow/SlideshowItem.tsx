@@ -19,7 +19,7 @@ export class SlideshowItem extends React.Component<SlideshowItemProps, any> {
                 <img
                     src={this.props.src}
                     alt={this.props.alt}
-                    uk-cover=""
+                    data-uk-cover={''}
                 />
             );
         } else if (this.props.type === 'video') {
@@ -29,7 +29,7 @@ export class SlideshowItem extends React.Component<SlideshowItemProps, any> {
                     loop={this.props.loop}
                     muted={this.props.muted}
                     playsinline={this.props.playsinline}
-                    uk-cover=""
+                   data-uk-cover={''}
                 >
                     <source src={this.props.src} type={`${this.props.type}/${this.props.videoFormat}`} />
                 </video>

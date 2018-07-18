@@ -8,7 +8,7 @@ export class Lightbox extends React.Component<LightboxProps, any> {
                 id={this.props.id ? this.props.id : null}
                 style={this.props.style ? this.props.style : null}
                 className={setClassNames(this.props)}
-                uk-lightbox={this.props.options ? this.props.options : ""}>
+                data-uk-lightbox={this.props.options ? this.props.options : ""}>
                 {this.props.children}
             </div>
         );
