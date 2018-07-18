@@ -1,6 +1,7 @@
  {
       "**/*.{ts,tsx}": [
-      "prettier --write",
+      "npm run prettier:fix",
+      "npm run lint:fix",
       "git add"
     ]
   }

@@ -8,8 +8,8 @@
   "module": "./lib/uikit-react.js",
   "scripts": {
     "build": "rollup -c",
-    "tsd:lint": "tslint \"./index.d.ts\" \"./src/**/*.d.ts\" \"./src/**/*.tsx\" \"./test/**/*.d.ts\" \"./test/**/*.tsx\"",
-    "tsd:lint:fix": "yarn tsd:lint --fix",
+    "lint": "tslint -c tslint.json \"src/**/*.ts\"",
+    "lint:fix": "tslint --fix -c tslint.json \"src/**/*.ts\"",
     "prettier": "prettier --list-different \"**/*.{js,jsx,ts,tsx}\"",
     "prettier:fix": "prettier --write \"**/*.{js,jsx,ts,tsx}\"",
     "precommit": "lint-staged"
@@ -53,5 +53,46 @@
     "tslint-config-airbnb": "^5.9.2",
     "typescript": "^2.9.1",
     "uglify-es": "^3.3.9"
+  },
+  "dependencies": {
+    "@types/jest": "^23.3.0",
+    "jest": "^23.4.1",
+    "ts-jest": "^23.0.1"
+  },
+  "jest": {
+    "transformIgnorePatterns": [
+      "node_modules/(?!shiva/)"
+    ],
+    "globals": {
+      "ts-jest": {
+        "tsConfigFile": "tsconfig.test.json"
+      },
+      "google": {}
+    },
+    "collectCoverageFrom": [
+      "src/**/*.ts",
+      "!src/**/*.schema.ts",
+      "!src/schema/*.ts"
+    ],
+    "testMatch": [
+      "<rootDir>/src/**/?(*.)test.ts",
+      "<rootDir>/tests/**/?(*.)test.ts"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 0,
+        "functions": 0,
+        "lines": 0,
+        "statements": 0
+      }
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ],
+    "transform": {
+      "\\.(ts)$": "<rootDir>/node_modules/ts-jest/preprocessor.js",
+      "^.+\\.js$": "babel-jest"
+    }
   }
 }
