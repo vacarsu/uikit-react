@@ -1,8 +1,8 @@
-import * as React from "react";
+import * as React from 'react'
 
 export class AccordionItem extends React.Component<AccordionItemProps, any> {
   render() {
-    const { title, content, ...rest } = this.props;
+    const { title, content, ...rest } = this.props
 
     return (
       <li {...rest}>
@@ -11,6 +11,6 @@ export class AccordionItem extends React.Component<AccordionItemProps, any> {
         </a>
         <div className="uk-accordion-content">{content}</div>
       </li>
-    );
+    )
   }
 }

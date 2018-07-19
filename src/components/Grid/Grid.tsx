@@ -1,7 +1,7 @@
-import * as React from "react";
-import * as _classNames from "classnames";
-let classNames = _classNames;
-import { setClassNames } from "../../utils/set-class-names";
+import * as React from 'react'
+import * as _classNames from 'classnames'
+const classNames = _classNames
+import { setClassNames } from '../../utils/set-class-names'
 
 export class Grid extends React.Component<GridProps, any> {
   render() {
@@ -10,11 +10,11 @@ export class Grid extends React.Component<GridProps, any> {
         id={this.props.id ? this.props.id : null}
         style={this.props.style ? this.props.style : null}
         className={`${this.setClassNames()}`}
-        uk-grid={this.props.options ? this.props.options : ""}
+        uk-grid={this.props.options ? this.props.options : ''}
       >
         {this.props.children}
       </div>
-    );
+    )
   }
 
   private setClassNames() {
@@ -22,7 +22,7 @@ export class Grid extends React.Component<GridProps, any> {
       [`uk-grid-${this.props.gutter}`]: !!this.props.gutter,
       [`uk-grid-divider`]: this.props.divider,
       [`uk-grid-match`]: this.props.match,
-      [`${setClassNames(this.props)}`]: true
-    });
+      [`${setClassNames(this.props)}`]: true,
+    })
   }
 }

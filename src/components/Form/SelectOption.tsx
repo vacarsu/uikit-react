@@ -1,12 +1,9 @@
-import * as React from "react";
-import * as _classNames from "classnames";
-let classNames = _classNames;
-import { setClassNames } from "../../utils/set-class-names";
+import * as React from 'react'
+import * as _classNames from 'classnames'
+const classNames = _classNames
+import { setClassNames } from '../../utils/set-class-names'
 
-export class SelectOption extends React.Component<
-  React.HTMLProps<HTMLOptionElement>,
-  any
-> {
+export class SelectOption extends React.Component<React.HTMLProps<HTMLOptionElement>, any> {
   render() {
     return (
       <option
@@ -17,6 +14,6 @@ export class SelectOption extends React.Component<
       >
         {this.props.children}
       </option>
-    );
+    )
   }
 }

@@ -1,5 +1,5 @@
-import * as React from "react";
-import { setClassNames } from "../../utils/set-class-names";
+import * as React from 'react'
+import { setClassNames } from '../../utils/set-class-names'
 
 export class Breadcrumb extends React.Component<BreadcrumbProps, any> {
   render() {
@@ -11,6 +11,6 @@ export class Breadcrumb extends React.Component<BreadcrumbProps, any> {
       >
         {this.props.children}
       </ul>
-    );
+    )
   }
 }

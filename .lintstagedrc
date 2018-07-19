@@ -1,6 +1,6 @@
  {
-      "**/*.{ts,tsx}": [
-      "npm run prettier:fix",
+      "*.{ts,tsx}": [
+      "prettier --config .prettierrc --write",
       "npm run lint:fix",
       "git add"
     ]

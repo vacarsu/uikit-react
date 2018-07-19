@@ -1,5 +1,5 @@
-import * as React from "react";
-import { setClassNames } from "../../utils/set-class-names";
+import * as React from 'react'
+import { setClassNames } from '../../utils/set-class-names'
 
 export class TableBody extends React.Component<BaseProps, any> {
   render() {
@@ -11,6 +11,6 @@ export class TableBody extends React.Component<BaseProps, any> {
       >
         {this.props.children}
       </tbody>
-    );
+    )
   }
 }

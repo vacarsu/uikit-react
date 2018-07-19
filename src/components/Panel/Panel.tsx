@@ -1,7 +1,7 @@
-import * as React from "react";
-import * as _classNames from "classnames";
-let classNames = _classNames;
-import { setClassNames } from "../../utils/set-class-names";
+import * as React from 'react'
+import * as _classNames from 'classnames'
+const classNames = _classNames
+import { setClassNames } from '../../utils/set-class-names'
 
 export class Panel extends React.Component<PanelProps, any> {
   render() {
@@ -13,13 +13,13 @@ export class Panel extends React.Component<PanelProps, any> {
       >
         {this.props.children}
       </div>
-    );
+    )
   }
 
   private setClassNames() {
-    return classNames("uk-panel", {
+    return classNames('uk-panel', {
       [`uk-panel-scrollable`]: this.props.isScrollable,
-      [setClassNames(this.props)]: true
-    });
+      [setClassNames(this.props)]: true,
+    })
   }
 }

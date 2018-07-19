@@ -1,7 +1,7 @@
-import * as React from "react";
-import * as _classNames from "classnames";
-let classNames = _classNames;
-import { setClassNames } from "../../utils/set-class-names";
+import * as React from 'react'
+import * as _classNames from 'classnames'
+const classNames = _classNames
+import { setClassNames } from '../../utils/set-class-names'
 
 export class Margin extends React.Component<MarginProps, any> {
   render() {
@@ -14,19 +14,19 @@ export class Margin extends React.Component<MarginProps, any> {
       >
         {this.props.children}
       </div>
-    );
+    )
   }
 
   private setClassNames() {
-    const stringArray = this.props.type.split("; ");
-    let classString: string;
+    const stringArray = this.props.type.split('; ')
+    let classString: string
 
     stringArray.map((string, idx) => {
-      classString = `${classString} uk-margin-${string}`;
-    });
+      classString = `${classString} uk-margin-${string}`
+    })
 
     return classNames(classString, {
-      [`${setClassNames(this.props)}`]: true
-    });
+      [`${setClassNames(this.props)}`]: true,
+    })
   }
 }

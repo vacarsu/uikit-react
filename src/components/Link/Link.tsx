@@ -1,7 +1,7 @@
-import * as React from "react";
-import * as _classNames from "classnames";
-let classNames = _classNames;
-import { setClassNames } from "../../utils/set-class-names";
+import * as React from 'react'
+import * as _classNames from 'classnames'
+const classNames = _classNames
+import { setClassNames } from '../../utils/set-class-names'
 
 export class Link extends React.Component<LinkProps, any> {
   render() {
@@ -15,13 +15,13 @@ export class Link extends React.Component<LinkProps, any> {
       >
         {this.props.children}
       </a>
-    );
+    )
   }
 
   private setClassNames() {
     return classNames({
       [`uk-link-${this.props.type}`]: !!this.props.type,
-      [`${setClassNames(this.props)}`]: true
-    });
+      [`${setClassNames(this.props)}`]: true,
+    })
   }
 }

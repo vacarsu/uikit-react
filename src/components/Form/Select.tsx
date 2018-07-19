@@ -1,7 +1,7 @@
-import * as React from "react";
-import * as _classNames from "classnames";
-let classNames = _classNames;
-import { setClassNames } from "../../utils/set-class-names";
+import * as React from 'react'
+import * as _classNames from 'classnames'
+const classNames = _classNames
+import { setClassNames } from '../../utils/set-class-names'
 
 export class Select extends React.Component<FormSelectProps, any> {
   render() {
@@ -16,7 +16,7 @@ export class Select extends React.Component<FormSelectProps, any> {
       >
         {this.props.children}
       </select>
-    );
+    )
   }
 
   private setClassNames(): string {
@@ -25,7 +25,7 @@ export class Select extends React.Component<FormSelectProps, any> {
       [`uk-form-${this.props.color}`]: !!this.props.color,
       [`uk-form-${this.props.width}`]: !!this.props.width,
       [`uk-form-${this.props.layout}`]: !!this.props.layout,
-      [`${setClassNames(this.props)}`]: true
-    });
+      [`${setClassNames(this.props)}`]: true,
+    })
   }
 }

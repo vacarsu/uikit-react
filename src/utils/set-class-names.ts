@@ -1,4 +1,4 @@
-import * as _classNames from "classnames"
+import * as _classNames from 'classnames'
 const classNames = _classNames
 
 export function setClassNames(props) {

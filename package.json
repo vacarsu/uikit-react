@@ -13,8 +13,6 @@
     "storybook": "start-storybook -p 6006 -c .storybook",
     "lint": "tslint -c tslint.json \"src/**/*.ts\"",
     "lint:fix": "tslint --fix -c tslint.json \"src/**/*.ts\"",
-    "prettier": "prettier --list-different \"**/*.{js,jsx,ts,tsx}\"",
-    "prettier:fix": "prettier --write \"**/*.{js,jsx,ts,tsx}\"",
     "precommit": "lint-staged"
   },
   "author": "Alex Lopez",

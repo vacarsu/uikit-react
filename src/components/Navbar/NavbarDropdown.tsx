@@ -1,5 +1,5 @@
-import * as React from "react";
-import { setClassNames } from "../../utils/set-class-names";
+import * as React from 'react'
+import { setClassNames } from '../../utils/set-class-names'
 
 export class NavbarDropdown extends React.Component<BaseProps, any> {
   render() {
@@ -11,6 +11,6 @@ export class NavbarDropdown extends React.Component<BaseProps, any> {
       >
         <ul className="uk-nav uk-navbar-dropdown-nav">{this.props.children}</ul>
       </div>
-    );
+    )
   }
 }

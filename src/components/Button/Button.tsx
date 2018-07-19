@@ -1,8 +1,8 @@
-import * as React from "react"
-import * as _classNames from "classnames"
+import * as React from 'react'
+import * as _classNames from 'classnames'
 
 const classNames = _classNames
-import { setClassNames } from "../../utils/set-class-names"
+import { setClassNames } from '../../utils/set-class-names'
 
 export class Button extends React.Component<ButtonProps, any> {
   render() {
@@ -35,7 +35,7 @@ export class Button extends React.Component<ButtonProps, any> {
   }
 
   private setClassNames(): string {
-    return classNames("uk-button", {
+    return classNames('uk-button', {
       [`uk-button-default`]: !this.props.color,
       [`uk-button-${this.props.color}`]: !!this.props.color,
       [`uk-button-${this.props.size}`]: !!this.props.size,

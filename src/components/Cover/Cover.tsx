@@ -1,5 +1,5 @@
-import * as React from "react";
-import { setClassNames } from "../../utils/set-class-names";
+import * as React from 'react'
+import { setClassNames } from '../../utils/set-class-names'
 
 export class Cover extends React.Component<CoverProps, any> {
   render() {
@@ -12,17 +12,17 @@ export class Cover extends React.Component<CoverProps, any> {
         {this.renderResponsiveMode()}
         {this.renderBasedOnType()}
       </div>
-    );
+    )
   }
 
   private renderResponsiveMode() {
     if (this.props.responsive) {
-      return <canvas width={this.props.width} height={this.props.height} />;
+      return <canvas width={this.props.width} height={this.props.height} />
     }
   }
 
   private renderBasedOnType() {
-    if (this.props.type === "image") {
+    if (this.props.type === 'image') {
       return (
         <img
           src={this.props.src}
@@ -31,8 +31,9 @@ export class Cover extends React.Component<CoverProps, any> {
           height={this.props.height}
           uk-cover
         />
-      );
-    } else if (this.props.type === "video") {
+      )
+    }
+    if (this.props.type === 'video') {
       return (
         <video
           autoPlay={this.props.autoPlay}
@@ -43,16 +44,10 @@ export class Cover extends React.Component<CoverProps, any> {
           height={this.props.height}
           uk-cover
         >
-          <source
-            src={this.props.src}
-            type={`${this.props.type}/${this.props.videoFormat}`}
-          />
+          <source src={this.props.src} type={`${this.props.type}/${this.props.videoFormat}`} />
         </video>
-      );
-    } else {
-      console.error(
-        "Type property on cover component must be either video or image"
-      );
+      )
     }
+    console.error('Type property on cover component must be either video or image')
   }
 }

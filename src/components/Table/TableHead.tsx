@@ -1,5 +1,5 @@
-import * as React from "react";
-import { setClassNames } from "../../utils/set-class-names";
+import * as React from 'react'
+import { setClassNames } from '../../utils/set-class-names'
 
 export class TableHead extends React.Component<TableHeadProps, any> {
   render() {
@@ -11,6 +11,6 @@ export class TableHead extends React.Component<TableHeadProps, any> {
       >
         {this.props.children}
       </thead>
-    );
+    )
   }
 }

@@ -1,5 +1,5 @@
-import * as React from "react";
-import { setClassNames } from "../../utils/set-class-names";
+import * as React from 'react'
+import { setClassNames } from '../../utils/set-class-names'
 
 export class Parallax extends React.Component<ParallaxProps, any> {
   render() {
@@ -11,18 +11,15 @@ export class Parallax extends React.Component<ParallaxProps, any> {
       >
         {this.applyParallaxFiltersToChild()}
       </div>
-    );
+    )
   }
 
   private applyParallaxFiltersToChild() {
-    return React.Children.map(
-      this.props.children,
-      (child: React.ReactChild, idx: number) => {
-        if (idx > 0) return child;
-        return React.cloneElement(child as React.ReactElement<any>, {
-          "uk-parallax": this.props.options
-        });
-      }
-    );
+    return React.Children.map(this.props.children, (child: React.ReactChild, idx: number) => {
+      if (idx > 0) return child
+      return React.cloneElement(child as React.ReactElement<any>, {
+        'uk-parallax': this.props.options,
+      })
+    })
   }
 }

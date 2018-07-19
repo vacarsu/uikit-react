@@ -1,5 +1,5 @@
-import * as React from "react";
-import { setClassNames } from "../../utils/set-class-names";
+import * as React from 'react'
+import { setClassNames } from '../../utils/set-class-names'
 
 export class Dropdown extends React.Component<DropdownProps, any> {
   render() {
@@ -7,15 +7,12 @@ export class Dropdown extends React.Component<DropdownProps, any> {
       <div
         id={this.props.id ? this.props.id : null}
         className={`${setClassNames(this.props)}`}
-        uk-dropdown={this.props.options ? this.props.options : ""}
+        uk-dropdown={this.props.options ? this.props.options : ''}
       >
-        <ul
-          style={this.props.style ? this.props.style : null}
-          className={`uk-nav uk-dropdown-nav`}
-        >
+        <ul style={this.props.style ? this.props.style : null} className={`uk-nav uk-dropdown-nav`}>
           {this.props.children}
         </ul>
       </div>
-    );
+    )
   }
 }
