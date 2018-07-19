@@ -1,7 +1,8 @@
-import * as React from "react";
-import * as _classNames from "classnames";
-let classNames = _classNames;
-import { setClassNames } from "../../utils/set-class-names";
+import * as React from "react"
+import * as _classNames from "classnames"
+
+const classNames = _classNames
+import { setClassNames } from "../../utils/set-class-names"
 
 export class Button extends React.Component<ButtonProps, any> {
   render() {
@@ -26,11 +27,11 @@ export class Button extends React.Component<ButtonProps, any> {
       >
         {this.props.children}
       </button>
-    );
+    )
   }
 
   private isLink(): boolean {
-    return this.props.href ? true : false;
+    return !!this.props.href
   }
 
   private setClassNames(): string {
@@ -38,7 +39,7 @@ export class Button extends React.Component<ButtonProps, any> {
       [`uk-button-default`]: !this.props.color,
       [`uk-button-${this.props.color}`]: !!this.props.color,
       [`uk-button-${this.props.size}`]: !!this.props.size,
-      [`${setClassNames(this.props)}`]: true
-    });
+      [`${setClassNames(this.props)}`]: true,
+    })
   }
 }

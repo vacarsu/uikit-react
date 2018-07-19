@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button> Should render without props 1`] = `
+<button
+  className="uk-button uk-button-default "
+  id={null}
+  style={null}
+>
+  Click
+</button>
+`;

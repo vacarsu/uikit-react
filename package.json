@@ -8,6 +8,7 @@
   "module": "./lib/uikit-react.js",
   "scripts": {
     "build": "rollup -c",
+    "test": "jest --no-cache",
     "build-storybook": "build-storybook",
     "storybook": "start-storybook -p 6006 -c .storybook",
     "lint": "tslint -c tslint.json \"src/**/*.ts\"",
@@ -30,6 +31,7 @@
     "@storybook/addon-options": "^3.4.8",
     "@storybook/react": "4.0.0-alpha.3",
     "@types/classnames": "^2.2.4",
+    "@types/enzyme": "^3.1.12",
     "@types/he": "^1.1.0",
     "@types/marked": "^0.3.0",
     "@types/prismjs": "^1.9.0",
@@ -39,8 +41,10 @@
     "@types/react-router-dom": "^4.2.7",
     "@types/uikit": "^2.27.6",
     "awesome-typescript-loader": "^5.2.0",
+    "enzyme": "^3.3.0",
     "he": "^1.1.1",
     "husky": "^0.14.3",
+    "identity-obj-proxy": "^3.0.0",
     "lint-staged": "^7.2.0",
     "npm-run-all": "^4.1.3",
     "prettier": "^1.13.7",
@@ -49,6 +53,7 @@
     "react-dom": "^16.4.1",
     "react-jsx-parser": "^1.3.4",
     "react-router-dom": "^4.3.1",
+    "react-test-renderer": "^16.4.1",
     "rimraf": "^2.6.2",
     "rollup": "^0.60.7",
     "rollup-plugin-commonjs": "^9.1.3",
@@ -72,39 +77,26 @@
     "ts-jest": "^23.0.1"
   },
   "jest": {
-    "transformIgnorePatterns": [
-      "node_modules/(?!shiva/)"
-    ],
-    "globals": {
-      "ts-jest": {
-        "tsConfigFile": "tsconfig.test.json"
-      },
-      "google": {}
+    "transform": {
+      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
     },
-    "collectCoverageFrom": [
-      "src/**/*.ts",
-      "!src/**/*.schema.ts",
-      "!src/schema/*.ts"
-    ],
     "testMatch": [
-      "<rootDir>/src/**/?(*.)test.ts",
-      "<rootDir>/tests/**/?(*.)test.ts"
+      "<rootDir>/src/**/__tests__/**/*.{js,tsx}",
+      "<rootDir>/src/**/?(*.)(spec|test).{js,tsx}"
     ],
-    "coverageThreshold": {
-      "global": {
-        "branches": 0,
-        "functions": 0,
-        "lines": 0,
-        "statements": 0
-      }
+
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/lib/"
+    ],
+    "moduleNameMapper": {
+      "\\.(css|less|scss)$": "identity-obj-proxy"
     },
     "moduleFileExtensions": [
       "ts",
-      "js"
-    ],
-    "transform": {
-      "\\.(ts)$": "<rootDir>/node_modules/ts-jest/preprocessor.js",
-      "^.+\\.js$": "babel-jest"
-    }
+      "tsx",
+      "js",
+      "json"
+    ]
   }
 }
