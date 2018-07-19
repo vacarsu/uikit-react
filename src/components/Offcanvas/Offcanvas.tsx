@@ -34,7 +34,7 @@ export class Offcanvas extends React.Component<OffcanvasProps, any> {
                 id={this.props.id}
                 style={this.props.style ? this.props.style : null}
                 className={`${setClassNames(this.props)}`}
-                uk-offcanvas={this.props.options ? this.props.options : ""}>
+                data-uk-offcanvas={this.props.options ? this.props.options : ""}>
                 <div className="uk-offcanvas-bar">
                     {this.props.children}
                 </div>

@@ -26,7 +26,7 @@ export class Progress extends React.Component<ProgressProps, ProgressState> {
                 className={`${this.setClassNames()}`}
                 value={this.state.value}
                 max={this.props.max}
-            ></progress>
+            />
         );
     }
 

@@ -10,7 +10,7 @@ export class Slideshow extends React.Component<SlideshowProps, any> {
                 id={this.props.id ? this.props.id : null} 
                 style={this.props.style ? this.props.style : null}
                 className={`${setClassNames(this.props)}`}
-                uk-slideshow={this.props.options ? this.props.options : ""}>
+                data-uk-slideshow={this.props.options ? this.props.options : ""}>
                 {this.setNavigation()}
             </div>
         );
@@ -24,8 +24,8 @@ export class Slideshow extends React.Component<SlideshowProps, any> {
                     <ul className="uk-slideshow-items">
                         {this.props.children}
                     </ul>
-                    <a className="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous="" uk-slideshow-item="previous"></a>
-                    <a className="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next="" uk-slideshow-item="next"></a>
+                    <a className="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous="" uk-slideshow-item="previous"/>
+                    <a className="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next="" uk-slideshow-item="next"/>
                 </div>
             );
         } else {
