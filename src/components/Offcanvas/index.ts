@@ -1,2 +1,2 @@
-export { Offcanvas } from './Offcanvas';
-export { OffcanvasContainer } from './OffcanvasContainer';
+export { Offcanvas } from './Offcanvas'
+export { OffcanvasContainer } from './OffcanvasContainer'

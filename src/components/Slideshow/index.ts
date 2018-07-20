@@ -1,2 +1,2 @@
-export { Slideshow } from './Slideshow';
-export { SlideshowItem } from './SlideshowItem';
+export { Slideshow } from './Slideshow'
+export { SlideshowItem } from './SlideshowItem'

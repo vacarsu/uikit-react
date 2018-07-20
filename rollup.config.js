@@ -6,14 +6,12 @@ import globals from 'rollup-plugin-node-globals';
 import serve from 'rollup-plugin-serve';
 
 export default [
-    {
-        input: './src/index.ts',
-        output: {
-            file: 'lib/uikit-react.js',
-            format: 'es'
-        },
-        plugins: [
-            typescript()
-        ]
-    }
+  {
+    input: './src/index.ts',
+    output: {
+      file: 'lib/uikit-react.js',
+      format: 'es',
+    },
+    plugins: [typescript()],
+  },
 ];

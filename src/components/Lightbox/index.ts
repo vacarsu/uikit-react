@@ -1,2 +1,2 @@
-export { Lightbox } from './lightbox';
-export { LightboxItem } from './lightboxItem';
+export { Lightbox } from './lightbox'
+export { LightboxItem } from './lightboxItem'
