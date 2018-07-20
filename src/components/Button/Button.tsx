@@ -1,6 +1,5 @@
 import * as React from 'react'
 import * as _classNames from 'classnames'
-
 const classNames = _classNames
 import { setClassNames } from '../../utils/set-class-names'
 
@@ -10,7 +9,7 @@ export class Button extends React.Component<ButtonProps, any> {
       <a
         id={this.props.id ? this.props.id : null}
         style={this.props.style ? this.props.style : null}
-        uk-toggle={this.props.toggleOptions}
+        data-uk-toggle={this.props.toggleOptions}
         href={this.props.href}
         onClick={this.props.onClick}
         className={this.setClassNames()}
@@ -21,7 +20,7 @@ export class Button extends React.Component<ButtonProps, any> {
       <button
         id={this.props.id ? this.props.id : null}
         style={this.props.style ? this.props.style : null}
-        uk-toggle={this.props.toggleOptions}
+        data-uk-toggle={this.props.toggleOptions}
         onClick={this.props.onClick}
         className={this.setClassNames()}
       >

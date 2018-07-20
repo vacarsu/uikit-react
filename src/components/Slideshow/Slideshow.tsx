@@ -11,7 +11,7 @@ export class Slideshow extends React.Component<SlideshowProps, any> {
         id={this.props.id ? this.props.id : null}
         style={this.props.style ? this.props.style : null}
         className={`${setClassNames(this.props)}`}
-        uk-slideshow={this.props.options ? this.props.options : ''}
+        data-uk-slideshow={this.props.options ? this.props.options : ''}
       >
         {this.setNavigation()}
       </div>

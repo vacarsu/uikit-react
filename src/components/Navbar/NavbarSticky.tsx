@@ -19,7 +19,7 @@ export class NavbarSticky extends React.Component<NavbarStickyProps, any> {
         id={this.props.id ? this.props.id : null}
         style={this.props.style ? this.props.style : null}
         className={`${setClassNames(this.props)}`}
-        uk-sticky={`
+        data-uk-sticky={`
                     sel-target: .uk-navbar-container;
                     cls-active: uk-navbar-sticky;
                     ${this.props.options ? this.props.options : ''}

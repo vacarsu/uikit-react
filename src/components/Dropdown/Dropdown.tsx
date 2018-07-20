@@ -7,7 +7,7 @@ export class Dropdown extends React.Component<DropdownProps, any> {
       <div
         id={this.props.id ? this.props.id : null}
         className={`${setClassNames(this.props)}`}
-        uk-dropdown={this.props.options ? this.props.options : ''}
+        data-uk-dropdown={this.props.options ? this.props.options : ''}
       >
         <ul style={this.props.style ? this.props.style : null} className={`uk-nav uk-dropdown-nav`}>
           {this.props.children}

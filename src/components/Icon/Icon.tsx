@@ -17,7 +17,7 @@ export class Icon extends React.Component<IconProps, any> {
           style={this.props.style ? this.props.style : null}
           className={this.getClassNames()}
           href={this.props.href}
-          uk-icon={this.props.options}
+          data-uk-icon={this.props.options}
         />
       )
     }
@@ -30,7 +30,7 @@ export class Icon extends React.Component<IconProps, any> {
             backgroundImage: `url(${this.props.image})`,
             ...this.props.style,
           }}
-          uk-icon={this.props.options}
+          data-uk-icon={this.props.options}
         />
       )
     }
@@ -40,7 +40,7 @@ export class Icon extends React.Component<IconProps, any> {
         id={this.props.id ? this.props.id : null}
         style={this.props.style ? this.props.style : null}
         className={this.getClassNames()}
-        uk-icon={this.props.options}
+        data-uk-icon={this.props.options}
       />
     )
   }

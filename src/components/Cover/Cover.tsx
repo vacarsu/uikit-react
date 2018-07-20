@@ -29,7 +29,7 @@ export class Cover extends React.Component<CoverProps, any> {
           alt={this.props.alt}
           width={this.props.width}
           height={this.props.height}
-          uk-cover
+          data-uk-cover={''}
         />
       )
     }
@@ -42,7 +42,7 @@ export class Cover extends React.Component<CoverProps, any> {
           playsinline={this.props.playsinline}
           width={this.props.width}
           height={this.props.height}
-          uk-cover
+          data-uk-cover={''}
         >
           <source src={this.props.src} type={`${this.props.type}/${this.props.videoFormat}`} />
         </video>
