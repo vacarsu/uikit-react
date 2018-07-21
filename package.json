@@ -82,7 +82,6 @@
       "<rootDir>/src/**/__tests__/**/*.{js,tsx}",
       "<rootDir>/src/**/?(*.)(spec|test).{js,tsx}"
     ],
-
     "testPathIgnorePatterns": [
       "/node_modules/",
       "/lib/"
