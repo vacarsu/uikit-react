@@ -37,6 +37,7 @@
     "@types/react-dom": "^16.0.5",
     "awesome-typescript-loader": "^5.2.0",
     "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "he": "^1.1.1",
     "husky": "^0.14.3",
     "identity-obj-proxy": "^3.0.0",
@@ -86,6 +87,9 @@
     "moduleNameMapper": {
       "\\.(css|less|scss)$": "identity-obj-proxy"
     },
+    "setupFiles": [
+      "<rootDir>/config/polyfills.js"
+    ],
     "moduleFileExtensions": [
       "ts",
       "tsx",
