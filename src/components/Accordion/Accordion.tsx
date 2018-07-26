@@ -1,12 +1,13 @@
 import * as React from 'react'
-import 'uikit'
 import { setClassNames } from '../../utils/set-class-names'
+
+const UIkit = require('uikit')
 
 export class Accordion extends React.Component<AccordionProps, any> {
   public static defaultProps: Partial<AccordionProps> = {
     options: {},
   }
-  public accordionRef: React.RefObject<any>
+  private accordionRef: React.RefObject<any>
   private mounted: boolean
   private component: any
 

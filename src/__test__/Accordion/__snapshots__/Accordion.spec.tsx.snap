@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Accordion> Should render with collapsible option FALSE 1`] = `
+<ul
+  className=""
+  id={null}
+  style={null}
+>
+  <li>
+    <a
+      className="uk-accordion-title"
+      role="button"
+    >
+      Heading
+    </a>
+    <div
+      className="uk-accordion-content"
+    >
+      Hello
+    </div>
+  </li>
+</ul>
+`;
+
+exports[`<Accordion> Should render with default props 1`] = `
+<ul
+  className=""
+  id={null}
+  style={null}
+>
+   
+  <li>
+    <a
+      className="uk-accordion-title"
+      role="button"
+    >
+      Heading
+    </a>
+    <div
+      className="uk-accordion-content"
+    >
+      Hello
+    </div>
+  </li>
+</ul>
+`;
