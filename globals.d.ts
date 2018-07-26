@@ -25,7 +25,7 @@ interface AccordionProps extends BaseContainerProps {
 
 interface AccordionItemProps extends BaseProps {
   title: string
-  content: string
+  children: string | JSX.Element
 }
 
 interface AlertProps extends BaseProps {
