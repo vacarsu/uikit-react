@@ -14,12 +14,18 @@ interface BaseContainerProps extends BaseProps {
 
 interface AccordionProps extends BaseContainerProps {
   children: any
-  options?: string
+  options?: object
+  onBeforeShow?: (e: Event, accordionState: any) => boolean | void
+  onBeforeHide?: (e: Event, accordionState: any) => boolean | void
+  onShow?: (e: Event, accordionState: any) => void
+  onShown?: (e: Event, accordionState: any) => void
+  onHide?: (e: Event, accordionState: any) => void
+  onHidden?: (e: Event, accordionState: any) => void
 }
 
 interface AccordionItemProps extends BaseProps {
   title: string
-  content: string
+  children: string | JSX.Element
 }
 
 interface AlertProps extends BaseProps {
