@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<AccordionItem> Should render correctly 1`] = `
-<li>
+<li
+  content="Hello"
+>
   <a
     className="uk-accordion-title"
     role="button"
@@ -10,14 +12,14 @@ exports[`<AccordionItem> Should render correctly 1`] = `
   </a>
   <div
     className="uk-accordion-content"
-  >
-    Hello
-  </div>
+  />
 </li>
 `;
 
 exports[`<AccordionItem> Should render correctly 2`] = `
-<li>
+<li
+  content="Hello"
+>
   <a
     className="uk-accordion-title"
     role="button"
@@ -26,16 +28,14 @@ exports[`<AccordionItem> Should render correctly 2`] = `
   </a>
   <div
     className="uk-accordion-content"
-  >
-    <span>
-      Test
-    </span>
-  </div>
+  />
 </li>
 `;
 
 exports[`<AccordionItem> Should render correctly 3`] = `
-<li>
+<li
+  content="Hello"
+>
   <a
     className="uk-accordion-title"
     role="button"
@@ -44,10 +44,6 @@ exports[`<AccordionItem> Should render correctly 3`] = `
   </a>
   <div
     className="uk-accordion-content"
-  >
-    <span>
-      Hello
-    </span>
-  </div>
+  />
 </li>
 `;
