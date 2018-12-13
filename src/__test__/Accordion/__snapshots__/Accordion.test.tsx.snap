@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Accordion> Should render accordion element with children and without props 1`] = `
+<ul
+  className=""
+  id={null}
+  style={null}
+>
+  <li
+    content="Accordion Item content"
+  >
+    <a
+      className="uk-accordion-title"
+      role="button"
+    >
+      Item 1
+    </a>
+    <div
+      className="uk-accordion-content"
+    />
+  </li>
+  <li
+    content="Accordion Item content"
+  >
+    <a
+      className="uk-accordion-title"
+      role="button"
+    >
+      Item 2
+    </a>
+    <div
+      className="uk-accordion-content"
+    />
+  </li>
+  <li
+    content="Accordion Item content"
+  >
+    <a
+      className="uk-accordion-title"
+      role="button"
+    >
+      Item 3
+    </a>
+    <div
+      className="uk-accordion-content"
+    />
+  </li>
+</ul>
+`;
+
+exports[`<Accordion> Should render accordion element with props and children 1`] = `
+<ul
+  className=""
+  id={null}
+  style={null}
+>
+  <li
+    content="Accordion Item content"
+  >
+    <a
+      className="uk-accordion-title"
+      role="button"
+    >
+      Item 1
+    </a>
+    <div
+      className="uk-accordion-content"
+    />
+  </li>
+  <li
+    content="Accordion Item content"
+  >
+    <a
+      className="uk-accordion-title"
+      role="button"
+    >
+      Item 2
+    </a>
+    <div
+      className="uk-accordion-content"
+    />
+  </li>
+  <li
+    content="Accordion Item content"
+  >
+    <a
+      className="uk-accordion-title"
+      role="button"
+    >
+      Item 3
+    </a>
+    <div
+      className="uk-accordion-content"
+    />
+  </li>
+</ul>
+`;

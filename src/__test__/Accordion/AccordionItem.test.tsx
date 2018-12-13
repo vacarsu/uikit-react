@@ -1,7 +1,7 @@
 import * as React from 'react'
 import * as renderer from 'react-test-renderer'
 
-import { AccordionItem } from './../../components/Accordion'
+import { AccordionItem } from '../../components/Accordion'
 
 describe('<AccordionItem>', () => {
   it('Should render correctly', () => {

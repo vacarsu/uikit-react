@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Cover> Should render with image 1`] = `
+<div
+  className="uk-cover-container uk-height-medium"
+  id={null}
+  style={null}
+>
+  <img
+    data-uk-cover=""
+    height="medium"
+    src="src/images/background.jpeg"
+  />
+</div>
+`;
+
+exports[`<Cover> Should render with video 1`] = `
+<div
+  className="uk-cover-container "
+  id={null}
+  style={null}
+>
+  <video
+    autoPlay={true}
+    data-uk-cover=""
+    loop={true}
+    muted={true}
+  >
+    <source
+      src="src/videos/video.mp4"
+      type="video/mp4"
+    />
+  </video>
+</div>
+`;

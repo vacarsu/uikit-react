@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Icon> Should render Button 1`] = `
+<em
+  className="uk-icon uk-icon-button "
+  data-uk-icon="github"
+  id={null}
+  style={null}
+/>
+`;
+
+exports[`<Icon> Should render Link 1`] = `
+<a
+  className="uk-icon uk-icon-link "
+  data-uk-icon="github"
+  href="https://github.com/vacarsu/uikit-react"
+  id={null}
+  style={null}
+/>
+`;
+
+exports[`<Icon> Should render image 1`] = `
+<span
+  className="uk-icon uk-icon-image "
+  data-uk-icon="star"
+  id={null}
+  style={
+    Object {
+      "backgroundImage": "url(src/images/background.jpeg)",
+    }
+  }
+/>
+`;

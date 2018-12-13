@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Alert> Should render with only content 1`] = `
+<div
+  className="uk-alert "
+  id={null}
+  style={
+    Object {
+      "height": "auto",
+      "opacity": 1,
+      "overflow": "hidden",
+      "transition": "height 0.5s ease-in-out, opacity 0.3s ease-in-out",
+    }
+  }
+>
+  <span>
+    String
+  </span>
+</div>
+`;
+
+exports[`<Alert> Should render with props 1`] = `
+<div
+  className="uk-alert uk-alert-primary "
+  id={null}
+  style={
+    Object {
+      "height": "auto",
+      "opacity": 1,
+      "overflow": "hidden",
+      "transition": "height 0.5s ease-in-out, opacity 0.3s ease-in-out",
+    }
+  }
+>
+  <a
+    className="uk-alert-close"
+    onClick={[Function]}
+  >
+    <em
+      className="uk-icon "
+      data-uk-icon="close"
+      id={null}
+      style={null}
+    />
+  </a>
+  <span>
+    String
+  </span>
+</div>
+`;

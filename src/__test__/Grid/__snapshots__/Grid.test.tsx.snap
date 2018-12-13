@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Grid> Should render with props 1`] = `
+<div
+  className="uk-grid-large uk-grid-divider uk-grid-match "
+  data-uk-grid=""
+  id={null}
+  style={null}
+>
+  <div>
+    block
+  </div>
+  <div>
+    block
+  </div>
+  <div>
+    block
+  </div>
+</div>
+`;
+
+exports[`<Grid> Should render without props 1`] = `
+<div
+  className=""
+  data-uk-grid=""
+  id={null}
+  style={null}
+>
+  <div>
+    block
+  </div>
+  <div>
+    block
+  </div>
+  <div>
+    block
+  </div>
+</div>
+`;

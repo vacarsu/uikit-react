@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Flex> Should render with props 1`] = `
+<div
+  className="uk-flex uk-flex-center uk-flex-column uk-flex-wrap "
+  id={null}
+  style={null}
+>
+  <div>
+    block
+  </div>
+  <div>
+    block
+  </div>
+  <div>
+    block
+  </div>
+</div>
+`;
+
+exports[`<Flex> Should render without props 1`] = `
+<div
+  className="uk-flex "
+  id={null}
+  style={null}
+>
+  <div>
+    block
+  </div>
+  <div>
+    block
+  </div>
+  <div>
+    block
+  </div>
+</div>
+`;

@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Article> Should render with only title and content 1`] = `
+<article
+  className="
+                    uk-article
+                    
+                "
+  id={null}
+  style={null}
+>
+  <h1
+    className="uk-article-title"
+  >
+    title
+  </h1>
+  
+  
+  <div>
+    Lengthy Article.....
+  </div>
+</article>
+`;
+
+exports[`<Article> Should render with props 1`] = `
+<article
+  className="
+                    uk-article
+                    
+                "
+  id={null}
+  style={null}
+>
+  <h1
+    className="uk-article-title"
+  >
+    title
+  </h1>
+  <p
+    className="uk-article-meta"
+  >
+    meta
+  </p>
+  <p
+    className="uk-text-lead"
+  >
+    lead
+  </p>
+  <div>
+    Lengthy Article.....
+  </div>
+</article>
+`;

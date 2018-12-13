@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Badge> Should render with count 1`] = `
+<span
+  className="uk-badge "
+  id={null}
+  style={null}
+>
+  100
+</span>
+`;

@@ -8,4 +8,14 @@ describe('<Button>', () => {
 
     expect(wrapper.toJSON()).toMatchSnapshot()
   })
+
+  it('Should render with props', () => {
+    const wrapper = renderer.create(
+      <Button size="small" color="primary" onClick={() => {}}>
+        Click
+      </Button>,
+    )
+
+    expect(wrapper.toJSON()).toMatchSnapshot()
+  })
 })

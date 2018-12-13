@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Image> Should render Image 1`] = `
+<img
+  data-src="/src/images/image-1.jpg"
+  data-uk-img=""
+  id={null}
+  style={null}
+  width="300px"
+/>
+`;

@@ -1,5 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<Button> Should render with props 1`] = `
+<button
+  className="uk-button uk-button-primary uk-button-small "
+  id={null}
+  onClick={[Function]}
+  style={null}
+>
+  Click
+</button>
+`;
+
 exports[`<Button> Should render without props 1`] = `
 <button
   className="uk-button uk-button-default "

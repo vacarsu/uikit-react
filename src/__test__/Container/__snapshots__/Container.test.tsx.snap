@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Container> Should render with size 1`] = `
+<div
+  className="uk-container uk-container-small "
+  id={null}
+  style={null}
+/>
+`;
+
+exports[`<Container> Should render without props 1`] = `
+<div
+  className="uk-container "
+  id={null}
+  style={null}
+/>
+`;

@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Dark> Should render Dark mode 1`] = `
+<div
+  className="uk-dark "
+  id={null}
+  style={null}
+>
+  <p>
+    Dark mode
+  </p>
+</div>
+`;
+
+exports[`<Light Should render Light mode 1`] = `
+<div
+  className="uk-light "
+  id={null}
+  style={null}
+>
+  <p>
+    Light mode
+  </p>
+</div>
+`;

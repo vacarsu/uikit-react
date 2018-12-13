@@ -1,28 +1,31 @@
 import * as React from 'react'
 import * as renderer from 'react-test-renderer'
 import { mount } from 'enzyme'
-import { Accordion, AccordionItem } from './../../components/Accordion'
+import { Accordion } from '../../components/Accordion/Accordion'
+import { AccordionItem } from '../../components/Accordion/AccordionItem'
 
 describe('<Accordion>', () => {
-  it('Should render with default props', () => {
+  it('Should render accordion element with children and without props', () => {
     const wrapper = renderer.create(
       <Accordion>
-        {' '}
-        <AccordionItem title="Heading">Hello</AccordionItem>
+        <AccordionItem title="Item 1" content="Accordion Item content" />
+        <AccordionItem title="Item 2" content="Accordion Item content" />
+        <AccordionItem title="Item 3" content="Accordion Item content" />
       </Accordion>,
     )
+
     expect(wrapper.toJSON()).toMatchSnapshot()
   })
 
-  it('Should render with collapsible option FALSE', () => {
-    const options = {
-      collapsible: false,
-    }
+  it('Should render accordion element with props and children', () => {
     const wrapper = renderer.create(
-      <Accordion options={options}>
-        <AccordionItem title="Heading">Hello</AccordionItem>
+      <Accordion options="active: true; duration: 200; animation: true; collapsible: true;">
+        <AccordionItem title="Item 1" content="Accordion Item content" />
+        <AccordionItem title="Item 2" content="Accordion Item content" />
+        <AccordionItem title="Item 3" content="Accordion Item content" />
       </Accordion>,
     )
+
     expect(wrapper.toJSON()).toMatchSnapshot()
   })
 

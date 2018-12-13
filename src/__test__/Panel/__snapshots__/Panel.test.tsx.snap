@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Panel> Should render with props 1`] = `
+<div
+  className="uk-panel uk-panel-scrollable "
+  id="panel"
+  style={null}
+/>
+`;
+
+exports[`<Panel> Should render without props 1`] = `
+<div
+  className="uk-panel "
+  id={null}
+  style={null}
+>
+  Panel
+</div>
+`;

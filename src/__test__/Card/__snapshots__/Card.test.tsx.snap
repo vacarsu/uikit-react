@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button> Should render card with color 1`] = `
+<div
+  className="uk-card uk-card-primary "
+  id={null}
+  style={null}
+>
+  <div
+    className="uk-card-header "
+    id={null}
+    style={null}
+  >
+    <h3
+      className="uk-card-title "
+      id={null}
+      style={null}
+    >
+      Title
+    </h3>
+    <div
+      className="uk-card-body "
+      id={null}
+      style={null}
+    >
+      Content body of the Card
+    </div>
+    <div
+      className="uk-card-footer "
+      id={null}
+      style={null}
+    >
+      Footer of the Card
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Button> Should render card with footer, header, title, and body 1`] = `
+<div
+  className="uk-card uk-card-default "
+  id={null}
+  style={null}
+>
+  <div
+    className="uk-card-header "
+    id={null}
+    style={null}
+  >
+    <h3
+      className="uk-card-title "
+      id={null}
+      style={null}
+    >
+      Title
+    </h3>
+    <div
+      className="uk-card-body "
+      id={null}
+      style={null}
+    >
+      Content body of the Card
+    </div>
+    <div
+      className="uk-card-footer "
+      id={null}
+      style={null}
+    >
+      Footer of the Card
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Button> Should render card with hover 1`] = `
+<div
+  className="uk-card uk-card-default uk-card-hover "
+  id={null}
+  style={null}
+>
+  <div
+    className="uk-card-header "
+    id={null}
+    style={null}
+  >
+    <h3
+      className="uk-card-title "
+      id={null}
+      style={null}
+    >
+      Title
+    </h3>
+    <div
+      className="uk-card-body "
+      id={null}
+      style={null}
+    >
+      Content body of the Card
+    </div>
+    <div
+      className="uk-card-footer "
+      id={null}
+      style={null}
+    >
+      Footer of the Card
+    </div>
+  </div>
+</div>
+`;

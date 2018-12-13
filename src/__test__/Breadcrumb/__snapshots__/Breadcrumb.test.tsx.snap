@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Breadcrumb> Should render with links 1`] = `
+<ul
+  className="uk-breadcrumb "
+  id={null}
+  style={null}
+>
+  <a
+    className=""
+    data-uk-toggle={null}
+    href="#"
+    id={null}
+    style={null}
+  >
+    Test
+  </a>
+  <a
+    className=""
+    data-uk-toggle={null}
+    href="#"
+    id={null}
+    style={null}
+  >
+    Test
+  </a>
+  <a
+    className=""
+    data-uk-toggle={null}
+    href="#"
+    id={null}
+    style={null}
+  >
+    Test
+  </a>
+</ul>
+`;

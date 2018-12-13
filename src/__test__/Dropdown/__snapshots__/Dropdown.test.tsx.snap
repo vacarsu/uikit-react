@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Dropdown> Should render with clickable 1`] = `
+<div
+  className="uk-container "
+  id={null}
+  style={null}
+>
+  <div
+    className=""
+    data-uk-dropdown="mode: click"
+    id={null}
+  >
+    <ul
+      className="uk-nav uk-dropdown-nav"
+      style={null}
+    >
+      Dropdown
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`<Dropdown> Should render without props 1`] = `
+<div
+  className="uk-container "
+  id={null}
+  style={null}
+>
+  <div
+    className=""
+    data-uk-dropdown=""
+    id={null}
+  >
+    <ul
+      className="uk-nav uk-dropdown-nav"
+      style={null}
+    >
+      Dropdown
+    </ul>
+  </div>
+</div>
+`;
