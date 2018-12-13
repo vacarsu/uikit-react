@@ -5,18 +5,13 @@ import { AccordionItem } from '../../components/Accordion'
 
 describe('<AccordionItem>', () => {
   it('Should render correctly', () => {
-    const wrapper = renderer.create(<AccordionItem title="Title">Hello</AccordionItem>)
+    const wrapper = renderer.create(<AccordionItem title="Title" content="Hello" />)
 
     expect(wrapper.toJSON()).toMatchSnapshot()
-    const content = <span>Test</span>
-    wrapper.update(<AccordionItem title="Title">{content}</AccordionItem>)
+    wrapper.update(<AccordionItem title="Title" content="Hello" />)
     expect(wrapper.toJSON()).toMatchSnapshot()
 
-    wrapper.update(
-      <AccordionItem title="Title">
-        <span>Hello</span>
-      </AccordionItem>,
-    )
+    wrapper.update(<AccordionItem title="Title" content="Hello" />)
     expect(wrapper.toJSON()).toMatchSnapshot()
   })
 
@@ -28,11 +23,7 @@ describe('<AccordionItem>', () => {
       },
     }
 
-    const wrapper = renderer.create(
-      <AccordionItem title="Title" {...props}>
-        hello
-      </AccordionItem>,
-    )
+    const wrapper = renderer.create(<AccordionItem title="Title" {...props} content="Hello" />)
     const inst = wrapper.root
     expect(inst.props.style).toEqual(props.style)
   })

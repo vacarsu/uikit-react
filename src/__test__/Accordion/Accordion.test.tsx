@@ -40,7 +40,7 @@ describe('<Accordion>', () => {
     }
     const wrapper = mount(
       <Accordion {...props}>
-        <AccordionItem title="Heading">Hello</AccordionItem>
+        <AccordionItem title="Heading" content="Hello" />
       </Accordion>,
     )
     const inst = wrapper.instance() as any
