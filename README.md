@@ -1,5 +1,5 @@
-# UIkit React
-**A library of UIkit components for use in React** <img src="https://travis-ci.org/vacarsu/uikit-react.svg?branch=master" />
+# UIkit React <div style="float: right"> <img src="https://travis-ci.org/vacarsu/uikit-react.svg?branch=master" /> </div>
+**A library of UIkit components for use in React** 
 
 <img src="/images/uikit-react.svg" width="256"/>
 
