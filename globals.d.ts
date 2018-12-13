@@ -14,7 +14,7 @@ interface BaseContainerProps extends BaseProps {
 
 interface AccordionProps extends BaseContainerProps {
   children: any
-  options?: object
+  options?: string
   onBeforeShow?: (e: Event, accordionState: any) => boolean | void
   onBeforeHide?: (e: Event, accordionState: any) => boolean | void
   onShow?: (e: Event, accordionState: any) => void
