@@ -6,9 +6,7 @@ exports[`<Accordion> Should render accordion element with children and without p
   id={null}
   style={null}
 >
-  <li
-    content="Accordion Item content"
-  >
+  <li>
     <a
       className="uk-accordion-title"
       role="button"
@@ -17,11 +15,11 @@ exports[`<Accordion> Should render accordion element with children and without p
     </a>
     <div
       className="uk-accordion-content"
-    />
+    >
+      Accordion Item content
+    </div>
   </li>
-  <li
-    content="Accordion Item content"
-  >
+  <li>
     <a
       className="uk-accordion-title"
       role="button"
@@ -30,11 +28,11 @@ exports[`<Accordion> Should render accordion element with children and without p
     </a>
     <div
       className="uk-accordion-content"
-    />
+    >
+      Accordion Item content
+    </div>
   </li>
-  <li
-    content="Accordion Item content"
-  >
+  <li>
     <a
       className="uk-accordion-title"
       role="button"
@@ -43,7 +41,9 @@ exports[`<Accordion> Should render accordion element with children and without p
     </a>
     <div
       className="uk-accordion-content"
-    />
+    >
+      Accordion Item content
+    </div>
   </li>
 </ul>
 `;
@@ -54,9 +54,7 @@ exports[`<Accordion> Should render accordion element with props and children 1`]
   id={null}
   style={null}
 >
-  <li
-    content="Accordion Item content"
-  >
+  <li>
     <a
       className="uk-accordion-title"
       role="button"
@@ -65,11 +63,11 @@ exports[`<Accordion> Should render accordion element with props and children 1`]
     </a>
     <div
       className="uk-accordion-content"
-    />
+    >
+      Accordion Item content
+    </div>
   </li>
-  <li
-    content="Accordion Item content"
-  >
+  <li>
     <a
       className="uk-accordion-title"
       role="button"
@@ -78,11 +76,11 @@ exports[`<Accordion> Should render accordion element with props and children 1`]
     </a>
     <div
       className="uk-accordion-content"
-    />
+    >
+      Accordion Item content
+    </div>
   </li>
-  <li
-    content="Accordion Item content"
-  >
+  <li>
     <a
       className="uk-accordion-title"
       role="button"
@@ -91,7 +89,9 @@ exports[`<Accordion> Should render accordion element with props and children 1`]
     </a>
     <div
       className="uk-accordion-content"
-    />
+    >
+      Accordion Item content
+    </div>
   </li>
 </ul>
 `;

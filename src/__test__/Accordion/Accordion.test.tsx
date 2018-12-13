@@ -8,9 +8,9 @@ describe('<Accordion>', () => {
   it('Should render accordion element with children and without props', () => {
     const wrapper = renderer.create(
       <Accordion>
-        <AccordionItem title="Item 1" content="Accordion Item content" />
-        <AccordionItem title="Item 2" content="Accordion Item content" />
-        <AccordionItem title="Item 3" content="Accordion Item content" />
+        <AccordionItem title="Item 1">Accordion Item content</AccordionItem>
+        <AccordionItem title="Item 2">Accordion Item content</AccordionItem>
+        <AccordionItem title="Item 3">Accordion Item content</AccordionItem>
       </Accordion>,
     )
 
@@ -20,9 +20,9 @@ describe('<Accordion>', () => {
   it('Should render accordion element with props and children', () => {
     const wrapper = renderer.create(
       <Accordion options="active: true; duration: 200; animation: true; collapsible: true;">
-        <AccordionItem title="Item 1" content="Accordion Item content" />
-        <AccordionItem title="Item 2" content="Accordion Item content" />
-        <AccordionItem title="Item 3" content="Accordion Item content" />
+        <AccordionItem title="Item 1">Accordion Item content</AccordionItem>
+        <AccordionItem title="Item 2">Accordion Item content</AccordionItem>
+        <AccordionItem title="Item 3">Accordion Item content</AccordionItem>
       </Accordion>,
     )
 
@@ -40,7 +40,7 @@ describe('<Accordion>', () => {
     }
     const wrapper = mount(
       <Accordion {...props}>
-        <AccordionItem title="Heading" content="Hello" />
+        <AccordionItem title="Heading">Hello</AccordionItem>
       </Accordion>,
     )
     const inst = wrapper.instance() as any
