@@ -24,6 +24,12 @@ import {
     Image,
     Lightbox,
     Label,
+<<<<<<< HEAD
+=======
+    Margin,
+    Labels,
+    Nav,
+>>>>>>> 39bb150918e1f51a2572c6ccb779533d2e13b942
     Tab,
     TabContainer,
     TabContent,
@@ -76,6 +82,12 @@ export const compile = marksy({
         Lightbox,
         Image,
         Label,
+<<<<<<< HEAD
+=======
+        Margin,
+        Labels,
+        Nav,
+>>>>>>> 39bb150918e1f51a2572c6ccb779533d2e13b942
         Tab,
         TabContainer,
         TabContent,

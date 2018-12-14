@@ -30,8 +30,8 @@ Defines different styles for list navigations.
 | `duration`     | number        | ```200```          | The animation duration in milliseconds. |
 
 ## Elements
-
 ``` tsx
+<<<<<<< HEAD
 <Nav>
   <NavItem>
   </NavItem>

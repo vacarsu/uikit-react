@@ -21,7 +21,7 @@ export class IndexPage extends React.Component {
         return (
             <Flex direction="column"  >
                 <Light>
-                    <Container size="large" type="image" style={{ backgroundImage: 'url("src/images/background.svg")', repeat: 'no-repeat', width: "expand", height:"100%"}}>
+                    <Container size="expand" type="image" style={{ padding:"0px",backgroundImage: 'url("src/images/background.svg")', repeat: 'no-repeat', width: "expand", height:"expand"}}>
                         <Flex alignment="center">
                             <object width="300" height="300" data="src/images/uikit-react.svg" />
                         </Flex>
