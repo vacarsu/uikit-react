@@ -9,6 +9,7 @@
   "scripts": {
     "build": "rollup -c",
     "test": "jest --coverage --json --outputFile=coverage/coverage.json",
+    "test-update": "jest --updateSnapshot",
     "test-watch": "jest --watchAll",
     "build-storybook": "build-storybook",
     "storybook": "start-storybook -p 6006 -c .storybook",
@@ -39,7 +40,7 @@
     "awesome-typescript-loader": "^5.2.0",
     "codecov": "^3.1.0",
     "enzyme": "^3.3.0",
-    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-adapter-react-16": "^1.7.1",
     "he": "^1.1.1",
     "husky": "^0.14.3",
     "identity-obj-proxy": "^3.0.0",

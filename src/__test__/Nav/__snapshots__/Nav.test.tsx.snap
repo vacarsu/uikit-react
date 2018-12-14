@@ -1,0 +1,118 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Nav> Should render Nav 1`] = `
+<ul
+  className="uk-nav "
+  data-uk-nav=""
+  id={null}
+  style={null}
+>
+  <li
+    className=""
+    id={null}
+    style={null}
+  >
+    <a
+      className=""
+      data-uk-toggle={null}
+      href="#"
+      id={null}
+      style={null}
+    >
+      Link
+    </a>
+  </li>
+  <li
+    className=""
+    id={null}
+    style={null}
+  >
+    <a
+      className=""
+      data-uk-toggle={null}
+      href="#"
+      id={null}
+      style={null}
+    >
+      Link
+    </a>
+  </li>
+  <li
+    className=""
+    id={null}
+    style={null}
+  >
+    <a
+      className=""
+      data-uk-toggle={null}
+      href="#"
+      id={null}
+      style={null}
+    >
+      Link
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`<Nav> Should render Nav Accordion 1`] = `
+<ul
+  className="uk-nav uk-nav-parent-icon "
+  data-uk-nav="multiple: true"
+  id={null}
+  style={null}
+>
+  <li
+    className="uk-parent "
+    id={null}
+    style={null}
+  >
+    <ul
+      className="uk-nav uk-nav-sub "
+      data-uk-nav=""
+      id={null}
+      style={null}
+    >
+      <a
+        className=""
+        data-uk-toggle={null}
+        href="#"
+        id={null}
+        style={null}
+      >
+        Link
+      </a>
+    </ul>
+  </li>
+  <li
+    className=""
+    id={null}
+    style={null}
+  >
+    <a
+      className=""
+      data-uk-toggle={null}
+      href="#"
+      id={null}
+      style={null}
+    >
+      Link
+    </a>
+  </li>
+  <li
+    className=""
+    id={null}
+    style={null}
+  >
+    <a
+      className=""
+      data-uk-toggle={null}
+      href="#"
+      id={null}
+      style={null}
+    >
+      Link
+    </a>
+  </li>
+</ul>
+`;

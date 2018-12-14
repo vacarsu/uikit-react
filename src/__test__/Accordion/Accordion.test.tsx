@@ -1,8 +1,11 @@
 import * as React from 'react'
 import * as renderer from 'react-test-renderer'
-import { mount } from 'enzyme'
+import * as Adapter from 'enzyme-adapter-react-16'
+import { configure, mount } from 'enzyme'
 import { Accordion } from '../../components/Accordion/Accordion'
 import { AccordionItem } from '../../components/Accordion/AccordionItem'
+
+configure({ adapter: new Adapter() })
 
 describe('<Accordion>', () => {
   it('Should render accordion element with children and without props', () => {

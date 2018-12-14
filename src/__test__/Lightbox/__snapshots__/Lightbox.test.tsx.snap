@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Lightbox> Should render Lightbox 1`] = `
+<div
+  className=""
+  data-uk-lightbox="animation: slide"
+  id={null}
+  style={null}
+>
+  <a
+    className="uk-button"
+    href="https://www.youtube.com/watch?v=YE7VzlLtp-4"
+  />
+</div>
+`;

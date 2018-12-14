@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<List> Should render default 1`] = `
+<ul
+  className="uk-list "
+  id={null}
+  style={null}
+>
+  <li
+    className=""
+    id={null}
+    style={null}
+  >
+    Item
+  </li>
+  <li
+    className=""
+    id={null}
+    style={null}
+  >
+    Item
+  </li>
+  <li
+    className=""
+    id={null}
+    style={null}
+  >
+    Item
+  </li>
+</ul>
+`;
+
+exports[`<List> Should render divider 1`] = `
+<ul
+  className="uk-list uk-link-divider "
+  id={null}
+  style={null}
+>
+  <li
+    className=""
+    id={null}
+    style={null}
+  >
+    Item
+  </li>
+  <li
+    className=""
+    id={null}
+    style={null}
+  >
+    Item
+  </li>
+  <li
+    className=""
+    id={null}
+    style={null}
+  >
+    Item
+  </li>
+</ul>
+`;
+
+exports[`<List> Should render striped 1`] = `
+<ul
+  className="uk-list uk-link-striped "
+  id={null}
+  style={null}
+>
+  <li
+    className=""
+    id={null}
+    style={null}
+  >
+    Item
+  </li>
+  <li
+    className=""
+    id={null}
+    style={null}
+  >
+    Item
+  </li>
+  <li
+    className=""
+    id={null}
+    style={null}
+  >
+    Item
+  </li>
+</ul>
+`;

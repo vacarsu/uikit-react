@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1544775165969" clover="3.2.0">
+  <project timestamp="1544775165969" name="All files">
+    <metrics statements="323" coveredstatements="298" conditionals="218" coveredconditionals="106" methods="90" coveredmethods="83" elements="631" coveredelements="487" complexity="0" loc="323" ncloc="323" packages="25" files="36" classes="36">
+      <package name="config">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="polyfills.js" path="/Users/alexlopez/Desktop/uikit-react/config/polyfills.js">
+          <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="23" type="stmt"/>
+          <line num="4" count="23" type="stmt"/>
+          <line num="6" count="23" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.components.Accordion">
+        <metrics statements="38" coveredstatements="25" conditionals="36" coveredconditionals="8" methods="7" coveredmethods="6"/>
+        <file name="Accordion.tsx" path="/Users/alexlopez/Desktop/uikit-react/src/components/Accordion/Accordion.tsx">
+          <metrics statements="33" coveredstatements="20" conditionals="36" coveredconditionals="8" methods="6" coveredmethods="5"/>
+          <line num="1" count="2" type="stmt"/>
+          <line num="2" count="2" type="stmt"/>
+          <line num="4" count="2" type="stmt"/>
+          <line num="6" count="2" type="stmt"/>
+          <line num="12" count="4" type="cond" truecount="2" falsecount="0"/>
+          <line num="13" count="4" type="stmt"/>
+          <line num="16" count="6" type="stmt"/>
+          <line num="17" count="6" type="stmt"/>
+          <line num="19" count="6" type="cond" truecount="2" falsecount="0"/>
+          <line num="20" count="4" type="stmt"/>
+          <line num="21" count="4" type="stmt"/>
+          <line num="23" count="4" type="cond" truecount="1" falsecount="1"/>
+          <line num="24" count="4" type="stmt"/>
+          <line num="28" count="0" type="stmt"/>
+          <line num="32" count="0" type="cond" truecount="0" falsecount="4"/>
+          <line num="33" count="0" type="stmt"/>
+          <line num="38" count="0" type="cond" truecount="0" falsecount="4"/>
+          <line num="39" count="0" type="stmt"/>
+          <line num="44" count="0" type="cond" truecount="0" falsecount="4"/>
+          <line num="45" count="0" type="stmt"/>
+          <line num="50" count="0" type="cond" truecount="0" falsecount="4"/>
+          <line num="51" count="0" type="stmt"/>
+          <line num="56" count="0" type="cond" truecount="0" falsecount="4"/>
+          <line num="57" count="0" type="stmt"/>
+          <line num="62" count="0" type="cond" truecount="0" falsecount="4"/>
+          <line num="63" count="0" type="stmt"/>
+          <line num="71" count="2" type="stmt"/>
+          <line num="72" count="1" type="stmt"/>
+          <line num="74" count="1" type="cond" truecount="1" falsecount="1"/>
+          <line num="77" count="2" type="stmt"/>
+          <line num="78" count="4" type="stmt"/>
+          <line num="89" count="2" type="stmt"/>
+          <line num="91" count="2" type="stmt"/>
+        </file>
+        <file name="AccordionItem.tsx" path="/Users/alexlopez/Desktop/uikit-react/src/components/Accordion/AccordionItem.tsx">
+          <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="1" count="2" type="stmt"/>
+          <line num="3" count="12" type="stmt"/>
+          <line num="12" count="2" type="stmt"/>
+        </file>
+        <file name="index.ts" path="/Users/alexlopez/Desktop/uikit-react/src/components/Accordion/index.ts">
+          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="2" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.components.Alert">
+        <metrics statements="27" coveredstatements="18" conditionals="22" coveredconditionals="9" methods="10" coveredmethods="5"/>
+        <file name="Alert.tsx" path="/Users/alexlopez/Desktop/uikit-react/src/components/Alert/Alert.tsx">
+          <metrics statements="27" coveredstatements="18" conditionals="22" coveredconditionals="9" methods="10" coveredmethods="5"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="5" count="1" type="stmt"/>
+          <line num="6" count="1" type="stmt"/>
+          <line num="8" count="1" type="stmt"/>
+          <line num="12" count="3" type="cond" truecount="2" falsecount="0"/>
+          <line num="13" count="3" type="stmt"/>
+          <line num="19" count="4" type="stmt"/>
+          <line num="20" count="4" type="cond" truecount="1" falsecount="1"/>
+          <line num="21" count="0" type="stmt"/>
+          <line num="22" count="0" type="stmt"/>
+          <line num="27" count="1" type="stmt"/>
+          <line num="28" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="29" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="32" count="1" type="stmt"/>
+          <line num="33" count="3" type="cond" truecount="1" falsecount="1"/>
+          <line num="35" count="3" type="stmt"/>
+          <line num="57" count="1" type="stmt"/>
+          <line num="58" count="0" type="stmt"/>
+          <line num="63" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="64" count="0" type="stmt"/>
+          <line num="65" count="0" type="stmt"/>
+          <line num="66" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="72" count="1" type="stmt"/>
+          <line num="73" count="3" type="stmt"/>
+          <line num="78" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.components.Article">
+        <metrics statements="6" coveredstatements="6" conditionals="8" coveredconditionals="6" methods="2" coveredmethods="2"/>
+        <file name="Article.tsx" path="/Users/alexlopez/Desktop/uikit-react/src/components/Article/Article.tsx">
+          <metrics statements="6" coveredstatements="6" conditionals="8" coveredconditionals="6" methods="2" coveredmethods="2"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="5" count="1" type="stmt"/>
+          <line num="6" count="2" type="stmt"/>
+          <line num="22" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.components.Badge">
+        <metrics statements="6" coveredstatements="6" conditionals="4" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <file name="Badge.tsx" path="/Users/alexlopez/Desktop/uikit-react/src/components/Badge/Badge.tsx">
+          <metrics statements="6" coveredstatements="6" conditionals="4" coveredconditionals="2" methods="2" coveredmethods="2"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="5" count="1" type="stmt"/>
+          <line num="6" count="1" type="stmt"/>
+          <line num="16" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.components.Breadcrumb">
+        <metrics statements="6" coveredstatements="6" conditionals="4" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <file name="Breadcrumb.tsx" path="/Users/alexlopez/Desktop/uikit-react/src/components/Breadcrumb/Breadcrumb.tsx">
+          <metrics statements="6" coveredstatements="6" conditionals="4" coveredconditionals="2" methods="2" coveredmethods="2"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="5" count="1" type="stmt"/>
+          <line num="6" count="1" type="stmt"/>
+          <line num="16" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.components.Button">
+        <metrics statements="12" coveredstatements="12" conditionals="10" coveredconditionals="3" methods="4" coveredmethods="4"/>
+        <file name="Button.tsx" path="/Users/alexlopez/Desktop/uikit-react/src/components/Button/Button.tsx">
+          <metrics statements="12" coveredstatements="12" conditionals="10" coveredconditionals="3" methods="4" coveredmethods="4"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="6" count="1" type="stmt"/>
+          <line num="7" count="1" type="stmt"/>
+          <line num="8" count="2" type="stmt"/>
+          <line num="32" count="1" type="stmt"/>
+          <line num="33" count="2" type="stmt"/>
+          <line num="36" count="1" type="stmt"/>
+          <line num="37" count="2" type="stmt"/>
+          <line num="44" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.components.Card">
+        <metrics statements="39" coveredstatements="39" conditionals="20" coveredconditionals="10" methods="11" coveredmethods="11"/>
+        <file name="Card.tsx" path="/Users/alexlopez/Desktop/uikit-react/src/components/Card/Card.tsx">
+          <metrics statements="10" coveredstatements="10" conditionals="4" coveredconditionals="2" methods="3" coveredmethods="3"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="6" count="1" type="stmt"/>
+          <line num="7" count="1" type="stmt"/>
+          <line num="8" count="3" type="stmt"/>
+          <line num="19" count="1" type="stmt"/>
+          <line num="20" count="3" type="stmt"/>
+          <line num="28" count="1" type="stmt"/>
+        </file>
+        <file name="CardBody.tsx" path="/Users/alexlopez/Desktop/uikit-react/src/components/Card/CardBody.tsx">
+          <metrics statements="6" coveredstatements="6" conditionals="4" coveredconditionals="2" methods="2" coveredmethods="2"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="5" count="1" type="stmt"/>
+          <line num="6" count="3" type="stmt"/>
+          <line num="16" count="1" type="stmt"/>
+        </file>
+        <file name="CardFooter.tsx" path="/Users/alexlopez/Desktop/uikit-react/src/components/Card/CardFooter.tsx">
+          <metrics statements="6" coveredstatements="6" conditionals="4" coveredconditionals="2" methods="2" coveredmethods="2"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="5" count="1" type="stmt"/>
+          <line num="6" count="3" type="stmt"/>
+          <line num="16" count="1" type="stmt"/>
+        </file>
+        <file name="CardHeader.tsx" path="/Users/alexlopez/Desktop/uikit-react/src/components/Card/CardHeader.tsx">
+          <metrics statements="6" coveredstatements="6" conditionals="4" coveredconditionals="2" methods="2" coveredmethods="2"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="5" count="1" type="stmt"/>
+          <line num="6" count="3" type="stmt"/>
+          <line num="16" count="1" type="stmt"/>
+        </file>
+        <file name="CardTitle.tsx" path="/Users/alexlopez/Desktop/uikit-react/src/components/Card/CardTitle.tsx">
+          <metrics statements="6" coveredstatements="6" conditionals="4" coveredconditionals="2" methods="2" coveredmethods="2"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="5" count="1" type="stmt"/>
+          <line num="6" count="3" type="stmt"/>
+          <line num="16" count="1" type="stmt"/>
+        </file>
+        <file name="index.ts" path="/Users/alexlopez/Desktop/uikit-react/src/components/Card/index.ts">
+          <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="5" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.components.Container">
+        <metrics statements="10" coveredstatements="10" conditionals="4" coveredconditionals="2" methods="3" coveredmethods="3"/>
+        <file name="Container.tsx" path="/Users/alexlopez/Desktop/uikit-react/src/components/Container/Container.tsx">
+          <metrics statements="10" coveredstatements="10" conditionals="4" coveredconditionals="2" methods="3" coveredmethods="3"/>
+          <line num="1" count="2" type="stmt"/>
+          <line num="2" count="2" type="stmt"/>
+          <line num="3" count="2" type="stmt"/>
+          <line num="5" count="2" type="stmt"/>
+          <line num="7" count="2" type="stmt"/>
+          <line num="8" count="2" type="stmt"/>
+          <line num="9" count="4" type="stmt"/>
+          <line num="20" count="2" type="stmt"/>
+          <line num="21" count="4" type="stmt"/>
+          <line num="27" count="2" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.components.Cover">
+        <metrics statements="15" coveredstatements="13" conditionals="10" coveredconditionals="6" methods="4" coveredmethods="4"/>
+        <file name="Cover.tsx" path="/Users/alexlopez/Desktop/uikit-react/src/components/Cover/Cover.tsx">
+          <metrics statements="15" coveredstatements="13" conditionals="10" coveredconditionals="6" methods="4" coveredmethods="4"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="5" count="1" type="stmt"/>
+          <line num="6" count="2" type="stmt"/>
+          <line num="18" count="1" type="stmt"/>
+          <line num="19" count="2" type="cond" truecount="1" falsecount="1"/>
+          <line num="20" count="0" type="stmt"/>
+          <line num="24" count="1" type="stmt"/>
+          <line num="25" count="2" type="cond" truecount="2" falsecount="0"/>
+          <line num="26" count="1" type="stmt"/>
+          <line num="36" count="1" type="cond" truecount="1" falsecount="1"/>
+          <line num="37" count="1" type="stmt"/>
+          <line num="51" count="0" type="stmt"/>
+          <line num="53" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.components.Dark">
+        <metrics statements="6" coveredstatements="6" conditionals="4" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <file name="Dark.tsx" path="/Users/alexlopez/Desktop/uikit-react/src/components/Dark/Dark.tsx">
+          <metrics statements="6" coveredstatements="6" conditionals="4" coveredconditionals="2" methods="2" coveredmethods="2"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="5" count="1" type="stmt"/>
+          <line num="6" count="1" type="stmt"/>
+          <line num="16" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.components.Dropdown">
+        <metrics statements="6" coveredstatements="6" conditionals="6" coveredconditionals="4" methods="2" coveredmethods="2"/>
+        <file name="Dropdown.tsx" path="/Users/alexlopez/Desktop/uikit-react/src/components/Dropdown/Dropdown.tsx">
+          <metrics statements="6" coveredstatements="6" conditionals="6" coveredconditionals="4" methods="2" coveredmethods="2"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="5" count="1" type="stmt"/>
+          <line num="6" count="2" type="stmt"/>
+          <line num="18" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.components.Flex">
+        <metrics statements="11" coveredstatements="11" conditionals="6" coveredconditionals="4" methods="3" coveredmethods="3"/>
+        <file name="Flex.tsx" path="/Users/alexlopez/Desktop/uikit-react/src/components/Flex/Flex.tsx">
+          <metrics statements="11" coveredstatements="11" conditionals="6" coveredconditionals="4" methods="3" coveredmethods="3"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="6" count="1" type="stmt"/>
+          <line num="7" count="1" type="stmt"/>
+          <line num="8" count="2" type="stmt"/>
+          <line num="19" count="1" type="stmt"/>
+          <line num="20" count="2" type="cond" truecount="2" falsecount="0"/>
+          <line num="22" count="2" type="stmt"/>
+          <line num="30" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.components.Grid">
+        <metrics statements="10" coveredstatements="10" conditionals="6" coveredconditionals="3" methods="3" coveredmethods="3"/>
+        <file name="Grid.tsx" path="/Users/alexlopez/Desktop/uikit-react/src/components/Grid/Grid.tsx">
+          <metrics statements="10" coveredstatements="10" conditionals="6" coveredconditionals="3" methods="3" coveredmethods="3"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="6" count="1" type="stmt"/>
+          <line num="7" count="1" type="stmt"/>
+          <line num="8" count="2" type="stmt"/>
+          <line num="20" count="1" type="stmt"/>
+          <line num="21" count="2" type="stmt"/>
+          <line num="28" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.components.Icon">
+        <metrics statements="16" coveredstatements="16" conditionals="14" coveredconditionals="9" methods="4" coveredmethods="4"/>
+        <file name="Icon.tsx" path="/Users/alexlopez/Desktop/uikit-react/src/components/Icon/Icon.tsx">
+          <metrics statements="16" coveredstatements="16" conditionals="14" coveredconditionals="9" methods="4" coveredmethods="4"/>
+          <line num="1" count="2" type="stmt"/>
+          <line num="2" count="2" type="stmt"/>
+          <line num="4" count="2" type="stmt"/>
+          <line num="5" count="2" type="stmt"/>
+          <line num="7" count="2" type="stmt"/>
+          <line num="8" count="2" type="stmt"/>
+          <line num="9" count="5" type="stmt"/>
+          <line num="12" count="2" type="stmt"/>
+          <line num="13" count="5" type="cond" truecount="2" falsecount="0"/>
+          <line num="14" count="1" type="stmt"/>
+          <line num="24" count="4" type="cond" truecount="2" falsecount="0"/>
+          <line num="25" count="1" type="stmt"/>
+          <line num="38" count="3" type="stmt"/>
+          <line num="48" count="2" type="stmt"/>
+          <line num="49" count="5" type="stmt"/>
+          <line num="57" count="2" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.components.Image">
+        <metrics statements="7" coveredstatements="7" conditionals="6" coveredconditionals="3" methods="2" coveredmethods="2"/>
+        <file name="Image.tsx" path="/Users/alexlopez/Desktop/uikit-react/src/components/Image/Image.tsx">
+          <metrics statements="7" coveredstatements="7" conditionals="6" coveredconditionals="3" methods="2" coveredmethods="2"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="6" count="1" type="stmt"/>
+          <line num="7" count="1" type="stmt"/>
+          <line num="8" count="1" type="stmt"/>
+          <line num="20" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.components.Label">
+        <metrics statements="10" coveredstatements="9" conditionals="4" coveredconditionals="2" methods="3" coveredmethods="2"/>
+        <file name="Label.tsx" path="/Users/alexlopez/Desktop/uikit-react/src/components/Label/Label.tsx">
+          <metrics statements="10" coveredstatements="9" conditionals="4" coveredconditionals="2" methods="3" coveredmethods="2"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="6" count="1" type="stmt"/>
+          <line num="7" count="1" type="stmt"/>
+          <line num="8" count="2" type="stmt"/>
+          <line num="19" count="1" type="stmt"/>
+          <line num="20" count="0" type="stmt"/>
+          <line num="24" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.components.Light">
+        <metrics statements="6" coveredstatements="6" conditionals="4" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <file name="Light.tsx" path="/Users/alexlopez/Desktop/uikit-react/src/components/Light/Light.tsx">
+          <metrics statements="6" coveredstatements="6" conditionals="4" coveredconditionals="2" methods="2" coveredmethods="2"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="5" count="1" type="stmt"/>
+          <line num="6" count="1" type="stmt"/>
+          <line num="16" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.components.Lightbox">
+        <metrics statements="6" coveredstatements="6" conditionals="6" coveredconditionals="3" methods="2" coveredmethods="2"/>
+        <file name="Lightbox.tsx" path="/Users/alexlopez/Desktop/uikit-react/src/components/Lightbox/Lightbox.tsx">
+          <metrics statements="6" coveredstatements="6" conditionals="6" coveredconditionals="3" methods="2" coveredmethods="2"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="5" count="1" type="stmt"/>
+          <line num="6" count="1" type="stmt"/>
+          <line num="17" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.components.Link">
+        <metrics statements="10" coveredstatements="10" conditionals="6" coveredconditionals="4" methods="3" coveredmethods="3"/>
+        <file name="Link.tsx" path="/Users/alexlopez/Desktop/uikit-react/src/components/Link/Link.tsx">
+          <metrics statements="10" coveredstatements="10" conditionals="6" coveredconditionals="4" methods="3" coveredmethods="3"/>
+          <line num="1" count="3" type="stmt"/>
+          <line num="2" count="3" type="stmt"/>
+          <line num="3" count="3" type="stmt"/>
+          <line num="4" count="3" type="stmt"/>
+          <line num="6" count="3" type="stmt"/>
+          <line num="7" count="3" type="stmt"/>
+          <line num="8" count="11" type="stmt"/>
+          <line num="21" count="3" type="stmt"/>
+          <line num="22" count="11" type="stmt"/>
+          <line num="27" count="3" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.components.List">
+        <metrics statements="18" coveredstatements="18" conditionals="8" coveredconditionals="4" methods="5" coveredmethods="5"/>
+        <file name="List.tsx" path="/Users/alexlopez/Desktop/uikit-react/src/components/List/List.tsx">
+          <metrics statements="10" coveredstatements="10" conditionals="4" coveredconditionals="2" methods="3" coveredmethods="3"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="6" count="1" type="stmt"/>
+          <line num="7" count="1" type="stmt"/>
+          <line num="8" count="3" type="stmt"/>
+          <line num="19" count="1" type="stmt"/>
+          <line num="20" count="3" type="stmt"/>
+          <line num="25" count="1" type="stmt"/>
+        </file>
+        <file name="ListItem.tsx" path="/Users/alexlopez/Desktop/uikit-react/src/components/List/ListItem.tsx">
+          <metrics statements="6" coveredstatements="6" conditionals="4" coveredconditionals="2" methods="2" coveredmethods="2"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="5" count="1" type="stmt"/>
+          <line num="6" count="9" type="stmt"/>
+          <line num="16" count="1" type="stmt"/>
+        </file>
+        <file name="index.ts" path="/Users/alexlopez/Desktop/uikit-react/src/components/List/index.ts">
+          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="2" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.components.Margin">
+        <metrics statements="13" coveredstatements="13" conditionals="4" coveredconditionals="2" methods="4" coveredmethods="4"/>
+        <file name="Margin.tsx" path="/Users/alexlopez/Desktop/uikit-react/src/components/Margin/Margin.tsx">
+          <metrics statements="13" coveredstatements="13" conditionals="4" coveredconditionals="2" methods="4" coveredmethods="4"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="6" count="1" type="stmt"/>
+          <line num="7" count="1" type="stmt"/>
+          <line num="8" count="1" type="stmt"/>
+          <line num="20" count="1" type="stmt"/>
+          <line num="21" count="1" type="stmt"/>
+          <line num="24" count="1" type="stmt"/>
+          <line num="25" count="1" type="stmt"/>
+          <line num="28" count="1" type="stmt"/>
+          <line num="32" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.components.Nav">
+        <metrics statements="22" coveredstatements="22" conditionals="10" coveredconditionals="6" methods="6" coveredmethods="6"/>
+        <file name="Nav.tsx" path="/Users/alexlopez/Desktop/uikit-react/src/components/Nav/Nav.tsx">
+          <metrics statements="10" coveredstatements="10" conditionals="6" coveredconditionals="4" methods="3" coveredmethods="3"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="6" count="1" type="stmt"/>
+          <line num="7" count="1" type="stmt"/>
+          <line num="8" count="3" type="stmt"/>
+          <line num="20" count="1" type="stmt"/>
+          <line num="21" count="3" type="stmt"/>
+          <line num="29" count="1" type="stmt"/>
+        </file>
+        <file name="NavItem.tsx" path="/Users/alexlopez/Desktop/uikit-react/src/components/Nav/NavItem.tsx">
+          <metrics statements="10" coveredstatements="10" conditionals="4" coveredconditionals="2" methods="3" coveredmethods="3"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="6" count="1" type="stmt"/>
+          <line num="7" count="1" type="stmt"/>
+          <line num="8" count="6" type="stmt"/>
+          <line num="19" count="1" type="stmt"/>
+          <line num="20" count="6" type="stmt"/>
+          <line num="26" count="1" type="stmt"/>
+        </file>
+        <file name="index.ts" path="/Users/alexlopez/Desktop/uikit-react/src/components/Nav/index.ts">
+          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="2" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.components.Panel">
+        <metrics statements="10" coveredstatements="10" conditionals="4" coveredconditionals="3" methods="3" coveredmethods="3"/>
+        <file name="Panel.tsx" path="/Users/alexlopez/Desktop/uikit-react/src/components/Panel/Panel.tsx">
+          <metrics statements="10" coveredstatements="10" conditionals="4" coveredconditionals="3" methods="3" coveredmethods="3"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="6" count="1" type="stmt"/>
+          <line num="7" count="1" type="stmt"/>
+          <line num="8" count="2" type="stmt"/>
+          <line num="19" count="1" type="stmt"/>
+          <line num="20" count="2" type="stmt"/>
+          <line num="25" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.utils">
+        <metrics statements="10" coveredstatements="10" conditionals="12" coveredconditionals="7" methods="1" coveredmethods="1"/>
+        <file name="set-class-names.ts" path="/Users/alexlopez/Desktop/uikit-react/src/utils/set-class-names.ts">
+          <metrics statements="10" coveredstatements="10" conditionals="12" coveredconditionals="7" methods="1" coveredmethods="1"/>
+          <line num="1" count="22" type="stmt"/>
+          <line num="2" count="22" type="stmt"/>
+          <line num="4" count="22" type="stmt"/>
+          <line num="5" count="85" type="cond" truecount="1" falsecount="1"/>
+          <line num="6" count="85" type="cond" truecount="2" falsecount="0"/>
+          <line num="7" count="85" type="cond" truecount="1" falsecount="1"/>
+          <line num="8" count="85" type="cond" truecount="1" falsecount="1"/>
+          <line num="9" count="85" type="cond" truecount="1" falsecount="1"/>
+          <line num="10" count="85" type="cond" truecount="1" falsecount="1"/>
+          <line num="12" count="85" type="stmt"/>
+        </file>
+      </package>
+    </metrics>
+  </project>
+</coverage>

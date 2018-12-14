@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Label> Should render Label 1`] = `
+<div
+  className=""
+  id={null}
+  style={null}
+>
+  test
+</div>
+`;
+
+exports[`<Label> Should render with color 1`] = `
+<div
+  className=""
+  id={null}
+  style={null}
+>
+  test
+</div>
+`;

@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Link> Should render default 1`] = `
+<a
+  className=""
+  data-uk-toggle={null}
+  href="#"
+  id={null}
+  style={null}
+>
+  Link
+</a>
+`;
+
+exports[`<Link> Should render toggle link 1`] = `
+<div>
+  <a
+    className=""
+    data-uk-toggle="target: #my-id"
+    id={null}
+    style={null}
+  >
+    Link
+  </a>
+  <p
+    id="my-id"
+  >
+    Lorem ipsum dolor sit amet,
+  </p>
+</div>
+`;
