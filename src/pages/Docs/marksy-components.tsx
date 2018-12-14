@@ -23,7 +23,7 @@ import {
     Icon,
     Image,
     Lightbox,
-    Labels,
+    Label,
     Tab,
     TabContainer,
     TabContent,
@@ -34,6 +34,12 @@ import {
     Section,
     Flex,
     Dropdown,
+    Nav,
+    NavItem,
+    NavbarContainer,
+    Navbar,
+    NavbarDropdown,
+    NavbarSticky
 } from 'uikit-react';
 import { Code } from './code';
 
@@ -69,7 +75,7 @@ export const compile = marksy({
         Icon,
         Lightbox,
         Image,
-        Labels,
+        Label,
         Tab,
         TabContainer,
         TabContent,
@@ -79,5 +85,11 @@ export const compile = marksy({
         Section,
         Flex,
         Dropdown,
+        Nav,
+        NavItem,
+        NavbarContainer,
+        Navbar,
+        NavbarDropdown,
+        NavbarSticky
     }
 });
