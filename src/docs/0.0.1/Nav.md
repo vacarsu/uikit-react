@@ -31,7 +31,6 @@ Defines different styles for list navigations.
 
 ## Elements
 ``` tsx
-<<<<<<< HEAD
 <Nav>
   <NavItem>
   </NavItem>
