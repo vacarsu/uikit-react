@@ -130,7 +130,7 @@ Create a list of items that can be shown individually by clicking an item's head
     </ul>
     <ul className="uk-switcher">
         <li>
-            <Accordion options="collapsible: false;">
+            <Accordion options="multiple: true;">
                 <AccordionItem 
                     title="Item 1"
                     content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
