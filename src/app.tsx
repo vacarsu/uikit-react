@@ -51,7 +51,7 @@ class ExamplePage extends React.Component<any, any> {
                             <Section color="secondary" preserveColor>
                                 <NavbarContainer>
                                     <Navbar left>
-                                        <ListItem padding="small">
+                                        <ListItem>
                                                 <a href="/"><img width="200" height="200" src="src/images/uikit-react-simple-text.svg"/></a>
                                         </ListItem>
                                     </Navbar>

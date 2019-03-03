@@ -25,7 +25,7 @@
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
     "uikit": "^3.0.0-rc.5",
-    "uikit-react": "^3.0.14"
+    "uikit-react": "^3.0.19"
   },
   "devDependencies": {
     "@types/classnames": "^2.2.4",
