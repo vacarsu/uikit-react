@@ -20,7 +20,6 @@
   "author": "Alex Lopez",
   "license": "ISC",
   "peerDependencies": {
-    "classnames": "^2.2.5",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
     "uikit": "^3.0.0-rc.5"
@@ -72,6 +71,7 @@
     "uikit": "^3.0.0-rc.9"
   },
   "dependencies": {
+    "classnames": "^2.2.5",
     "@types/jest": "^23.3.0",
     "jest": "^23.4.1",
     "ts-jest": "^23.0.1"
