@@ -68,13 +68,13 @@
     "tslint-config-airbnb": "^5.9.2",
     "typescript": "^2.9.1",
     "uglify-es": "^3.3.9",
-    "uikit": "^3.0.0-rc.9"
+    "uikit": "^3.3.0",
+    "@types/jest": "24.9.0",
+    "jest": "24.9.0",
+    "ts-jest": "^23.0.1"
   },
   "dependencies": {
-    "classnames": "^2.2.5",
-    "@types/jest": "^23.3.0",
-    "jest": "^23.4.1",
-    "ts-jest": "^23.0.1"
+    "classnames": "^2.2.5"
   },
   "jest": {
     "transform": {
