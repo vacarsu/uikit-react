@@ -1,7 +1,7 @@
-import * as React from 'react'
-import * as _classNames from 'classnames'
-const classNames = _classNames
-import { setClassNames } from '../../utils/set-class-names'
+import React from 'react';
+import _classNames from 'classnames';
+const classNames = _classNames;
+import { setClassNames } from '../../utils/set-class-names';
 
 export class InputContainer extends React.Component<BaseContainerProps, any> {
   render() {
@@ -13,6 +13,6 @@ export class InputContainer extends React.Component<BaseContainerProps, any> {
       >
         {this.props.children}
       </div>
-    )
+    );
   }
 }

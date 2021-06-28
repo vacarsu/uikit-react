@@ -1,7 +1,7 @@
-import * as React from 'react'
-import * as renderer from 'react-test-renderer'
-import { Dark } from './../../components/Dark/Dark'
-import { Light } from './../../components/Light/Light'
+import React from 'react';
+import renderer from 'react-test-renderer';
+import { Dark } from './../../components/Dark/Dark';
+import { Light } from './../../components/Light/Light';
 
 describe('<Dark>', () => {
   it('Should render Dark mode', () => {
@@ -9,11 +9,11 @@ describe('<Dark>', () => {
       <Dark>
         <p>Dark mode</p>
       </Dark>,
-    )
+    );
 
-    expect(wrapper.toJSON()).toMatchSnapshot()
-  })
-})
+    expect(wrapper.toJSON()).toMatchSnapshot();
+  });
+});
 
 describe('<Light', () => {
   it('Should render Light mode', () => {
@@ -21,8 +21,8 @@ describe('<Light', () => {
       <Light>
         <p>Light mode</p>
       </Light>,
-    )
+    );
 
-    expect(wrapper.toJSON()).toMatchSnapshot()
-  })
-})
+    expect(wrapper.toJSON()).toMatchSnapshot();
+  });
+});

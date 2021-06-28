@@ -1,6 +1,6 @@
-import * as React from 'react'
-import * as renderer from 'react-test-renderer'
-import { Card, CardBody, CardFooter, CardHeader, CardTitle } from './../../components/Card'
+import React from 'react';
+import renderer from 'react-test-renderer';
+import { Card, CardBody, CardFooter, CardHeader, CardTitle } from './../../components/Card';
 
 describe('<Button>', () => {
   it('Should render card with footer, header, title, and body', () => {
@@ -12,10 +12,10 @@ describe('<Button>', () => {
           <CardFooter>Footer of the Card</CardFooter>
         </CardHeader>
       </Card>,
-    )
+    );
 
-    expect(wrapper.toJSON()).toMatchSnapshot()
-  })
+    expect(wrapper.toJSON()).toMatchSnapshot();
+  });
 
   it('Should render card with hover', () => {
     const wrapper = renderer.create(
@@ -26,10 +26,10 @@ describe('<Button>', () => {
           <CardFooter>Footer of the Card</CardFooter>
         </CardHeader>
       </Card>,
-    )
+    );
 
-    expect(wrapper.toJSON()).toMatchSnapshot()
-  })
+    expect(wrapper.toJSON()).toMatchSnapshot();
+  });
 
   it('Should render card with color', () => {
     const wrapper = renderer.create(
@@ -40,8 +40,8 @@ describe('<Button>', () => {
           <CardFooter>Footer of the Card</CardFooter>
         </CardHeader>
       </Card>,
-    )
+    );
 
-    expect(wrapper.toJSON()).toMatchSnapshot()
-  })
-})
+    expect(wrapper.toJSON()).toMatchSnapshot();
+  });
+});

@@ -1,27 +1,25 @@
-import * as React from 'react'
-import * as _classNames from 'classnames'
-const classNames = _classNames
+import React from 'react';
+import classnames from 'classnames';
+import { setClassNames } from '../../utils/set-class-names';
 
-import { setClassNames } from '../../utils/set-class-names'
-
-export class Container extends React.Component<ContainerProps, any> {
-  render() {
-    return (
-      <div
-        id={this.props.id ? this.props.id : null}
-        style={this.props.style ? this.props.style : null}
-        className={this.setClassNames()}
-      >
-        {this.props.children}
-      </div>
-    )
-  }
-
-  private setClassNames(): string {
-    return classNames({
+export function Container(props: ContainerProps) {
+  const _setClassNames = (): string => {
+    return classnames({
       [`uk-container`]: true,
-      [`uk-container-${this.props.size}`]: !!this.props.size,
-      [setClassNames(this.props)]: true,
-    })
-  }
+      [`uk-container-${props.size}`]: !!props.size,
+      [setClassNames(props)]: true,
+    });
+  };
+
+  return (
+    <div
+      id={props.id ? props.id : null}
+      style={props.style ? props.style : null}
+      className={_setClassNames()}
+    >
+      {props.children}
+    </div>
+  );
 }
+
+export default Container;

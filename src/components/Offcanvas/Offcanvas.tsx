@@ -1,43 +1,43 @@
-import * as React from 'react'
-import { setClassNames } from '../../utils/set-class-names'
+import React, { useEffect } from 'react';
+import { setClassNames } from '../../utils/set-class-names';
 
-export class Offcanvas extends React.Component<OffcanvasProps, any> {
-  componentDidMount() {
-    if (this.props.onBeforeShow) {
-      UIkit.util.on(this.props.id, 'beforeshow', this.props.onBeforeShow)
+export function Offcanvas(props: OffcanvasProps) {
+  useEffect(() => {
+    if (props.onBeforeShow) {
+      UIkit.util.on(props.id, 'beforeshow', props.onBeforeShow);
     }
 
-    if (this.props.onShow) {
-      UIkit.util.on(this.props.id, 'show', this.props.onShow)
+    if (props.onShow) {
+      UIkit.util.on(props.id, 'show', props.onShow);
     }
 
-    if (this.props.onShown) {
-      UIkit.util.on(this.props.id, 'shown', this.props.onShown)
+    if (props.onShown) {
+      UIkit.util.on(props.id, 'shown', props.onShown);
     }
 
-    if (this.props.onBeforeHide) {
-      UIkit.util.on(this.props.id, 'beforehide', this.props.onBeforeHide)
+    if (props.onBeforeHide) {
+      UIkit.util.on(props.id, 'beforehide', props.onBeforeHide);
     }
 
-    if (this.props.onHide) {
-      UIkit.util.on(this.props.id, 'hide', this.props.onHide)
+    if (props.onHide) {
+      UIkit.util.on(props.id, 'hide', props.onHide);
     }
 
-    if (this.props.onHidden) {
-      UIkit.util.on(this.props.id, 'hidden', this.props.onHidden)
+    if (props.onHidden) {
+      UIkit.util.on(props.id, 'hidden', props.onHidden);
     }
-  }
+  }, []);
 
-  render() {
-    return (
-      <div
-        id={this.props.id}
-        style={this.props.style ? this.props.style : null}
-        className={`${setClassNames(this.props)}`}
-        data-uk-offcanvas={this.props.options ? this.props.options : ''}
-      >
-        <div className="uk-offcanvas-bar">{this.props.children}</div>
-      </div>
-    )
-  }
+  return (
+    <div
+      id={props.id}
+      style={props.style ? props.style : null}
+      className={`${setClassNames(props)}`}
+      data-uk-offcanvas={props.options ? props.options : ''}
+    >
+      <div className="uk-offcanvas-bar">{props.children}</div>
+    </div>
+  );
 }
+
+export default Offcanvas;

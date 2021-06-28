@@ -1,7 +1,7 @@
-import * as React from 'react'
-import * as renderer from 'react-test-renderer'
-import { Link } from './../../components/Link/Link'
-import { Nav, NavItem } from './../../components/Nav'
+import React from 'react';
+import renderer from 'react-test-renderer';
+import { Link } from './../../components/Link/Link';
+import { Nav, NavItem } from './../../components/Nav';
 
 describe('<Nav>', () => {
   it('Should render Nav', () => {
@@ -17,10 +17,10 @@ describe('<Nav>', () => {
           <Link href="#">Link</Link>
         </NavItem>
       </Nav>,
-    )
+    );
 
-    expect(wrapper.toJSON()).toMatchSnapshot()
-  })
+    expect(wrapper.toJSON()).toMatchSnapshot();
+  });
 
   it('Should render Nav Accordion', () => {
     const wrapper = renderer.create(
@@ -37,8 +37,8 @@ describe('<Nav>', () => {
           <Link href="#">Link</Link>
         </NavItem>
       </Nav>,
-    )
+    );
 
-    expect(wrapper.toJSON()).toMatchSnapshot()
-  })
-})
+    expect(wrapper.toJSON()).toMatchSnapshot();
+  });
+});

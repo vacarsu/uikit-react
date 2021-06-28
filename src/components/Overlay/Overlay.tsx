@@ -1,26 +1,24 @@
-import * as React from 'react'
-import * as _classNames from 'classnames'
-const classNames = _classNames
-import { setClassNames } from '../../utils/set-class-names'
+import React from 'react';
+import _classNames from 'classnames';
+import { setClassNames } from '../../utils/set-class-names';
 
-export class Overlay extends React.Component<OverlayProps, any> {
-  render() {
-    return (
-      <div
-        id={this.props.id ? this.props.id : null}
-        style={this.props.style ? this.props.style : null}
-        className={`${this.setClassNames()}`}
-      >
-        {this.props.showIcon ? <span uk-overlay-icon /> : null}
-      </div>
-    )
-  }
-
-  private setClassNames() {
-    return classNames('uk-overlay', {
-      [`uk-position-${this.props.position}`]: !!this.props.position,
-      [`uk-position-${this.props.type}`]: !!this.props.type,
-      [`${setClassNames(this.props)}`]: true,
-    })
-  }
+export function Overlay(props: OverlayProps) {
+  const _setClassNames = (): string => {
+    return _classNames('uk-overlay', {
+      [`uk-position-${props.position}`]: !!props.position,
+      [`uk-position-${props.type}`]: !!props.type,
+      [`${setClassNames(props)}`]: true,
+    });
+  };
+  return (
+    <div
+      id={props.id ? props.id : null}
+      style={props.style ? props.style : null}
+      className={`${_setClassNames()}`}
+    >
+      {props.showIcon ? <span uk-overlay-icon /> : null}
+    </div>
+  );
 }
+
+export default Overlay;

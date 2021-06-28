@@ -1,26 +1,25 @@
-import * as React from 'react'
-import * as _classNames from 'classnames'
-const classNames = _classNames
-import { setClassNames } from '../../utils/set-class-names'
+import React from 'react';
+import _classNames from 'classnames';
+import { setClassNames } from '../../utils/set-class-names';
 
-export class Navbar extends React.Component<NavbarProps, any> {
-  render() {
-    return (
-      <div
-        id={this.props.id ? this.props.id : null}
-        style={this.props.style ? this.props.style : null}
-        className={`${this.setClassNames()}`}
-      >
-        <ul className="uk-navbar-nav">{this.props.children}</ul>
-      </div>
-    )
-  }
+export function Navbar(props: NavbarProps) {
+  const _setClassNames = (): string => {
+    return _classNames({
+      [`uk-navbar-left`]: props.left,
+      [`uk-navbar-right`]: props.right,
+      [setClassNames(props)]: true,
+    });
+  };
 
-  private setClassNames() {
-    return classNames({
-      [`uk-navbar-left`]: this.props.left,
-      [`uk-navbar-right`]: this.props.right,
-      [setClassNames(this.props)]: true,
-    })
-  }
+  return (
+    <div
+      id={props.id ? props.id : null}
+      style={props.style ? props.style : null}
+      className={`${_setClassNames()}`}
+    >
+      <ul className="uk-navbar-nav">{props.children}</ul>
+    </div>
+  );
 }
+
+export default Navbar;

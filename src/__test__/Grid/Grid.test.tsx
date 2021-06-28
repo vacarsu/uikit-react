@@ -1,6 +1,6 @@
-import * as React from 'react'
-import * as renderer from 'react-test-renderer'
-import { Grid } from './../../components/Grid/Grid'
+import React from 'react';
+import renderer from 'react-test-renderer';
+import { Grid } from './../../components/Grid/Grid';
 
 describe('<Grid>', () => {
   it('Should render without props', () => {
@@ -10,10 +10,10 @@ describe('<Grid>', () => {
         <div>block</div>
         <div>block</div>
       </Grid>,
-    )
+    );
 
-    expect(wrapper.toJSON()).toMatchSnapshot()
-  })
+    expect(wrapper.toJSON()).toMatchSnapshot();
+  });
 
   it('Should render with props', () => {
     const wrapper = renderer.create(
@@ -22,8 +22,8 @@ describe('<Grid>', () => {
         <div>block</div>
         <div>block</div>
       </Grid>,
-    )
+    );
 
-    expect(wrapper.toJSON()).toMatchSnapshot()
-  })
-})
+    expect(wrapper.toJSON()).toMatchSnapshot();
+  });
+});

@@ -22,7 +22,7 @@ yarn add uikit-react
 
 #### Sample layout with Offcanvas
 ```jsx
-import * as React from 'react';
+import React from 'react';
 import { 
     Container,
     Icon,

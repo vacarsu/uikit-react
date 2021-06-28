@@ -1,71 +1,69 @@
-import * as React from 'react'
-import { createPortal } from 'react-dom'
-import { setClassNames } from '../../utils/set-class-names'
+import React, { useEffect } from 'react';
+import { setClassNames } from '../../utils/set-class-names';
 
-export class TabContainer extends React.Component<TabContainerProps, any> {
-  componentDidMount() {
-    console.log(this.props.children)
-    if (this.props.onBeforeShow) {
-      this.validateIdProp()
-      UIkit.util.on(this.props.id, 'beforeshow', () => {
-        console.log('eventFired')
-        this.props.onBeforeShow()
-      })
-    }
-
-    if (this.props.onShow) {
-      this.validateIdProp()
-      UIkit.util.on(this.props.id, 'show', this.props.onShow)
-    }
-
-    if (this.props.onShown) {
-      this.validateIdProp()
-      UIkit.util.on(this.props.id, 'shown', this.props.onShown)
-    }
-
-    if (this.props.onBeforeHide) {
-      this.validateIdProp()
-      UIkit.util.on(this.props.id, 'beforehide', this.props.onBeforeHide)
-    }
-
-    if (this.props.onHide) {
-      this.validateIdProp()
-      UIkit.util.on(this.props.id, 'hide', this.props.onHide)
-    }
-
-    if (this.props.onHidden) {
-      this.validateIdProp()
-      UIkit.util.on(this.props.id, 'hidden', this.props.onHidden)
-    }
-  }
-
-  render() {
-    return (
-      <div
-        id={this.props.id ? this.props.id : null}
-        style={this.props.style ? this.props.style : null}
-        className={setClassNames(this.props)}
-      >
-        <ul uk-tab={this.props.options ? this.props.options : ''}>{this.renderChildren('tab')}</ul>
-        <ul id={this.props.id ? this.props.id : ''} className="uk-switcher">
-          {this.renderChildren('tab-content')}
-        </ul>
-      </div>
-    )
-  }
-
-  private renderChildren(key) {
-    return React.Children.map(this.props.children, (child, idx) => {
-      const comp = child as React.ReactElement<any>
+export function TabContainer(props: TabContainerProps) {
+  const renderChildren = key => {
+    return React.Children.map(props.children, (child, idx) => {
+      const comp = child as React.ReactElement<any>;
       if (comp.key === key) {
-        return comp
+        return comp;
       }
-    })
-  }
+    });
+  };
 
-  private validateIdProp() {
-    if (!this.props.id) {
-      console.error('ID property is required to register to tab events')
+  const validateIdProp = () => {
+    if (!props.id) {
+      console.error('ID property is required to register to tab events');
     }
-  }
+  };
+
+  useEffect(() => {
+    if (props.onBeforeShow) {
+      validateIdProp();
+      UIkit.util.on(props.id, 'beforeshow', () => {
+        console.log('eventFired');
+        props.onBeforeShow();
+      });
+    }
+
+    if (props.onShow) {
+      validateIdProp();
+      UIkit.util.on(props.id, 'show', props.onShow);
+    }
+
+    if (props.onShown) {
+      validateIdProp();
+      UIkit.util.on(props.id, 'shown', props.onShown);
+    }
+
+    if (props.onBeforeHide) {
+      validateIdProp();
+      UIkit.util.on(props.id, 'beforehide', props.onBeforeHide);
+    }
+
+    if (props.onHide) {
+      validateIdProp();
+      UIkit.util.on(props.id, 'hide', props.onHide);
+    }
+
+    if (props.onHidden) {
+      validateIdProp();
+      UIkit.util.on(props.id, 'hidden', props.onHidden);
+    }
+  }, []);
+
+  return (
+    <div
+      id={props.id ? props.id : null}
+      style={props.style ? props.style : null}
+      className={setClassNames(props)}
+    >
+      <ul uk-tab={props.options ? props.options : ''}>{renderChildren('tab')}</ul>
+      <ul id={props.id ? props.id : ''} className="uk-switcher">
+        {renderChildren('tab-content')}
+      </ul>
+    </div>
+  );
 }
+
+export default TabContainer;

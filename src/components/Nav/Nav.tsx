@@ -1,29 +1,28 @@
-import * as React from 'react'
-import * as _classNames from 'classnames'
-const classNames = _classNames
-import { setClassNames } from '../../utils/set-class-names'
+import React from 'react';
+import _classNames from 'classnames';
+import { setClassNames } from '../../utils/set-class-names';
 
-export class Nav extends React.Component<NavProps, any> {
-  render() {
-    return (
-      <ul
-        id={this.props.id ? this.props.id : null}
-        style={this.props.style ? this.props.style : null}
-        className={`${this.setClassNames()}`}
-        data-uk-nav={this.props.options ? this.props.options : ''}
-      >
-        {this.props.children}
-      </ul>
-    )
-  }
-
-  setClassNames() {
-    return classNames({
+export function Nav(props: NavProps) {
+  const _setClassNames = (): string => {
+    return _classNames({
       [`uk-nav`]: true,
-      [`uk-nav-${this.props.preset}`]: !!this.props.preset,
-      [`uk-nav-sub`]: this.props.child,
-      [`uk-nav-parent-icon`]: this.props.accordion,
-      [`${setClassNames(this.props)}`]: true,
-    })
-  }
+      [`uk-nav-${props.preset}`]: !!props.preset,
+      [`uk-nav-sub`]: props.child,
+      [`uk-nav-parent-icon`]: props.accordion,
+      [`${setClassNames(props)}`]: true,
+    });
+  };
+
+  return (
+    <ul
+      id={props.id ? props.id : null}
+      style={props.style ? props.style : null}
+      className={`${_setClassNames()}`}
+      data-uk-nav={props.options ? props.options : ''}
+    >
+      {props.children}
+    </ul>
+  );
 }
+
+export default Nav;

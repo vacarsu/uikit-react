@@ -1,25 +1,22 @@
-import * as React from 'react'
-import * as _classNames from 'classnames'
-const classNames = _classNames
-import { setClassNames } from '../../utils/set-class-names'
+import React from 'react';
+import _classNames from 'classnames';
+import { setClassNames } from '../../utils/set-class-names';
 
-export class List extends React.Component<ListProps, any> {
-  render() {
-    return (
-      <ul
-        id={this.props.id ? this.props.id : null}
-        style={this.props.style ? this.props.style : null}
-        className={`${this.setClassNames()}`}
-      >
-        {this.props.children}
-      </ul>
-    )
-  }
+export function List(props: ListProps) {
+  const _setClassNames = (): string => {
+    return _classNames('uk-list', {
+      [`uk-link-${props.type}`]: !!props.type,
+      [`${setClassNames(props)}`]: true,
+    });
+  };
 
-  private setClassNames() {
-    return classNames('uk-list', {
-      [`uk-link-${this.props.type}`]: !!this.props.type,
-      [`${setClassNames(this.props)}`]: true,
-    })
-  }
+  return (
+    <ul
+      id={props.id ? props.id : null}
+      style={props.style ? props.style : null}
+      className={`${_setClassNames()}`}
+    >
+      {props.children}
+    </ul>
+  );
 }

@@ -1,17 +1,17 @@
-import * as React from 'react'
-import { setClassNames } from '../../utils/set-class-names'
+import React from 'react';
+import { setClassNames } from '../../utils/set-class-names';
 
-export class Scrollspy extends React.Component<ScrollspyProps, any> {
-  render() {
-    return (
-      <div
-        id={this.props.id ? this.props.id : null}
-        style={this.props.style ? this.props.style : null}
-        className={`${setClassNames(this.props)}`}
-        data-uk-scrollspy={this.props.options ? this.props.options : ''}
-      >
-        {this.props.children}
-      </div>
-    )
-  }
+export function Scrollspy(props: ScrollspyProps) {
+  return (
+    <div
+      id={props.id ? props.id : null}
+      style={props.style ? props.style : null}
+      className={`${setClassNames(props)}`}
+      data-uk-scrollspy={props.options ? props.options : ''}
+    >
+      {props.children}
+    </div>
+  );
 }
+
+export default Scrollspy;

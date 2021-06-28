@@ -1,53 +1,53 @@
-import * as React from 'react'
-import { setClassNames } from '../../utils/set-class-names'
+import React from 'react';
+import { setClassNames } from '../../utils/set-class-names';
 
-export class Cover extends React.Component<CoverProps, any> {
-  render() {
-    return (
-      <div
-        id={this.props.id ? this.props.id : null}
-        style={this.props.style ? this.props.style : null}
-        className={`uk-cover-container ${setClassNames(this.props)}`}
-      >
-        {this.renderResponsiveMode()}
-        {this.renderBasedOnType()}
-      </div>
-    )
-  }
-
-  private renderResponsiveMode() {
-    if (this.props.responsive) {
-      return <canvas width={this.props.width} height={this.props.height} />
+export function Cover(props: CoverProps) {
+  const renderResponsiveMode = () => {
+    if (props.responsive) {
+      return <canvas width={props.width} height={props.height} />;
     }
-  }
+  };
 
-  private renderBasedOnType() {
-    if (this.props.type === 'image') {
+  const renderBasedOnType = () => {
+    if (props.type === 'image') {
       return (
         <img
-          src={this.props.src}
-          alt={this.props.alt}
-          width={this.props.width}
-          height={this.props.height}
+          src={props.src}
+          alt={props.alt}
+          width={props.width}
+          height={props.height}
           data-uk-cover={''}
         />
-      )
+      );
     }
-    if (this.props.type === 'video') {
+    if (props.type === 'video') {
       return (
         <video
-          autoPlay={this.props.autoPlay}
-          loop={this.props.loop}
-          muted={this.props.muted}
-          playsinline={this.props.playsinline}
-          width={this.props.width}
-          height={this.props.height}
+          autoPlay={props.autoPlay}
+          loop={props.loop}
+          muted={props.muted}
+          playsInline={props.playsInline}
+          width={props.width}
+          height={props.height}
           data-uk-cover={''}
         >
-          <source src={this.props.src} type={`${this.props.type}/${this.props.videoFormat}`} />
+          <source src={props.src} type={`${props.type}/${props.videoFormat}`} />
         </video>
-      )
+      );
     }
-    console.error('Type property on cover component must be either video or image')
-  }
+    console.error('Type property on cover component must be either video or image');
+  };
+
+  return (
+    <div
+      id={props.id ? props.id : null}
+      style={props.style ? props.style : null}
+      className={`uk-cover-container ${setClassNames(props)}`}
+    >
+      {renderResponsiveMode()}
+      {renderBasedOnType()}
+    </div>
+  );
 }
+
+export default Cover;

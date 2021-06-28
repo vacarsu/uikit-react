@@ -1,25 +1,24 @@
-import * as React from 'react'
-import * as _classNames from 'classnames'
-const classNames = _classNames
-import { setClassNames } from '../../utils/set-class-names'
+import React from 'react';
+import _classNames from 'classnames';
+import { setClassNames } from '../../utils/set-class-names';
 
-export class Panel extends React.Component<PanelProps, any> {
-  render() {
-    return (
-      <div
-        id={this.props.id ? this.props.id : null}
-        style={this.props.style ? this.props.style : null}
-        className={this.setClassNames()}
-      >
-        {this.props.children}
-      </div>
-    )
-  }
+export function Panel(props: PanelProps) {
+  const _setClassNames = (): string => {
+    return _classNames('uk-panel', {
+      [`uk-panel-scrollable`]: props.isScrollable,
+      [setClassNames(props)]: true,
+    });
+  };
 
-  private setClassNames() {
-    return classNames('uk-panel', {
-      [`uk-panel-scrollable`]: this.props.isScrollable,
-      [setClassNames(this.props)]: true,
-    })
-  }
+  return (
+    <div
+      id={props.id ? props.id : null}
+      style={props.style ? props.style : null}
+      className={_setClassNames()}
+    >
+      {props.children}
+    </div>
+  );
 }
+
+export default Panel;

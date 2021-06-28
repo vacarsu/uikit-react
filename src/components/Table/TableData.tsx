@@ -1,36 +1,35 @@
-import * as React from 'react'
-import * as _classNames from 'classnames'
-const classNames = _classNames
-import { setClassNames } from '../../utils/set-class-names'
+import React from 'react';
+import _classNames from 'classnames';
+import { setClassNames } from '../../utils/set-class-names';
 
-export class TableData extends React.Component<TableDataProps, any> {
-  render() {
-    return (
-      <td
-        id={this.props.id ? this.props.id : null}
-        style={this.props.style ? this.props.style : null}
-        className={this.setClassNames()}
-      >
-        {this.props.children}
-      </td>
-    )
-  }
-
-  private setClassNames(): string {
-    if (this.props.shrink && this.props.expand) {
-      console.error('Please use only one width modfier on table components')
-    } else if (this.props.expand && this.props.width) {
-      console.error('Please use only one width modfier on table components')
-    } else if (this.props.shrink && this.props.width) {
-      console.error('Please use only one width modfier on table components')
+export function TableData(props: TableDataProps) {
+  const _setClassNames = (): string => {
+    if (props.shrink && props.expand) {
+      console.error('Please use only one width modfier on table components');
+    } else if (props.expand && props.width) {
+      console.error('Please use only one width modfier on table components');
+    } else if (props.shrink && props.width) {
+      console.error('Please use only one width modfier on table components');
     } else {
-      const isWidth = this.props.width ? true : false
-      return classNames({
-        [`uk-table-expand`]: this.props.expand,
-        [`uk-table-shrink`]: this.props.shrink,
-        [`uk-table-${this.props.width}`]: isWidth,
-        [`${setClassNames(this.props)}`]: true,
-      })
+      const isWidth = props.width ? true : false;
+      return _classNames({
+        [`uk-table-expand`]: props.expand,
+        [`uk-table-shrink`]: props.shrink,
+        [`uk-table-${props.width}`]: isWidth,
+        [`${setClassNames(props)}`]: true,
+      });
     }
-  }
+  };
+
+  return (
+    <td
+      id={props.id ? props.id : null}
+      style={props.style ? props.style : null}
+      className={_setClassNames()}
+    >
+      {props.children}
+    </td>
+  );
 }
+
+export default TableData;

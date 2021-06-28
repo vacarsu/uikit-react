@@ -1,6 +1,6 @@
-import * as React from 'react'
-import * as renderer from 'react-test-renderer'
-import { Lightbox } from './../../components/Lightbox/Lightbox'
+import React from 'react';
+import renderer from 'react-test-renderer';
+import { Lightbox } from './../../components/Lightbox/Lightbox';
 
 describe('<Lightbox>', () => {
   it('Should render Lightbox', () => {
@@ -8,8 +8,8 @@ describe('<Lightbox>', () => {
       <Lightbox options="animation: slide">
         <a className="uk-button" href="https://www.youtube.com/watch?v=YE7VzlLtp-4" />
       </Lightbox>,
-    )
+    );
 
-    expect(wrapper.toJSON()).toMatchSnapshot()
-  })
-})
+    expect(wrapper.toJSON()).toMatchSnapshot();
+  });
+});

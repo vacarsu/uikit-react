@@ -1,16 +1,16 @@
-import * as React from 'react'
-import { setClassNames } from '../../utils/set-class-names'
+import React from 'react';
+import { setClassNames } from '../../utils/set-class-names';
 
-export class NavbarDropdown extends React.Component<BaseProps, any> {
-  render() {
-    return (
-      <div
-        id={this.props.id ? this.props.id : null}
-        style={this.props.style ? this.props.style : null}
-        className={`uk-navbar-dropdown ${setClassNames(this.props)}`}
-      >
-        <ul className="uk-nav uk-navbar-dropdown-nav">{this.props.children}</ul>
-      </div>
-    )
-  }
+export function NavbarDropdown(props: BaseContainerProps) {
+  return (
+    <div
+      id={props.id ? props.id : null}
+      style={props.style ? props.style : null}
+      className={`uk-navbar-dropdown ${setClassNames(props)}`}
+    >
+      <ul className="uk-nav uk-navbar-dropdown-nav">{props.children}</ul>
+    </div>
+  );
 }
+
+export default NavbarDropdown;

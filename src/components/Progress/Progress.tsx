@@ -1,38 +1,25 @@
-import * as React from 'react'
-import * as _classNames from 'classnames'
-const classNames = _classNames
-import { setClassNames } from '../../utils/set-class-names'
+import React, { useState } from 'react';
+import _classNames from 'classnames';
+import { setClassNames } from '../../utils/set-class-names';
 
-export class Progress extends React.Component<ProgressProps, ProgressState> {
-  constructor(props) {
-    super(props)
+export function Progress(props: ProgressProps) {
+  const [state, setState] = useState({ value: props.value });
 
-    this.state = { value: props.value }
-  }
+  const _setClassNames = (): string => {
+    return _classNames('uk-progress', {
+      [`${setClassNames(props)}`]: true,
+    });
+  };
 
-  static getDerivedStateFromProps(props, currentState) {
-    if (currentState !== props.value) {
-      return {
-        value: props.value,
-      }
-    }
-  }
-
-  render() {
-    return (
-      <progress
-        id={this.props.id ? this.props.id : null}
-        style={this.props.style ? this.props.style : null}
-        className={`${this.setClassNames()}`}
-        value={this.state.value}
-        max={this.props.max}
-      />
-    )
-  }
-
-  private setClassNames() {
-    return classNames('uk-progress', {
-      [`${setClassNames(this.props)}`]: true,
-    })
-  }
+  return (
+    <progress
+      id={props.id ? props.id : null}
+      style={props.style ? props.style : null}
+      className={`${_setClassNames()}`}
+      value={state.value}
+      max={props.max}
+    />
+  );
 }
+
+export default Progress;

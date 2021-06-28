@@ -1,12 +1,14 @@
-import * as React from 'react'
+import React from 'react';
 
-export const AccordionItem: React.SFC<AccordionItemProps> = ({ title, children, ...rest }) => (
-  <li {...rest}>
-    <a role="button" className="uk-accordion-title">
-      {title}
-    </a>
-    <div className="uk-accordion-content">{children}</div>
-  </li>
-)
+export function AccordionItem({ title, children, ...rest }) {
+  return (
+    <li {...rest}>
+      <a role="button" className="uk-accordion-title">
+        {title}
+      </a>
+      <div className="uk-accordion-content">{children}</div>
+    </li>
+  );
+}
 
-export default AccordionItem
+export default AccordionItem;

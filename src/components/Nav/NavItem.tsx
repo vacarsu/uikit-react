@@ -1,26 +1,25 @@
-import * as React from 'react'
-import * as _classNames from 'classnames'
-const classNames = _classNames
-import { setClassNames } from '../../utils/set-class-names'
+import React from 'react';
+import _classNames from 'classnames';
+import { setClassNames } from '../../utils/set-class-names';
 
-export class NavItem extends React.Component<NavItemProps, any> {
-  render() {
-    return (
-      <li
-        id={this.props.id ? this.props.id : null}
-        style={this.props.style ? this.props.style : null}
-        className={`${this.setClassNames()}`}
-      >
-        {this.props.children}
-      </li>
-    )
-  }
+export function NavItem(props: NavItemProps) {
+  const _setClassNames = (): string => {
+    return _classNames({
+      [`uk-nav-${props.type}`]: !!props.type,
+      [`uk-parent`]: props.parent,
+      [`${setClassNames(props)}`]: true,
+    });
+  };
 
-  private setClassNames(): string {
-    return classNames({
-      [`uk-nav-${this.props.type}`]: !!this.props.type,
-      [`uk-parent`]: this.props.parent,
-      [`${setClassNames(this.props)}`]: true,
-    })
-  }
+  return (
+    <li
+      id={props.id ? props.id : null}
+      style={props.style ? props.style : null}
+      className={`${_setClassNames()}`}
+    >
+      {props.children}
+    </li>
+  );
 }
+
+export default NavItem;

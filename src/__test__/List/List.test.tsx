@@ -1,6 +1,6 @@
-import * as React from 'react'
-import * as renderer from 'react-test-renderer'
-import { List, ListItem } from './../../components/List'
+import React from 'react';
+import renderer from 'react-test-renderer';
+import { List, ListItem } from './../../components/List';
 
 describe('<List>', () => {
   it('Should render default', () => {
@@ -10,10 +10,10 @@ describe('<List>', () => {
         <ListItem>Item</ListItem>
         <ListItem>Item</ListItem>
       </List>,
-    )
+    );
 
-    expect(wrapper.toJSON()).toMatchSnapshot()
-  })
+    expect(wrapper.toJSON()).toMatchSnapshot();
+  });
 
   it('Should render divider', () => {
     const wrapper = renderer.create(
@@ -22,10 +22,10 @@ describe('<List>', () => {
         <ListItem>Item</ListItem>
         <ListItem>Item</ListItem>
       </List>,
-    )
+    );
 
-    expect(wrapper.toJSON()).toMatchSnapshot()
-  })
+    expect(wrapper.toJSON()).toMatchSnapshot();
+  });
 
   it('Should render striped', () => {
     const wrapper = renderer.create(
@@ -34,8 +34,8 @@ describe('<List>', () => {
         <ListItem>Item</ListItem>
         <ListItem>Item</ListItem>
       </List>,
-    )
+    );
 
-    expect(wrapper.toJSON()).toMatchSnapshot()
-  })
-})
+    expect(wrapper.toJSON()).toMatchSnapshot();
+  });
+});
