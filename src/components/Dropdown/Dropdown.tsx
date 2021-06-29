@@ -8,9 +8,7 @@ export function Dropdown(props: DropdownProps) {
       className={`${setClassNames(props)}`}
       data-uk-dropdown={props.options ? props.options : ''}
     >
-      <ul style={props.style ? props.style : null} className={`uk-nav uk-dropdown-nav`}>
-        {props.children}
-      </ul>
+      {props.children}
     </div>
   );
 }
