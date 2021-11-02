@@ -9,11 +9,18 @@ export class FormLabel extends React.Component<React.HTMLProps<HTMLLabelElement>
       <label
         id={this.props.id ? this.props.id : null}
         style={this.props.style ? this.props.style : null}
-        className={`${setClassNames(this.props)}`}
+        className={this.setClassNames()}
         htmlFor={this.props.htmlFor}
       >
         {this.props.children}
       </label>
     );
+  }
+
+  private setClassNames(): string {
+    return classNames({
+      [`uk-form-label`]: true,
+      [`${setClassNames(this.props)}`]: true,
+    });
   }
 }
