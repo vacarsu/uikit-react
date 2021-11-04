@@ -14,7 +14,6 @@ export function Accordion(props: AccordionProps) {
   useEffect(() => {
     if (accordionRef.current) {
       const { options } = props;
-      console.log(accordionRef.current);
       // setState({ ...state, component: UIkit.accordion(accordionRef.current, options) })
       UIkit.util.on(
         accordionRef.current as HTMLElement,
