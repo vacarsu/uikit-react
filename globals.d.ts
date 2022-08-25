@@ -317,3 +317,7 @@ declare interface TableHeaderProps extends BaseProps {
   width?: string;
   children: any;
 }
+
+declare interface ModalBodyProps extends BaseProps {
+  children?: any;
+}

@@ -3,12 +3,12 @@ declare namespace UIkit {
     /**
      * Show the dropdown
      */
-    show(): void
+    show(): void;
 
     /**
      * Hide the dropdown
      */
-    hide(force?: boolean): void
+    hide(force?: boolean): void;
   }
 
   type DropdownPosition =
@@ -23,55 +23,55 @@ declare namespace UIkit {
     | 'left-bottom'
     | 'right-top'
     | 'right-center'
-    | 'right-bottom'
+    | 'right-bottom';
 
   interface DropdownOptions {
     /**
      * Dropdown position
      * @default 'bottom-left'
      */
-    pos?: DropdownPosition
+    pos?: DropdownPosition;
     /**
      * Dropdown trigger behaviour
      * @default 'hover'
      */
-    mode?: 'hover' | 'click'
+    mode?: 'hover' | 'click';
     /**
      * Remain time before auto closing dropdown in hover mode
      * @default 800
      */
-    remaintime?: number
+    remaintime?: number;
     /**
      * Stretch dropdown width to a specified element
      * @default false
      */
-    justify?: string | HTMLElement | false
+    justify?: string | HTMLElement | false;
     /**
      * Referenced element to keep dropdowns visibilty
      * @default window
      */
-    boundary?: string | HTMLElement | Window
+    boundary?: string | HTMLElement | Window;
     /**
      * Delay time in hover mode before a dropdown is shown in ms
      * @default 0
      */
-    delay?: number
+    delay?: number;
     /**
      * Dropdown selector
      * @default '.uk-dropdown,.uk-dropdown-blank'
      */
-    dropdownSelector?: string | HTMLElement
+    dropdownSelector?: string | HTMLElement;
     /**
      * Is added to the delay time when hovering from one active dropdown to another dropdown (in ms)
      * @default 250
      */
-    hoverDelayIdle?: number
+    hoverDelayIdle?: number;
     /**
      * Prevent automatic dropdown flip
      * Possible values: 'x', 'y', true, false
      * @default false
      */
-    preventflip?: 'x' | 'y' | boolean
+    preventflip?: 'x' | 'y' | boolean;
   }
 
   /**
@@ -84,62 +84,89 @@ declare namespace UIkit {
    * hide.uk.dropdown   Triggered on dropdown hide
    * stack.uk.dropdown  Triggered when a dropdown stacks to fit into screen
    */
-  type Dropdown = (selector: string | HTMLElement, options?: DropdownOptions) => DropdownElement
+  type Dropdown = (selector: string | HTMLElement, options?: DropdownOptions) => DropdownElement;
 
   interface ModalElement {
     /**
      * Show the modal
      */
-    show(): void
+    show(): void;
 
     /**
      * Hide the modal
      */
-    hide(): void
+    hide(): void;
 
     /**
      * Return if the modal is active on the page
      * @return True if the modal is current active on the page, false otherwise
      */
-    isActive(): boolean
+    isActive(): boolean;
   }
 
   interface ModalOptions {
     /**
-     * Allows controls from keyboard (ESC to close)
+     * Close the modal when the Esc key is pressed.
+     *
      * @default true
-     * <h2>Possible value</h2>
-     * boolean
      */
-    keyboard?: boolean
+    escClose?: boolean;
+
     /**
-     * Allow modal to close automatically when clicking on the modal overlay
+     * Close the modal when the background is clicked.
+     *
      * @default true
-     * <h2>Possible value</h2>
-     * boolean
      */
-    bgclose?: boolean
+    bgClose?: boolean;
+
     /**
-     * Set the height for overflow container to start scrolling
-     * @default 150
-     * <h2>Possible value</h2>
-     * integer
-     */
-    minScrollHeight?: number
-    /**
-     * Vertically center the modal
+     * Stack modals, when more than one is open.
+     * By default, the previous modal will be hidden.
+     *
      * @default false
-     * <h2>Possible value</h2>
-     * boolean
      */
-    center?: boolean
+    stack?: boolean;
+
     /**
-     * Close currently opened modals on opening modal
+     * Define a target container via a selector to specify where the modal
+     * should be appended in the DOM.
+     * Setting it to false will prevent this behavior.
+     *
      * @default true
-     * <h2>Possible value</h2>
-     * boolean
      */
-    modal?: boolean
+    container?: string | boolean;
+
+    /**
+     * Class to add to <html> when modal is active
+     *
+     * @default 'uk-modal-page'
+     */
+    clsPage?: string;
+
+    /**
+     * Class of the element to be considered the panel of the modal
+     *
+     * @default 'uk-modal-dialog'
+     */
+    clsPanel?: string;
+
+    /**
+     * CSS selector for all elements that should trigger the closing of the modal
+     *
+     * @default '.uk-modal-close, .uk-modal-close-default, .uk-modal-close-outside, .uk-modal-close-full'
+     */
+    selClose?: string;
+
+    /**
+     * classes that the root `div` element should have.
+     *
+     * Note that when you specify this, the default 'uk-modal-dialog' is not appended
+     * automatically. A common use-case for this is to have the 'uk-modal-dialog' element
+     * also have the 'uk-modal-body' class.
+     *
+     * @default 'uk-modal-dialog'
+     */
+    className?: string;
   }
 
   /**
@@ -184,14 +211,14 @@ declare namespace UIkit {
      * Create a alert dialog
      * @param  message The message to display. Can be Html
      */
-    alert(message: string): void
+    alert(message: string): void;
 
     /**
      * Create a confirm dialog
      * @param  message The message to display. Can be Html
      * @param  [options={bgclose: true, keyboard: false, modal: false}] The modal options
      */
-    confirm(message: string, options?: ModalOptions): void
+    confirm(message: string, options?: ModalOptions): void;
 
     /**
      * Create a confirm dialog and execute onconfirm on confirmation
@@ -199,7 +226,7 @@ declare namespace UIkit {
      * @param  onconfirm A function to execute on confirmation
      * @param  [options={bgclose: true, keyboard: false, modal: false}] The modal options
      */
-    confirm(message: string, onconfirm: () => any, options?: ModalOptions): void
+    confirm(message: string, onconfirm: () => any, options?: ModalOptions): void;
 
     /**
      * Create a confirm dialog and execute onconfirm on confirmation and oncancel on cancelation.
@@ -213,7 +240,7 @@ declare namespace UIkit {
       onconfirm: () => any,
       oncancel?: () => any,
       options?: ModalOptions,
-    ): void
+    ): void;
 
     /**
      * Create a prompt dialog, where the user enter information
@@ -227,14 +254,14 @@ declare namespace UIkit {
       value: string,
       onsubmit?: (newValue: string) => any,
       options?: ModalOptions,
-    ): void
+    ): void;
 
     /**
      * Create a modal that blocks the entire page
      * @param content A content to display. Can be Html
      * @param  [options={bgclose: true, keyboard: false, modal: false}] The modal options
      */
-    blockUI(content: string, options?: ModalOptions): ModalElement
+    blockUI(content: string, options?: ModalOptions): ModalElement;
 
     /**
      * Select a modal element on page and return it.
@@ -249,7 +276,7 @@ declare namespace UIkit {
      * }
      * </code></pre>
      */
-    (selector: string | HTMLElement, options?: ModalOptions): ModalElement
+    (selector: string | HTMLElement, options?: ModalOptions): ModalElement;
   }
 
   /**
@@ -279,7 +306,7 @@ declare namespace UIkit {
      * Show an off-canvas matching the passed CSS selector
      * @param  selector A CSS selector
      */
-    show(selector: string): void
+    show(selector: string): void;
 
     /**
      * Hide any active offcanvas. Set force to true, if you don't want any
@@ -287,7 +314,7 @@ declare namespace UIkit {
      * @param  force When seted to true do not run animations.
      * @default false
      */
-    hide(force?: boolean): void
+    hide(force?: boolean): void;
   }
 
   interface LightBoxOptions {
@@ -295,29 +322,29 @@ declare namespace UIkit {
      * Group name to group elements as a gallery to show.
      * @default false
      */
-    group?: string
+    group?: string;
     /**
      * Animation duration between gallery item change
      * @default 400
      */
-    duration?: number
+    duration?: number;
     /**
      * Allow keyboard navigation
      * @default true
      */
-    keyboard?: boolean
+    keyboard?: boolean;
   }
 
   interface LightBoxItem {
-    source: string
-    type: string
+    source: string;
+    type: string;
   }
 
   interface LightBoxElement {
     /**
      * Open the lightbox
      */
-    show(): void
+    show(): void;
   }
 
   /**
@@ -343,37 +370,37 @@ declare namespace UIkit {
      * @param  items Group of items on the lightbox
      * @return           The lightbox element to show
      */
-    create(items: LightBoxItem[]): LightBoxElement
+    create(items: LightBoxItem[]): LightBoxElement;
 
     /**
      * Init element manually
      */
-    (element: string | HTMLElement, options?: LightBoxOptions): LightBoxElement
+    (element: string | HTMLElement, options?: LightBoxOptions): LightBoxElement;
   }
 
-  type CallbackAutoComplete = () => string
+  type CallbackAutoComplete = () => string;
 
   interface AutoCompleteOptions {
     /**
      * Data source
      * @default []
      */
-    source?: string | string[] | CallbackAutoComplete
+    source?: string | string[] | CallbackAutoComplete;
     /**
      * Min. input length before triggering autocomplete
      * @default 3
      */
-    minLength?: number
+    minLength?: number;
     /**
      * Query name when sending ajax request
      * @default search
      */
-    param?: string
+    param?: string;
     /**
      * Delay time after stop typing
      * @default 300
      */
-    delay?: number
+    delay?: number;
   }
 
   /**
@@ -398,7 +425,7 @@ declare namespace UIkit {
    * </tr>
    * </table>
    */
-  type AutoComplete = (element: string | HTMLElement, options?: AutoCompleteOptions) => any
+  type AutoComplete = (element: string | HTMLElement, options?: AutoCompleteOptions) => any;
 
   interface DatePickerOptions {
     /**
@@ -406,22 +433,22 @@ declare namespace UIkit {
      * integer (0..6)
      * @default 1
      */
-    weekstart?: number
+    weekstart?: number;
     /**
      * Language string definitions
      * @default { months:['January',...], weekdays:['Sun',..,'Sat'] }
      */
-    i18n?: {}
+    i18n?: {};
     /**
      * Date format string
      * @default 'DD.MM.YYYY'
      */
-    format?: string
+    format?: string;
     /**
      * Offset to the input value
      * @default 5
      */
-    offsettop?: number
+    offsettop?: number;
     /**
      * Min. date
      * bool (false to ignore the option)
@@ -429,7 +456,7 @@ declare namespace UIkit {
      * integer (offset in days from current date)
      * @default false
      */
-    minDate?: string | boolean | number
+    minDate?: string | boolean | number;
     /**
      * Max. date
      * bool (false to ignore the option)
@@ -437,13 +464,13 @@ declare namespace UIkit {
      * integer (offset in days from current date)
      * @default false
      */
-    maxDate?: string | boolean | number
+    maxDate?: string | boolean | number;
     /**
      * Position of the datepicker
      * 'auto', 'top', 'bottom'
      * @default 'auto'
      */
-    pos?: string
+    pos?: string;
   }
 
   /**
@@ -473,7 +500,7 @@ declare namespace UIkit {
    * </tr>
    * </table>
    */
-  type DatePicker = (element: string | HTMLElement, options?: DatePickerOptions) => any
+  type DatePicker = (element: string | HTMLElement, options?: DatePickerOptions) => any;
 
   interface HtmlEditorOptions {
     /**
@@ -481,71 +508,71 @@ declare namespace UIkit {
      * Possible values 'split','tab'
      * @default 'split'
      */
-    mode?: string
+    mode?: string;
     /**
      * Button list to appear in the toolbar
      * @default [ "bold", "italic", "strike", "link", "picture", ... ]
      */
-    toolbar?: string[]
+    toolbar?: string[];
     /**
      * Min. browser width when to switch to responsive tab mode when in split mode
      * @default 1000
      */
-    maxsplitsize?: number
+    maxsplitsize?: number;
     /**
      * Label string for preview mode
      * @default 'Preview'
      */
-    lblPreview?: string
+    lblPreview?: string;
     /**
      * Label string for code mode
      * @default 'Markdown'
      */
-    lblCodeview?: string
+    lblCodeview?: string;
   }
 
   /**
    * Create a rich HTML or markdown editor with an immediate preview and syntax highlighting
    * Documentation {@link http://getuikit.org/docs/htmleditor.html}
    */
-  type HtmlEditor = (element: string | HTMLElement, options?: HtmlEditorOptions) => any
+  type HtmlEditor = (element: string | HTMLElement, options?: HtmlEditorOptions) => any;
 
   interface SliderOptions {
     /**
      * Center items mode
      * @default false
      */
-    center?: boolean
+    center?: boolean;
     /**
      * Mouse movement threshold in pixel until trigger element dragging
      * @default true
      */
-    threshold?: boolean
+    threshold?: boolean;
     /**
      * Infinite scrolling
      * @default true
      */
-    infinite?: boolean
+    infinite?: boolean;
     /**
      * Class added on active item in center mode
      * @default uk-active
      */
-    activecls?: string
+    activecls?: string;
     /**
      * Defines whether or not the slider items should switch automatically
      * @default false
      */
-    autoplay?: boolean
+    autoplay?: boolean;
     /**
      * Pause autoplay when hovering a slider
      * @default true
      */
-    pauseOnHover?: boolean
+    pauseOnHover?: boolean;
     /**
      * Defines the timespan between switching slider items
      * @default 7000
      */
-    autoplayInterval?: number
+    autoplayInterval?: number;
   }
 
   /**
@@ -565,69 +592,69 @@ declare namespace UIkit {
    * </tr>
    * </table>
    */
-  type Slider = (element: string | HTMLElement, options?: SliderOptions) => any
+  type Slider = (element: string | HTMLElement, options?: SliderOptions) => any;
 
   interface SlideSetOptions {
     /**
      * Default visible items in a set
      * @default 1
      */
-    default?: number
+    default?: number;
     /**
      * Visible items in a set at small breakpoint
      * @default null
      */
-    small?: number
+    small?: number;
     /**
      * Visible items in a set at medium breakpoint
      * @default null
      */
-    medium?: number
+    medium?: number;
     /**
      * Visible items in a set at large breakpoint
      * @default null
      */
-    large?: number
+    large?: number;
     /**
      * Visible items in a set at xlarge breakpoint
      * @default null
      */
-    xlarge?: number
+    xlarge?: number;
     /**
      * Animation name
      * @default 'fade'
      */
-    animation?: string
+    animation?: string;
     /**
      * Animation duration in ms
      * @default 200
      */
-    duration?: number
+    duration?: number;
     /**
      * Animation delay between items in a set
      * @default 100
      */
-    delay?: number
+    delay?: number;
     /**
      * Items filter
      * @default ""
      */
-    filter?: string
+    filter?: string;
     /**
      * Defines whether or not the slideset items should switch automatically.
      * @default false
      */
-    autoplay?: boolean
+    autoplay?: boolean;
     /**
      * Pause autoplay when hovering a slideset.
      * @default true
      */
-    pauseOnHover?: boolean
+    pauseOnHover?: boolean;
     /**
      * Defines the timespan between switching slideset items.
      * @default 7000
      */
-    autoplayInterval?: number
+    autoplayInterval?: number;
   }
 
   /**
@@ -647,81 +674,81 @@ declare namespace UIkit {
    * </tr>
    * </table>
    */
-  type SlideSet = (element: string | HTMLElement, options?: SlideSetOptions) => any
+  type SlideSet = (element: string | HTMLElement, options?: SlideSetOptions) => any;
 
   interface SlideShowOptions {
     /**
      * Defines the preferred transition between items.
      * @default 'fade
      */
-    animation?: string
+    animation?: string;
 
     /**
      * Defines the transition duration.
      * @default 500
      */
-    duration?: number
+    duration?: number;
 
     /**
      * Defines the slideshow height.
      * @default 'auto'
      */
-    height?: string
+    height?: string;
 
     /**
      * Defines the first slideshow item to be displayed.
      * @default 0
      */
-    start?: number
+    start?: number;
 
     /**
      * Defines whether or not the slideshow items should switch automatically.
      * @default false
      */
-    autoplay?: boolean
+    autoplay?: boolean;
 
     /**
      * Pause autoplay when hovering a slideshow.
      * @default true
      */
-    pauseOnHover?: boolean
+    pauseOnHover?: boolean;
 
     /**
      * Defines the timespan between switching slideshow items.
      * @default 7000
      */
-    autoplayInterval?: number
+    autoplayInterval?: number;
 
     /**
      * Defines whether or not a video starts automatically.
      * @default true
      */
-    videoautoplay?: boolean
+    videoautoplay?: boolean;
 
     /**
      * Defines whether or not a video is muted.
      * @default false
      */
-    videomute?: boolean
+    videomute?: boolean;
 
     /**
      * Defines whether or not the Ken Burns effect is active. If kenburns is a numeric value, it will be used as
      * the animation duration.
      * @default false
      */
-    kenburns?: boolean
+    kenburns?: boolean;
 
     /**
      * Animation series.
      * @default 'uk-animation-middle-left, uk-animation-top-right, uk-animation-bottom-left, uk-animation-top-center,uk-animation-bottom-right'
      */
-    kenburnsanimations?: string
+    kenburnsanimations?: string;
 
     /**
      * Defines the number of slices, if a "Slice" transition is set.
      * @default 15
      */
-    slices?: number
+    slices?: number;
   }
 
   /**
@@ -741,40 +768,40 @@ declare namespace UIkit {
    * </tr>
    * </table>
    */
-  type SlideShow = (element: string | HTMLElement, options: SlideShowOptions) => any
+  type SlideShow = (element: string | HTMLElement, options: SlideShowOptions) => any;
 
   interface ParallaxOptions {
     /**
      * Animation velocity during scrolling
      * @default 0.5
      */
-    velocity?: number
+    velocity?: number;
     /**
      * Element dimension reference for animation duration.
      * @default false
      */
-    target?: boolean
+    target?: boolean;
     /**
      * Animation range depending on the viewport.
      * <h2>Possible value</h2>
      * float (0 to 1)
      * @default false
      */
-    viewport?: number
+    viewport?: number;
     /**
      * Condition for the active status with a width as integer (e.g. 640) or a css media query
      * @default false
      * <h2>Possible Value</h2>
      * integer / string
      */
-    media?: number | string
+    media?: number | string;
   }
 
   /**
    * Animate CSS properties depending on the scroll position of the document.
    * Documentation {@link http://getuikit.org/docs/parallax.html}
    */
-  type Parallax = (element: string | HTMLElement, options: ParallaxOptions) => any
+  type Parallax = (element: string | HTMLElement, options: ParallaxOptions) => any;
 
   interface AccordionOptions {
     /**
@@ -783,56 +810,56 @@ declare namespace UIkit {
      * <h2>Possible value</h2>
      * boolean
      */
-    showfirst?: boolean
+    showfirst?: boolean;
     /**
      * Allow multiple open items
      * @default true
      * <h2>Possible value</h2>
      * boolean
      */
-    collapse?: boolean
+    collapse?: boolean;
     /**
      * Animate toggle
      * @default true
      * <h2>Possible value</h2>
      * boolean
      */
-    animate?: boolean
+    animate?: boolean;
     /**
      * Animation function
      * @default swing
      * <h2>Possible value</h2>
      * string
      */
-    easing?: string
+    easing?: string;
     /**
      * Animation duration
      * @default 300
      * <h2>Possible value</h2>
      * integer
      */
-    duration?: number
+    duration?: number;
     /**
      * Css selector for toggles
      * @default .uk-accordion-title
      * <h2>Possible value</h2>
      * string
      */
-    toggle?: string
+    toggle?: string;
     /**
      * Css selector for content containers
      * @default .uk-accordion-content
      * <h2>Possible value</h2>
      * string
      */
-    containers?: string
+    containers?: string;
     /**
      * Class to add when an item is active
      * @default uk-active
      * <h2>Possible value</h2>
      * string
      */
-    clsactive?: string
+    clsactive?: string;
   }
 
   /**
@@ -852,13 +879,13 @@ declare namespace UIkit {
    * </tr>
    * </table>
    */
-  type Accordion = (element: string | HTMLElement, options: AccordionOptions) => any
+  type Accordion = (element: string | HTMLElement, options: AccordionOptions) => any;
 
   interface NotifyOptions {
     /**
      * The message to display
      */
-    message?: string
+    message?: string;
 
     /**
      * A notification can be styled by adding a status to the message to indicate an info, success, warning or a
@@ -868,13 +895,13 @@ declare namespace UIkit {
      * If you want to create one set its style with the CSS class uk-notify-message-yourStatus
      * @default 'info'
      */
-    status?: string
+    status?: string;
 
     /**
      * Amount of tiem in milliseconds a messa is visible. Set to 0 for sticky message
      * @default 5000
      */
-    timeout?: number
+    timeout?: number;
 
     /**
      * Adjust the notification's position to different corners.
@@ -883,7 +910,7 @@ declare namespace UIkit {
      * top-center, top-left, top-right, bottom-center, bottom-left, bottom-right
      * If you want to create one value set its style with the CSS uk-notify-yourPosition
      */
-    pos?: string
+    pos?: string;
   }
 
   /**
@@ -896,13 +923,13 @@ declare namespace UIkit {
      * @param message The html message
      * @param [status] The status or options
      */
-    (message: string, status?: string | NotifyOptions): any
+    (message: string, status?: string | NotifyOptions): any;
 
     /**
      * Show a notification
      * @param options Options
      */
-    (options: NotifyOptions): any
+    (options: NotifyOptions): any;
   }
 
   interface SearchOptions {
@@ -912,7 +939,7 @@ declare namespace UIkit {
      * <h2>Possible value</h2>
      * string
      */
-    source?: string
+    source?: string;
 
     /**
      * Min. input length before triggering autocomplete
@@ -920,7 +947,7 @@ declare namespace UIkit {
      * <h2>Possible value</h2>
      * integer
      */
-    minLength?: number
+    minLength?: number;
 
     /**
      * Query name when sending ajax request
@@ -928,7 +955,7 @@ declare namespace UIkit {
      * <h2>Possible value</h2>
      * string
      */
-    param?: string
+    param?: string;
 
     /**
      * Delay time after stop typing
@@ -936,14 +963,14 @@ declare namespace UIkit {
      * <h2>Possible value</h2>
      * integer
      */
-    delay?: number
+    delay?: number;
   }
 
   /**
    * Easily create a nicely looking search.
    * Documentation {@link http://getuikit.org/docs/search.html}
    */
-  type Search = (element: string | HTMLElement, options: SearchOptions) => any
+  type Search = (element: string | HTMLElement, options: SearchOptions) => any;
 
   interface NestableOptions {
     /**
@@ -952,98 +979,98 @@ declare namespace UIkit {
      * <h2>Possible value</h2>
      * string
      */
-    group?: string
+    group?: string;
     /**
      * Max nesting level
      * @default 10
      * <h2>Possible value</h2>
      * integer
      */
-    maxDepth?: number
+    maxDepth?: number;
     /**
      * Pixel threshold before starting to drag
      * @default 20
      * <h2>Possible value</h2>
      * integer
      */
-    threshold?: number
+    threshold?: number;
     /**
      * List node name
      * @default ul
      * <h2>Possible value</h2>
      * string
      */
-    listNodeName?: string
+    listNodeName?: string;
     /**
      * Item node name
      * @default li
      * <h2>Possible value</h2>
      * string
      */
-    itemNodeName?: string
+    itemNodeName?: string;
     /**
      * List base class
      * @default uk-nestable
      * <h2>Possible value</h2>
      * string
      */
-    listBaseClass?: string
+    listBaseClass?: string;
     /**
      * List class
      * @default uk-nestable-list
      * <h2>Possible value</h2>
      * string
      */
-    listClass?: string
+    listClass?: string;
     /**
      * List item class
      * @default uk-nestable-list-item
      * <h2>Possible value</h2>
      * string
      */
-    listitemClass?: string
+    listitemClass?: string;
     /**
      * Item class
      * @default uk-nestable-item
      * <h2>Possible value</h2>
      * string
      */
-    itemClass?: string
+    itemClass?: string;
     /**
      * Class added to dragged list
      * @default uk-nestable-list-dragged
      * <h2>Possible value</h2>
      * string
      */
-    dragClass?: string
+    dragClass?: string;
     /**
      * Class added to <code>&lt;html&gt;</code> when moving
      * @default uk-nestable-moving
      * <h2>Possible value</h2>
      * string
      */
-    movingClass?: string
+    movingClass?: string;
     /**
      * Class for drag handle
      * @default uk-nestable-handle
      * <h2>Possible value</h2>
      * string
      */
-    handleClass?: string
+    handleClass?: string;
     /**
      * Class for collapsed items
      * @default uk-nestable-collapsed
      * <h2>Possible value</h2>
      * string
      */
-    collapsedClass?: string
+    collapsedClass?: string;
     /**
      * Class for placeholder of currently dragged element
      * @default uk-nestable-placeholder
      * <h2>Possible value</h2>
      * string
      */
-    placeClass?: string
+    placeClass?: string;
     /**
      * Elements with this class will not trigger dragging. Useful when having the complete item draggable and not
      * just the handle.
@@ -1051,14 +1078,14 @@ declare namespace UIkit {
      * <h2>Possible value</h2>
      * string
      */
-    noDragClass?: string
+    noDragClass?: string;
     /**
      * Class for empty lists
      * @default uk-nestable-empty
      * <h2>Possible value</h2>
      * string
      */
-    emptyClass?: string
+    emptyClass?: string;
   }
 
   /**
@@ -1093,7 +1120,7 @@ declare namespace UIkit {
    * </tr>
    * </table>
    */
-  type Nestable = (element: string | HTMLElement, options: NestableOptions) => any
+  type Nestable = (element: string | HTMLElement, options: NestableOptions) => any;
 
   interface SortableOptions {
     /**
@@ -1102,35 +1129,35 @@ declare namespace UIkit {
      * <h2>Possible value</h2>
      * string
      */
-    group?: string
+    group?: string;
     /**
      * Animation speed in ms
      * @default 150
      * <h2>Possible value</h2>
      * integer
      */
-    animation?: string
+    animation?: string;
     /**
      * Mouse movement threshold in pixel until trigger element dragging
      * @default 10
      * <h2>Possible value</h2>
      * integer
      */
-    threshold?: string
+    threshold?: string;
     /**
      * Custom class to define elements which can trigger sorting
      * @default ''
      * <h2>Possible value</h2>
      * string
      */
-    handleClass?: string
+    handleClass?: string;
     /**
      * Custom class added to the dragged element
      * @default ''
      * <h2>Possible value</h2>
      * string
      */
-    dragCustomClass?: string
+    dragCustomClass?: string;
   }
 
   /**
@@ -1165,7 +1192,7 @@ declare namespace UIkit {
    * </tr>
    * </table>
    */
-  type Sortable = (element: string | HTMLElement, options: SortableOptions) => any
+  type Sortable = (element: string | HTMLElement, options: SortableOptions) => any;
 
   interface StickyOptions {
     /**
@@ -1174,70 +1201,70 @@ declare namespace UIkit {
      * <h2>Possible value</h2>
      * integer
      */
-    top?: number
+    top?: number;
     /**
      * UIkit animation class
      * @default ''
      * <h2>Possible value</h2>
      * string
      */
-    animation?: string
+    animation?: string;
     /**
      * Init class when the element is sticky for the first time
      * @default uk-sticky-init
      * <h2>Possible value</h2>
      * string
      */
-    clsinit?: string
+    clsinit?: string;
     /**
      * Active class to add, when element is sticky
      * @default uk-active
      * <h2>Possible value</h2>
      * string
      */
-    clsactive?: string
+    clsactive?: string;
     /**
      * Class to add, when element is not sticky
      * @default ''
      * <h2>Possible value</h2>
      * string
      */
-    clsinactive?: string
+    clsinactive?: string;
     /**
      * Css selector where to get the width from in sticky mode. By default it takes the width from the created wrapper element.
      * @default ''
      * <h2>Possible value</h2>
      * string
      */
-    getWidthFrom?: string
+    getWidthFrom?: string;
     /**
      * Condition for the active status with a width as integer (e.g. 640) or a css media query
      * @default false
      * <h2>Possible value</h2>
      * integer / string
      */
-    media?: number | string
+    media?: number | string;
     /**
      * Make sure that a sticky element is not over a targeted element via location hash on dom-ready.
      * @default false
      * <h2>Possible value</h2>
      * boolean
      */
-    target?: boolean
+    target?: boolean;
     /**
      * Show sticky element only when scrolling up.
      * @default false
      * <h2>Possible value</h2>
      * boolean
      */
-    showup?: boolean
+    showup?: boolean;
     /**
      * Set to <code>true</code> to bind sticky to the parent or a Css selector to bind sticky to a specific element.
      * @default false
      * <h2>Possible value</h2>
      * mixed
      */
-    boundary?: boolean | string
+    boundary?: boolean | string;
   }
 
   /**
@@ -1262,7 +1289,7 @@ declare namespace UIkit {
    * </tr>
    * </table>
    */
-  type Sticky = (element: string | HTMLElement, options: StickyOptions) => any
+  type Sticky = (element: string | HTMLElement, options: StickyOptions) => any;
 
   interface TimepickerOptions {
     /**
@@ -1271,28 +1298,28 @@ declare namespace UIkit {
      * <h2>Possible value</h2>
      * '24h' or '12h'
      */
-    format?: string
+    format?: string;
     /**
      * Start time
      * @default 0
      * <h2>Possible value</h2>
      * Integer between 0 and 24
      */
-    start?: number
+    start?: number;
     /**
      * End time
      * @default 24
      * <h2>Possible value</h2>
      * Integer between 0 and 24
      */
-    end?: number
+    end?: number;
   }
 
   /**
    * Create a timepicker which can easily be used by selecting a time value from a pre filled dropdown.
    * Documentation {@link http://getuikit.org/docs/timepicker.html}
    */
-  type Timepicker = (element: string | HTMLElement, options: TimepickerOptions) => any
+  type Timepicker = (element: string | HTMLElement, options: TimepickerOptions) => any;
 
   interface TooltipOptions {
     /**
@@ -1301,49 +1328,49 @@ declare namespace UIkit {
      * <h2>Possible value</h2>
      * integer
      */
-    offset?: number
+    offset?: number;
     /**
      * Tooltip position
      * @default 'top'
      * <h2>Possible value</h2>
      * string
      */
-    pos?: string
+    pos?: string;
     /**
      * Fade in tooltip
      * @default false
      * <h2>Possible value</h2>
      * boolean
      */
-    animation?: boolean
+    animation?: boolean;
     /**
      * Delay tooltip show in ms
      * @default 0
      * <h2>Possible value</h2>
      * integer
      */
-    delay?: number
+    delay?: number;
     /**
      * Custom class to add on show
      * @default ''
      * <h2>Possible value</h2>
      * string
      */
-    cls?: string
+    cls?: string;
     /**
      * Toggled active class
      * @default 'uk-active'
      * <h2>Possible value</h2>
      * string
      */
-    activeClass?: string
+    activeClass?: string;
   }
 
   /**
    * Easily create a nicely looking tooltip.
    * Documentation {@link http://getuikit.org/docs/tooltip.html}
    */
-  type Tooltip = (element: string | HTMLElement, options: TooltipOptions) => any
+  type Tooltip = (element: string | HTMLElement, options: TooltipOptions) => any;
 
   interface UploadOptions {
     /**
@@ -1352,75 +1379,75 @@ declare namespace UIkit {
      * <h2>Possible value</h2>
      * string
      */
-    action?: string
+    action?: string;
     /**
      * Send each file one by one
      * @default true
      * <h2>Possible value</h2>
      * boolean
      */
-    single?: boolean
+    single?: boolean;
     /**
      * Post query name
      * @default files[]
      * <h2>Possible value</h2>
      * string
      */
-    param?: string
+    param?: string;
     /**
      * Additional request parameters
      * @default {}
      * <h2>Possible value</h2>
      * JSON Object
      */
-    params?: {}
+    params?: {};
     /**
      * File filter
      * @default *.*
      * <h2>Possible value</h2>
      * string
      */
-    allow?: string
+    allow?: string;
     /**
      * Limit the number of files to upload
      * @default false
      * <h2>Possible value</h2>
      * integer
      */
-    filelimit?: number
+    filelimit?: number;
     /**
      * Response type from server
      * @default text
      * <h2>Possible Value</h2>
      * (text|json)
      */
-    type?: string
+    type?: string;
 
-    before?(settings: UploadOptions, files: string | string[]): any
+    before?(settings: UploadOptions, files: string | string[]): any;
 
-    beforeAll?(files: string | string[]): any
+    beforeAll?(files: string | string[]): any;
 
-    beforeSend?(xhr: XMLHttpRequest): any
+    beforeSend?(xhr: XMLHttpRequest): any;
 
-    progress?(percent: number): any
+    progress?(percent: number): any;
 
-    complete?(response: any, xhr: XMLHttpRequest): any
+    complete?(response: any, xhr: XMLHttpRequest): any;
 
-    allcomplete?(response: any, xhr: XMLHttpRequest): any
+    allcomplete?(response: any, xhr: XMLHttpRequest): any;
 
-    notallowed?(file: string | string[], settings: UploadOptions): any
+    notallowed?(file: string | string[], settings: UploadOptions): any;
 
-    loadstart?(event: any): any
+    loadstart?(event: any): any;
 
-    load?(event: any): any
+    load?(event: any): any;
 
-    loadend?(event: any): any
+    loadend?(event: any): any;
 
-    error?(event: any): any
+    error?(event: any): any;
 
-    abort?(event: any): any
+    abort?(event: any): any;
 
-    readystatechange?(event: any): any
+    readystatechange?(event: any): any;
   }
 
   /**
@@ -1486,27 +1513,27 @@ declare namespace UIkit {
    * </tr>
    * </table>
    */
-  type Upload = (element: string | HTMLElement, options: UploadOptions) => any
-  const dropdown: Dropdown
-  const modal: Modal
-  const lightbox: LightBox
-  const offcanvas: OffCanvas
-  const autocomplete: AutoComplete
-  const datepicker: DatePicker
-  const htmleditor: HtmlEditor
-  const slider: Slider
-  const slideset: SlideSet
-  const slideshow: SlideShow
-  const parallax: Parallax
-  const accordion: Accordion
-  const notify: Notify
-  const search: Search
-  const nestable: Nestable
-  const sortable: Sortable
-  const sticky: Sticky
-  const timepicker: Timepicker
-  const tooltip: Tooltip
-  const uploadSelect: Upload
-  const uploadDrop: Upload
-  const util: { on(id: string | HTMLElement, eventName: string, callback: Function) }
+  type Upload = (element: string | HTMLElement, options: UploadOptions) => any;
+  const dropdown: Dropdown;
+  const modal: Modal;
+  const lightbox: LightBox;
+  const offcanvas: OffCanvas;
+  const autocomplete: AutoComplete;
+  const datepicker: DatePicker;
+  const htmleditor: HtmlEditor;
+  const slider: Slider;
+  const slideset: SlideSet;
+  const slideshow: SlideShow;
+  const parallax: Parallax;
+  const accordion: Accordion;
+  const notify: Notify;
+  const search: Search;
+  const nestable: Nestable;
+  const sortable: Sortable;
+  const sticky: Sticky;
+  const timepicker: Timepicker;
+  const tooltip: Tooltip;
+  const uploadSelect: Upload;
+  const uploadDrop: Upload;
+  const util: { on(id: string | HTMLElement, eventName: string, callback: Function) };
 }
