@@ -15,6 +15,13 @@ const UIkit = require('uikit');
  *     </ModalBody>
  * ).show()
  * </code></pre>
+ *
+ * <h2>Important:</h2>
+ * This method creates a reusable modal. When you use this method
+ * to create a one-time modal, make sure to dispose of the modal using the
+ * {@link destroyModal} method. Make sure to dispose of the modal when you no longer need
+ * it (for example when the component where the modal is used in unmounts).
+ *
  * @param content The content to display
  * @param options Modal options
  */
@@ -26,4 +33,9 @@ export function createModal(
   divElement.setAttribute('uk-modal', '');
   render(<div className={options?.className ?? 'uk-modal-dialog'}>{content}</div>, divElement);
   return UIkit.modal(divElement, options);
+}
+
+export function destroyModal(modal: UIkit.ModalElement) {
+  // @ts-ignore
+  modal.$destroy(true);
 }
