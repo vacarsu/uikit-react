@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import { render } from 'react-dom';
+
+const UIkit = require('uikit');
 
 /**
  * creates a simple modal elements that can contain any content you want
@@ -16,9 +18,12 @@ import { render } from 'react-dom';
  * @param content The content to display
  * @param options Modal options
  */
-export function modal(content: JSX.Element, options?: UIkit.ModalOptions): UIkit.ModalElement {
+export function createModal(
+  content: ReactElement,
+  options?: UIkit.ModalOptions,
+): UIkit.ModalElement {
   const divElement = document.createElement('div');
   divElement.setAttribute('uk-modal', '');
-  render(<div className="uk-modal-dialog">{content}</div>, divElement);
+  render(<div className={options?.className ?? 'uk-modal-dialog'}>{content}</div>, divElement);
   return UIkit.modal(divElement, options);
 }

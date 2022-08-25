@@ -319,5 +319,5 @@ declare interface TableHeaderProps extends BaseProps {
 }
 
 declare interface ModalBodyProps extends BaseProps {
-  children?: JSX.Element | string;
+  children?: any;
 }

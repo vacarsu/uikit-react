@@ -1,18 +1,17 @@
 import React from 'react';
 import { setClassNames } from '../../utils/set-class-names';
+import _classNames from 'classnames';
 
-export function ModalBody({ className, children, ...rest }: ModalBodyProps) {
-  function createClassNames(): string {
-    return setClassNames({
-      className: className,
-      'uk-modal-body': true,
-      ...rest,
+export function ModalBody(props: ModalBodyProps) {
+  const _setClassNames = (): string => {
+    return _classNames('uk-modal-body', {
+      [`${setClassNames(props)}`]: true,
     });
-  }
+  };
 
   return (
-    <div className={createClassNames()} {...rest}>
-      {children}
+    <div className={`${_setClassNames()}`} id={props.id} style={props.style}>
+      {props.children}
     </div>
   );
 }
